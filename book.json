@@ -1,0 +1,21 @@
+{
+    "title": "无为徐生",
+    "language": "zh-hans",
+    "links": {
+        "sidebar": {
+            "github": "https://github.com/scott180/gitbook-blog",
+            "xushufa": "https://xushufa.cn"
+        }
+    },
+    "plugins": ["-sharing", "sharing-plus", "lightbox", "page-toc-button"],
+    "pluginsConfig": {
+        "sharing": {
+            "all": []
+        },
+        "page-toc-button": {
+            "maxTocDepth": 2,
+            "minTocSize": 2
+        }
+    }
+
+}
