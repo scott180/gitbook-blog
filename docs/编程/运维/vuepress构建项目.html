@@ -1380,6 +1380,28 @@ yarn add valine -S
     }
 }
 </code></pre>
+<h3 id="16-&#x5168;&#x5C40;&#x641C;&#x7D22;">1.6 &#x5168;&#x5C40;&#x641C;&#x7D22;</h3>
+<pre><code class="lang-js">themeConfig: {
+<span class="hljs-comment">// algolia &#x5168;&#x5C40;&#x641C;&#x7D22;</span>
+algolia: {
+  apiKey: <span class="hljs-string">&apos;123&apos;</span>,
+  indexName: <span class="hljs-string">&apos;xushufa&apos;</span>,
+  appId: <span class="hljs-string">&apos;456&apos;</span>,
+},
+
+&#x5B98;&#x7F51;    
+https:<span class="hljs-comment">//crawler.algolia.com/admin/crawlers/9f0f4253-4d83-44d8-9f0a-472f436581fd/overview</span>
+https:<span class="hljs-comment">//www.algolia.com/apps/ODP1ID8WCB/explorer/browse/xushufa?searchMode=search</span>
+
+&#x6559;&#x7A0B;
+https:<span class="hljs-comment">//docsearch.algolia.com/docs/legacy/config-file/</span>
+https:<span class="hljs-comment">//www.cnblogs.com/yayujs/p/15982507.html</span>
+</code></pre>
+<pre><code class="lang-java">&#x641C;&#x7D22;&#x4E3A;&#x7A7A;&#xFF0C;&#x4E00;&#x822C;&#x662F; pathsToMatch &#x6CA1;&#x914D;&#x7F6E;&#x597D;
+crawler.algolia.com -- Editor -- <span class="hljs-keyword">new</span> Crawle -- pathsToMatch
+
+pathsToMatch: [<span class="hljs-string">&quot;https://blog.xushufa.cn/**&quot;</span>]
+</code></pre>
 <h2 id="&#x4E8C;&#x3001;vuepress-theme-reco&#x4E3B;&#x9898;">&#x4E8C;&#x3001;vuepress-theme-reco&#x4E3B;&#x9898;</h2>
 <p>&#x4F7F;&#x7528;vuepress-theme-reco&#x6784;&#x5EFA;&#x7684;&#x535A;&#x5BA2;&#x3002;</p>
 <p><a href="https://github.com/scott180/reco-blog" target="_blank">github</a> &#x2002; <a href="https://scott180.github.io/reco-blog" target="_blank">reco-blog</a>  &#x2002; <a href="https://scott180.github.io/reco-calligraphy" target="_blank">reco-calligraphy</a></p>
@@ -1580,7 +1602,7 @@ npm run deploy
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"vuepress构建项目","level":"3.2.8","depth":2,"next":{"title":"gitlab、github绑定自定义域名","level":"3.2.9","depth":2,"path":"编程/运维/gitlab、github绑定自定义域名.md","ref":"编程/运维/gitlab、github绑定自定义域名.md","articles":[]},"previous":{"title":"gitbook部署博客","level":"3.2.7","depth":2,"path":"编程/运维/gitbook部署博客.md","ref":"编程/运维/gitbook部署博客.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/运维/vuepress构建项目.md","mtime":"2022-04-29T01:54:06.324Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-04T07:05:50.013Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"vuepress构建项目","level":"3.2.8","depth":2,"next":{"title":"gitlab、github绑定自定义域名","level":"3.2.9","depth":2,"path":"编程/运维/gitlab、github绑定自定义域名.md","ref":"编程/运维/gitlab、github绑定自定义域名.md","articles":[]},"previous":{"title":"gitbook部署博客","level":"3.2.7","depth":2,"path":"编程/运维/gitbook部署博客.md","ref":"编程/运维/gitbook部署博客.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/运维/vuepress构建项目.md","mtime":"2022-05-05T06:47:34.658Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-07T08:16:19.347Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

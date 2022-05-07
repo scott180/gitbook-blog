@@ -39,17 +39,22 @@ $ npm -v
 ```
 
 ```
-网站
-https://www.gitbook.com/
-https://www.cnblogs.com/fenggedainifei/p/15500749.html
+配置说明
+https://www.gitbook.com
+https://www.cnblogs.com/zhangycun/p/15099747.html
 
+参考案例
+https://www.cnblogs.com/fenggedainifei/p/15500749.html
 https://blog.windrunner.me/tool/gitbook-tutorial.html
 https://suerimn-1.gitbook.io/suerimn-s-blog/css3/yuan-su-ju-zhong
-https://www.cnblogs.com/zhangycun/p/15099747.html
+
 ```
 
+## 插件配置
+
 ```json
-配置插件 book.json
+插件配置
+book.json
 
 {
     "title": "无为徐生",
@@ -83,6 +88,34 @@ expandable-chapters ：左侧目录折叠
 
 ```
 
+```json
+主题配置
+https://www.npmjs.com/search?q=gitbook-theme
+
+book.json
+{
+    "title": "书法练习",
+    "language": "zh-hans",
+    "links": {
+        "sidebar": {
+            "github": "https://github.com/scott180/calligraphy",
+            "xushufa": "https://xushufa.cn"
+        }
+    },
+    "plugins": ["theme-beauty"],
+    "pluginsConfig": {
+        "theme-beauty":{
+            "search-placeholder":"输入关键字搜索", 
+            "logo":"./logo.jpg", 
+            "favicon": "./favicon.ico" 
+        }
+    }
+
+}
+
+
+
+```
 
 ```
 开启github pages 
