@@ -55,6 +55,7 @@
 
   - [mysqlNote](编程/数据库/mysqlNote.md)
   - [oracleNote](编程/数据库/oracleNote.md)
+  - [ldapNote](编程/数据库/ldapNote.md)
   - [redis](编程/数据库/redis.md)
   - [mongo](编程/数据库/mongo.md)
   - [数据库隔离级别](编程/数据库/数据库隔离级别.md)
