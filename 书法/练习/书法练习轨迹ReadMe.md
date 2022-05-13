@@ -134,19 +134,25 @@
 | 12   | [notion]( https://brick-windshield-519.notion.site/4c6820d4272a4b91ba50b15077869b7e ) &ensp; [ReadMe]( https://brick-windshield-519.notion.site/ReadMe-5c35fb0d0da644bb98e673cc98409ad5 )     | 笔记个人空间。       |
 | 13   | [boostnote]( https://boostnote.io/shared/c45f0095-bffc-40e9-93da-bb3927e60294 ) &ensp; [ReadMe]( https://boostnote.io/shared/1ae6faaa-ee9e-4659-8721-650d1b272f7f ) | 专为程序员提供的markdown笔记本软件。           |
 | 14   | [pdfdrive]( https://www.pdfdrive.com/%E4%B9%A6%E6%B3%95%E7%BB%83%E4%B9%A0%E8%BD%A8%E8%BF%B9readme-e201239704.html ) | PDF Drive is Digital Library of Free PDF eBooks.           |
-| -    | **云盘**                        |                                    |
-| 15   | [坚果云]( https://www.jianguoyun.com/p/Df38XDMQxP-NBhi3vKwE ) &ensp; [markdown]( https://www.jianguoyun.com/p/DfYHsfUQxP-NBhjOrfED )          |  文件分享。         |
-| 16   | [百度网盘]( https://pan.baidu.com/s/1dOJMgeZAyCYolEflsKIOPQ )        | 提取码: zpxu 。pdf文件分享，需要登录。       |
-| 17   | [阿里云盘]( https://www.aliyundrive.com/s/A6HYqyw15Zr )              | pdf文件分享，需要登录。                      |
-| 18   | [天翼云]( https://cloud.189.cn/t/RRBbumb2MB7b )                      | pdf文件分享，需要登录。中国电信网盘。        |
-| 19   | [和彩云]( https://caiyun.139.com/m/i?125CmrCy7hU1y )                 | 提取码:WAmq 。pdf文件分享，需要登录。中国移动网盘。     |
-| 20   | [微云]( https://share.weiyun.com/JKZ4ANJ5 )  &ensp; [腾讯文档]( https://docs.qq.com/pdf/DVmxKTG5YZHZBUGlx )         | pdf文件分享。                                 |
-| 21   | [google云盘]( https://drive.google.com/file/d/1Ubx-Rz3Xwhn48PEXMx-BmWrJGyIAzNfn/view?usp=sharing )                  | 文件分享，无删减。                            |
-| -    | **内容**                        |                                                                                   |
-| 22   | [豆瓣]( https://www.douban.com/photos/album/1881601083/ )            |  发现优质书影音，记录生活表达自我。          |
-| 23   | [知乎]( https://zhuanlan.zhihu.com/p/403400860 )                     |  问答社区和创作者聚集的原创内容平台。        |
-| 24   | [今日头条]( https://www.toutiao.com/a7003584972175147528/ )          |  通用信息平台，看见更大的世界。              |
-| 25   | [微信公众号]( https://mp.weixin.qq.com/s?__biz=Mzg4NDY2OTM0Mg==&mid=2247487244&idx=1&sn=fa21068e783c6b31a62abf71186c1b20 )     |  自媒体，每周一在【**无为徐生**】公众号发布`书法练习轨迹`一周练习图文记录。        |
+| 15   | [npm]( https://www.npmjs.com/~xushufa ) | node包管理器。             |
+
+---
+
+| 序号 | **云盘**                                              			      |  备注             			                 |
+| ---  | -------------------------------------------------------------        |  -----------------------------------         |
+| 1    | [坚果云]( https://www.jianguoyun.com/p/Df38XDMQxP-NBhi3vKwE ) &ensp; [markdown]( https://www.jianguoyun.com/p/DfYHsfUQxP-NBhjOrfED )          |  文件分享。         |
+| 2   | [百度网盘]( https://pan.baidu.com/s/1vE7fXHu1O1M6s8v5YCEFkw )        | 提取码: f9aq 。文件分享，需要登录。       |
+| 3   | [阿里云盘]( https://www.aliyundrive.com/s/z168Lhd36qe )              | 文件分享，需要登录。                      |
+| 4   | [天翼云]( https://cloud.189.cn/t/RRBbumb2MB7b )                      | pdf文件分享，需要登录。中国电信网盘。        |
+| 5   | [和彩云]( https://caiyun.139.com/m/i?125CmrCy7hU1y )                 | 提取码:WAmq 。pdf文件分享，需要登录。中国移动网盘。     |
+| 6   | [微云]( https://share.weiyun.com/JKZ4ANJ5 )  &ensp; [腾讯文档]( https://docs.qq.com/pdf/DVmxKTG5YZHZBUGlx )         | pdf文件分享。                                 |
+| 7   | [google云盘]( https://drive.google.com/file/d/1Ubx-Rz3Xwhn48PEXMx-BmWrJGyIAzNfn/view?usp=sharing )                  | 文件分享，无删减。                            |
+| 8   | [金山文档]( https://kdocs.cn/l/ctHflHcmGvtS )                        | 文件分享，无删减。                            |
+| -   | **内容**                        |                                                                                   |
+| 9   | [豆瓣]( https://www.douban.com/photos/album/1881601083/ )            |  发现优质书影音，记录生活表达自我。          |
+| 10   | [知乎]( https://zhuanlan.zhihu.com/p/403400860 )                     |  问答社区和创作者聚集的原创内容平台。        |
+| 11   | [今日头条]( https://www.toutiao.com/a7003584972175147528/ )          |  通用信息平台，看见更大的世界。              |
+| 12   | [微信公众号]( https://mp.weixin.qq.com/s?__biz=Mzg4NDY2OTM0Mg==&mid=2247487244&idx=1&sn=fa21068e783c6b31a62abf71186c1b20 )     |  自媒体，每周一在【**无为徐生**】公众号发布`书法练习轨迹`一周练习图文记录。        |
 
 ---
 
@@ -284,7 +290,7 @@ docsify是跟mkdocs类似的工具，可将markdown文件布署成静态网页�
 ---
 
 > 笔名汉字频率分析 <br/>
-> 数据来自《[书法练习轨迹--明月几时有]( https://xuyq123.gitlab.io/plain/%E4%B9%A6%E6%B3%95%E7%BB%83%E4%B9%A0%E8%BD%A8%E8%BF%B9--%E6%98%8E%E6%9C%88%E5%87%A0%E6%97%B6%E6%9C%89.html )》中关于本人笔名的记录。 --20210718
+> 数据来自《[书法练习轨迹--明月几时有]( https://xushufa.cn )》中关于本人笔名的记录。 --20210718
 
 | 序号 | 1    | 2    | 3    | 4    | 5    | 6    |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
@@ -504,6 +510,11 @@ https://sourceforge.net/p/calligraphy/imgs/ci/master/tree/mingyue/2022/202201/20
 
 codeberg 速度较快
 https://codeberg.org/xuyq/imgs/raw/branch/master/mingyue/2022/202201/2022012101.jpg
+
+npm  cdn
+https://cdn.jsdelivr.net/npm/xushufa-imgs/imgs/mingyue/2021/202112/2021120801.jpg
+https://cdn.jsdelivr.net/npm/xushufa-imgs2/imgs/mingyue/2022/202205/2022050801.jpg
+
 
 ```
 

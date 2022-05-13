@@ -63,6 +63,7 @@
   
 - `资料`
 
+  - [npm笔记](编程/资料/npm笔记.md)
   - [jquery笔记](编程/资料/jquery笔记.md)
   - [javaScript笔记](编程/资料/javaScript笔记.md)
   - [二进制数负数](编程/资料/二进制数负数.md)
