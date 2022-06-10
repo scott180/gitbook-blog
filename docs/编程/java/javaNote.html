@@ -1472,6 +1472,29 @@ slist.forEach(e -&gt; System.out.println(&quot;Id:&quot; + e.getId() + &quot;, N
 System.out.println(&quot;---Sorting using Comparator by Age with reverse order---&quot;);
 slist = list.stream().sorted(Comparator.comparing(Student::getAge).reversed()).collect(Collectors.toList());
 slist.forEach(e -&gt; System.out.println(&quot;Id:&quot; + e.getId() + &quot;, Name: &quot; + e.getName() + &quot;, Age:&quot; + e.getAge()));
+
+
+&#x5206;&#x7EC4;&#x6392;&#x5E8F;
+https://www.toutiao.com/article/7096484701099295263
+
+TreeMap&lt;TypeEnum, List&lt;Customer&gt;&gt; treeMap4 = customers.stream().sorted(Comparator.comparing(Customer::getAge, Comparator.nullsLast(Integer::compareTo)))
+        .collect(Collectors.groupingBy(Customer::getType, TreeMap::new, Collectors.toList()));
+
+
+Map&lt;String, List&lt;LogisticsStatisticsDAO&gt;&gt; logisticsRegionMap = logisticsStatisticsDAOS.stream().
+        collect(Collectors.groupingBy(LogisticsStatisticsDAO::getRegion, WarehouseUtil::getCustomSortTreeMap, Collectors.toList()));
+
+public static TreeMap&lt;String, List&lt;LogisticsStatisticsDAO&gt;&gt; getCustomSortTreeMap() {
+    // return new TreeMap&lt;&gt;(Comparator.comparingInt(TypeEnum::getPriority));
+    TreeMap&lt;String, List&lt;LogisticsStatisticsDAO&gt;&gt; map = new TreeMap&lt;String, List&lt;LogisticsStatisticsDAO&gt;&gt;(new Comparator&lt;String&gt;() {
+        @Override
+        public int compare(String r1, String r2) {
+            // &#x5347;&#x5E8F;
+            return CommonUtil.regionSort(r1, r2);
+        }
+    });
+    return map;
+}
 </code></pre>
 <h3 id="14&#x3001;flatmappeeknewarraylist">1.4&#x3001;flatmap,peek,newArrayList</h3>
 <pre><code class="lang-java">JAVA8 &#x4E2D;&#x7684;flatmap
@@ -1849,7 +1872,7 @@ maven&#x5E38;&#x7528;&#x6253;&#x5305;&#x547D;&#x4EE4;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"javaNote","level":"3.1.10","depth":2,"next":{"title":"排序算法","level":"3.1.11","depth":2,"path":"编程/java/排序算法.md","ref":"编程/java/排序算法.md","articles":[]},"previous":{"title":"SpringCloud入门","level":"3.1.9","depth":2,"path":"编程/java/SpringCloud入门.md","ref":"编程/java/SpringCloud入门.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/java/javaNote.md","mtime":"2022-05-10T13:10:07.168Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-21T04:47:31.588Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"javaNote","level":"3.1.10","depth":2,"next":{"title":"排序算法","level":"3.1.11","depth":2,"path":"编程/java/排序算法.md","ref":"编程/java/排序算法.md","articles":[]},"previous":{"title":"SpringCloud入门","level":"3.1.9","depth":2,"path":"编程/java/SpringCloud入门.md","ref":"编程/java/SpringCloud入门.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/java/javaNote.md","mtime":"2022-06-02T07:17:03.897Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-10T03:19:07.375Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

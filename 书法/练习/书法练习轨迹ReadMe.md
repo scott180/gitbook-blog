@@ -525,6 +525,17 @@ https://cdn.jsdelivr.net/npm/xushufa-imgs2/imgs/mingyue/2022/202205/2022050801.j
 
 ## 三、账号
 
+> **作者**
+
+徐永钦<br/>
+生于无为，学于合肥，居于杭州。<br/>
+君子固穷，记而不作，未来已来。<br/>
+
+以[无为徐生]( https://xushufa.cn/%E7%BB%83%E4%B9%A0/%E6%97%A0%E4%B8%BA%E5%BE%90%E7%94%9F.html )之名作[书法练习轨迹]( https://xushufa.cn/%E8%BD%A8%E8%BF%B9/%E4%B9%A6%E6%B3%95%E7%BB%83%E4%B9%A0%E8%BD%A8%E8%BF%B9--%E6%98%8E%E6%9C%88%E5%87%A0%E6%97%B6%E6%9C%89-%E6%97%A0%E5%9B%BE%E7%89%88.html )成[徐书法]( https://xushufa.cn/%E7%BB%83%E4%B9%A0/%E5%BE%90%E4%B9%A6%E6%B3%95.html )。 <br/>
+做人如果没有梦想，那跟咸鱼有什么区别。 <br/>
+
+---
+
 > **平台**
 
 - 若有志同道合的小伙伴想联系本人，可通过以下方式发邮件或私信。路漫漫其修远兮，吾将上下而求索。共勉。
