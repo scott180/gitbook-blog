@@ -1242,50 +1242,50 @@
                                 
                                 <h1 id="git&#x5E73;&#x53F0;docsify&#x5E03;&#x7F72;markdown&#x6587;&#x4EF6;">git&#x5E73;&#x53F0;docsify&#x5E03;&#x7F72;markdown&#x6587;&#x4EF6;</h1>
 <p><br></p>
-<p><code>&#x7F51;&#x5740;</code> &#x2002; <a href="https://xushufa.cn" target="_blank">xushufa</a> &#x2002; <a href="https://vuepress-blog.xushufa.cn" target="_blank">blog</a></p>
+<p><code>&#x7F51;&#x5740;</code> &#x2002; <a href="https://xushufa.cn" target="_blank">xushufa</a> &#x2002; <a href="https://blog.xushufa.cn" target="_blank">blog</a></p>
 <h2 id="&#x672C;&#x5730;&#x5B89;&#x88C5;">&#x672C;&#x5730;&#x5B89;&#x88C5;</h2>
-<pre><code>docsify &#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x5E2E;&#x4F60;&#x751F;&#x6210;&#x6587;&#x6863;&#x7F51;&#x7AD9;&#x3002;&#x4E0D;&#x540C;&#x4E8E;GitBook&#x3001;Hexo&#x7684;&#x5730;&#x65B9;&#x662F;&#x5B83;&#x4E0D;&#x4F1A;&#x751F;&#x6210;&#x9759;&#x6001;&#x7684; .html &#x6587;&#x4EF6;&#xFF0C;&#x6240;&#x6709;&#x8F6C;&#x6362;&#x5DE5;&#x4F5C;&#x90FD;&#x662F;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x3002;
+<pre><code class="lang-js">docsify &#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x5E2E;&#x4F60;&#x751F;&#x6210;&#x6587;&#x6863;&#x7F51;&#x7AD9;&#x3002;&#x4E0D;&#x540C;&#x4E8E;GitBook&#x3001;Hexo&#x7684;&#x5730;&#x65B9;&#x662F;&#x5B83;&#x4E0D;&#x4F1A;&#x751F;&#x6210;&#x9759;&#x6001;&#x7684; .html &#x6587;&#x4EF6;&#xFF0C;&#x6240;&#x6709;&#x8F6C;&#x6362;&#x5DE5;&#x4F5C;&#x90FD;&#x662F;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x3002;
 
-// &#x9996;&#x5148;&#x5B89;&#x88C5;node
-https://gitlab.com/xuyq123/mynotes/-/blob/master/%E5%85%B6%E4%BB%96/nodejs%20&amp;%20vue.md
+<span class="hljs-comment">// &#x9996;&#x5148;&#x5B89;&#x88C5;node</span>
+https:<span class="hljs-comment">//gitlab.com/xuyq123/mynotes/-/blob/master/%E5%85%B6%E4%BB%96/nodejs%20&amp;%20vue.md</span>
 
-// &#x5B89;&#x88C5;docsify
+<span class="hljs-comment">// &#x5B89;&#x88C5;docsify</span>
 npm i docsify-cli -g   
 
 docsify --version
 
-// &#x521D;&#x59CB;&#x5316;docsify&#x9879;&#x76EE;
+<span class="hljs-comment">// &#x521D;&#x59CB;&#x5316;docsify&#x9879;&#x76EE;</span>
 docsify init ./test
 
-// &#x8FD0;&#x884C;
+<span class="hljs-comment">// &#x8FD0;&#x884C;</span>
 docsify serve docs
 
-http://localhost:3000
+http:<span class="hljs-comment">//localhost:3000</span>
 
 &#x6559;&#x7A0B;
-https://docsify.js.org/#/zh-cn/quickstart
-https://www.jianshu.com/p/4883e95aa903
-https://marked.js.org/demo/
+https:<span class="hljs-comment">//docsify.js.org/#/zh-cn/quickstart</span>
+https:<span class="hljs-comment">//www.jianshu.com/p/4883e95aa903</span>
+https:<span class="hljs-comment">//marked.js.org/demo/</span>
 
 
 &#x4FEE;&#x6539;&#x4E3B;&#x9898;
 index.html  
-&lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/docsify/themes/vue.css&quot;&gt;
+&lt;link rel=<span class="hljs-string">&quot;stylesheet&quot;</span> href=<span class="hljs-string">&quot;//cdn.jsdelivr.net/npm/docsify/themes/vue.css&quot;</span>&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/docsify/themes/buble.css&quot;&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/docsify/themes/dark.css&quot;&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/docsify/themes/pure.css&quot;&gt;
 &lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/docsify/themes/dolphin.css&quot;&gt;
-</code></pre><pre><code>
-&#x7ED9;&#x6BCF;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x672B;&#x5C3E;&#x52A0;&#x4E0A; footer
+</code></pre>
+<pre><code class="lang-html">&#x7ED9;&#x6BCF;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x672B;&#x5C3E;&#x52A0;&#x4E0A; footer
 window.$docsify = {
   plugins: [
     function(hook) {
       var footer = [
-        &apos;&lt;hr/&gt;&apos;,
-        &apos;&lt;footer&gt;&apos;,
-        &apos;&lt;span&gt;&lt;a href=&quot;https://github.com/QingWei-Li&quot;&gt;cinwell&lt;/a&gt; &amp;copy;2017.&lt;/span&gt;&apos;,
-        &apos;&lt;span&gt;Proudly published with &lt;a href=&quot;https://github.com/docsifyjs/docsify&quot; target=&quot;_blank&quot;&gt;docsify&lt;/a&gt;.&lt;/span&gt;&apos;,
-        &apos;&lt;/footer&gt;&apos;
+        &apos;<span class="hljs-tag">&lt;<span class="hljs-name">hr</span>/&gt;</span>&apos;,
+        &apos;<span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>&apos;,
+        &apos;<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://github.com/QingWei-Li&quot;</span>&gt;</span>cinwell<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> &amp;copy;2017.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>&apos;,
+        &apos;<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Proudly published with <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://github.com/docsifyjs/docsify&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span>docsify<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>&apos;,
+        &apos;<span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>&apos;
       ].join(&apos;&apos;);
 
       hook.afterEach(function(html) {
@@ -1294,68 +1294,84 @@ window.$docsify = {
     }
   ]
 };
-</code></pre><hr>
+</code></pre>
+<pre><code class="lang-java">cdn &#x8FDE;&#x4E0D;&#x4E0A;&#x6216;&#x8005;&#x7F51;&#x901F;&#x8F83;&#x6162;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css&quot;&gt;
+  &lt;script src=&quot;//cdn.jsdelivr.net/npm/docsify@4&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js&quot;&gt;&lt;/script&gt;
+
+  &#x53EF;&#x6362;&#x6210;&#x672C;&#x5730;&#x52A0;&#x8F7D;&#x6587;&#x4EF6;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;docsify/vue.css&quot;&gt;
+  &lt;script src=&quot;docsify/docsify.js&quot;&gt;&lt;/script&gt;
+  &lt;script src=&quot;docsify/search.min.js&quot;&gt;&lt;/script&gt;
+
+  &#x6216;&#x5176;&#x4ED6;cdn
+  https://cdnjs.com/libraries/docsify    https://cdnjs.cloudflare.com/ajax/libs/docsify/4.12.2/docsify.min.js
+  https://www.bootcdn.cn                 https://cdn.bootcdn.net/ajax/libs/docsify/4.12.2/docsify.js
+</code></pre>
+<hr>
 <h2 id="gitlab&#x5E03;&#x7F72;docsify">gitlab&#x5E03;&#x7F72;docsify</h2>
-<pre><code>1&#x3001;&#x521B;&#x5EFA; .gitlab-ci.yml
-2&#x3001;&#x521B;&#x5EFA;docs&#x76EE;&#x5F55;&#xFF0C;&#x5C06;markdown&#x6587;&#x4EF6;&#x653E;&#x5728;&#x6B64;&#x5904;&#x3002;&#x63A8;&#x9001;&#x6587;&#x4EF6;&#x3002;
-3&#x3001;&#x63A8;&#x9001;&#x6587;&#x4EF6;&#x3002;
+<pre><code class="lang-c"><span class="hljs-number">1</span>&#x3001;&#x521B;&#x5EFA; .gitlab-ci.yml
+<span class="hljs-number">2</span>&#x3001;&#x521B;&#x5EFA;docs&#x76EE;&#x5F55;&#xFF0C;&#x5C06;markdown&#x6587;&#x4EF6;&#x653E;&#x5728;&#x6B64;&#x5904;&#x3002;&#x63A8;&#x9001;&#x6587;&#x4EF6;&#x3002;
+<span class="hljs-number">3</span>&#x3001;&#x63A8;&#x9001;&#x6587;&#x4EF6;&#x3002;
 
 &#x53EF;&#x53C2;&#x8003;&#x6B64;&#x9879;&#x76EE;  
-https://gitlab.com/xuyq123/plain-docsify   
-https://xuyq123.gitlab.io/plain-docsify 
+https:<span class="hljs-comment">//gitlab.com/xuyq123/plain-docsify   </span>
+https:<span class="hljs-comment">//xuyq123.gitlab.io/plain-docsify </span>
 
 &#x591A;&#x7EA7;&#x9875;&#x9762;&#x53EF;&#x53C2;&#x8003;  
-https://gitlab.com/xuyq123/myblog-docsify   
-https://xuyq123.gitlab.io/myblog-docsify
-</code></pre><blockquote>
-<p>.gitlab-ci.yml
-```
-image: ruby:alpine</p>
+https:<span class="hljs-comment">//gitlab.com/xuyq123/myblog-docsify   </span>
+https:<span class="hljs-comment">//xuyq123.gitlab.io/myblog-docsify</span>
+</code></pre>
+<blockquote>
+<p>.gitlab-ci.yml</p>
 </blockquote>
-<p>stages:</p>
-<ul>
-<li>deploy</li>
-</ul>
-<p>pages:
+<pre><code class="lang-sh">image: ruby:alpine
+
+stages:
+- deploy
+
+pages:
   stage: deploy
-  script:</p>
-<ul>
-<li>cp -r docs/. public</li>
-<li>echo &quot;deploying to pages for note&quot;
-environment:
-name: note
-url: <a href="https://xuyq123.gitlab.io/plain-docsify" target="_blank">https://xuyq123.gitlab.io/plain-docsify</a>
-artifacts:
-paths:<ul>
-<li>public
-only:</li>
-</ul>
-</li>
-<li>master</li>
-</ul>
-<pre><code>
----
-
-## github&#x5E03;&#x7F72;docsify
-</code></pre><p>1&#x3001;&#x672C;&#x5730;&#x751F;&#x6210; docsify&#x9879;&#x76EE;</p>
-<p>// &#x521D;&#x59CB;&#x5316;docsify&#x9879;&#x76EE;
-docsify init ./test</p>
-<p>// &#x8FD0;&#x884C;
-docsify serve docs</p>
-<p>2&#x3001;&#x63A8;&#x9001;&#x6587;&#x4EF6;&#x3002;</p>
-<p>3&#x3001;&#x5F00;&#x542F;github pages 
-&#x4F4D;&#x7F6E;&#xFF1A;Setting - GitHub Pages - Save<br>&#x9009;&#x62E9;&#x5BF9;&#x5E94;&#x76EE;&#x5F55;&#x3002;</p>
-<p>&#x540E;&#x671F;&#x66F4;&#x65B0;&#x6587;&#x4EF6;&#xFF0C;&#x53EA;&#x9700;&#x63A8;&#x9001;&#x5373;&#x53EF;&#x3002;</p>
-<p>&#x53EF;&#x53C2;&#x8003;&#x6B64;&#x9879;&#x76EE; 
-<a href="https://github.com/scott180/myblog-docsify/" target="_blank">https://github.com/scott180/myblog-docsify/</a><br><a href="https://scott180.github.io/myblog-docsify/" target="_blank">https://scott180.github.io/myblog-docsify/</a></p>
-<pre><code>
----
-
-## gitee&#x5E03;&#x7F72;docsify
-</code></pre><p>&#x5728;&#x5BF9;&#x5E94;&#x7684; Gitee &#x4ED3;&#x5E93;&#x670D;&#x52A1;&#x4E2D;&#x9009;&#x62E9; Gitee Pages&#xFF0C;&#x9009;&#x62E9;&#x60A8;&#x8981;&#x90E8;&#x7F72;&#x7684;&#x5206;&#x652F;&#xFF0C;&#x586B;&#x5199;&#x60A8;&#x8981;&#x90E8;&#x7F72;&#x7684;&#x5206;&#x652F;&#x4E0A;&#x7684;&#x76EE;&#x5F55;&#xFF0C;
-&#x4F8B;&#x5982;docs&#xFF0C;&#x586B;&#x5199;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x70B9;&#x51FB;&#x542F;&#x52A8;&#x5373;&#x53EF;&#x3002;
-```</p>
+  script:
+  - cp -r docs/. public
+  - <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;deploying to pages for note&quot;</span>
+  environment:
+    name: note
+    url: https://xuyq123.gitlab.io/plain-docsify
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+</code></pre>
 <hr>
+<h2 id="github&#x5E03;&#x7F72;docsify">github&#x5E03;&#x7F72;docsify</h2>
+<pre><code class="lang-js"><span class="hljs-number">1</span>&#x3001;&#x672C;&#x5730;&#x751F;&#x6210; docsify&#x9879;&#x76EE;
+
+<span class="hljs-comment">// &#x521D;&#x59CB;&#x5316;docsify&#x9879;&#x76EE;</span>
+docsify init ./test
+
+<span class="hljs-comment">// &#x8FD0;&#x884C;</span>
+docsify serve docs
+
+<span class="hljs-number">2</span>&#x3001;&#x63A8;&#x9001;&#x6587;&#x4EF6;&#x3002;
+
+<span class="hljs-number">3</span>&#x3001;&#x5F00;&#x542F;github pages 
+&#x4F4D;&#x7F6E;&#xFF1A;Setting - GitHub Pages - Save  
+&#x9009;&#x62E9;&#x5BF9;&#x5E94;&#x76EE;&#x5F55;&#x3002;
+
+&#x540E;&#x671F;&#x66F4;&#x65B0;&#x6587;&#x4EF6;&#xFF0C;&#x53EA;&#x9700;&#x63A8;&#x9001;&#x5373;&#x53EF;&#x3002;
+
+&#x53EF;&#x53C2;&#x8003;&#x6B64;&#x9879;&#x76EE; 
+https:<span class="hljs-comment">//github.com/scott180/myblog-docsify/   </span>
+https:<span class="hljs-comment">//scott180.github.io/myblog-docsify/</span>
+</code></pre>
+<hr>
+<h2 id="gitee&#x5E03;&#x7F72;docsify">gitee&#x5E03;&#x7F72;docsify</h2>
+<pre><code>&#x5728;&#x5BF9;&#x5E94;&#x7684; Gitee &#x4ED3;&#x5E93;&#x670D;&#x52A1;&#x4E2D;&#x9009;&#x62E9; Gitee Pages&#xFF0C;&#x9009;&#x62E9;&#x60A8;&#x8981;&#x90E8;&#x7F72;&#x7684;&#x5206;&#x652F;&#xFF0C;&#x586B;&#x5199;&#x60A8;&#x8981;&#x90E8;&#x7F72;&#x7684;&#x5206;&#x652F;&#x4E0A;&#x7684;&#x76EE;&#x5F55;&#xFF0C;
+&#x4F8B;&#x5982;docs&#xFF0C;&#x586B;&#x5199;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x70B9;&#x51FB;&#x542F;&#x52A8;&#x5373;&#x53EF;&#x3002;
+</code></pre><hr>
 <h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
 <table>
 <thead>
@@ -1421,7 +1437,7 @@ docsify serve docs</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"git平台docsify布署markdown文件","level":"3.2.10","depth":2,"next":{"title":"gitlab、github、gitee布署mkdocs主题仓库","level":"3.2.11","depth":2,"path":"编程/运维/gitlab、github、gitee布署mkdocs主题仓库.md","ref":"编程/运维/gitlab、github、gitee布署mkdocs主题仓库.md","articles":[]},"previous":{"title":"gitlab、github绑定自定义域名","level":"3.2.9","depth":2,"path":"编程/运维/gitlab、github绑定自定义域名.md","ref":"编程/运维/gitlab、github绑定自定义域名.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/运维/git平台docsify布署markdown文件.md","mtime":"2022-04-19T07:18:57.284Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-10T03:19:07.375Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"git平台docsify布署markdown文件","level":"3.2.10","depth":2,"next":{"title":"gitlab、github、gitee布署mkdocs主题仓库","level":"3.2.11","depth":2,"path":"编程/运维/gitlab、github、gitee布署mkdocs主题仓库.md","ref":"编程/运维/gitlab、github、gitee布署mkdocs主题仓库.md","articles":[]},"previous":{"title":"gitlab、github绑定自定义域名","level":"3.2.9","depth":2,"path":"编程/运维/gitlab、github绑定自定义域名.md","ref":"编程/运维/gitlab、github绑定自定义域名.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/运维/git平台docsify布署markdown文件.md","mtime":"2022-06-11T08:20:47.474Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-11T08:32:02.297Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
