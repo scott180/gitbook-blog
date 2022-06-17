@@ -1314,14 +1314,15 @@ docker rm &#x3010;&#x5BB9;&#x5668;id&#x3011;
 * &#x5220;&#x9664;&#x955C;&#x50CF;&#x540E;&#xFF0C;&#x91CD;&#x65B0;&#x5236;&#x4F5C;&#x955C;&#x50CF;&#x65F6;&#xFF0C;&#x8981;&#x628A;&#x539F;&#x6765;&#x7684;mongo&#x3001;mysql&#x6570;&#x636E;&#x5220;&#x6389;
 /mnt/opt/data/ucp1.1.7/mysql/data
 /mnt/opt/data/ucp1.1.7/mongo/data
-</code></pre><pre><code>&#x63D0;&#x4EA4;&#x955C;&#x50CF;
-docker commit 678ae48535b1 ucp:1.1.7
-docker commit  -m &quot;ucp1.1.7--20180428&quot; -a &quot;xyq&quot; f54f18474f15 ucp:1.1.7
+</code></pre><pre><code class="lang-js">&#x63D0;&#x4EA4;&#x955C;&#x50CF;
+docker commit <span class="hljs-number">678</span>ae48535b1 ucp:<span class="hljs-number">1.1</span><span class="hljs-number">.7</span>
+docker commit  -m <span class="hljs-string">&quot;ucp1.1.7--20180428&quot;</span> -a <span class="hljs-string">&quot;xyq&quot;</span> f54f18474f15 ucp:<span class="hljs-number">1.1</span><span class="hljs-number">.7</span>
     -a :&#x63D0;&#x4EA4;&#x7684;&#x955C;&#x50CF;&#x4F5C;&#x8005;&#xFF1B;
     -c :&#x4F7F;&#x7528;Dockerfile&#x6307;&#x4EE4;&#x6765;&#x521B;&#x5EFA;&#x955C;&#x50CF;&#xFF1B;
     -m :&#x63D0;&#x4EA4;&#x65F6;&#x7684;&#x8BF4;&#x660E;&#x6587;&#x5B57;&#xFF1B;
     -p :&#x5728;commit&#x65F6;&#xFF0C;&#x5C06;&#x5BB9;&#x5668;&#x6682;&#x505C;&#x3002;
-</code></pre><pre><code>&#x4E0A;&#x4F20;&#x5230;170.18.10.40&#x955C;&#x50CF;&#x4ED3;&#x5E93;
+</code></pre>
+<pre><code class="lang-sql">&#x4E0A;&#x4F20;&#x5230;170.18.10.40&#x955C;&#x50CF;&#x4ED3;&#x5E93;
     &#x767B;&#x9646; docker login http://170.18.10.40 
          docker login http://registry.saiwentech.com:35000
 
@@ -1347,28 +1348,29 @@ docker commit  -m &quot;ucp1.1.7--20180428&quot; -a &quot;xyq&quot; f54f18474f15
     &#x4E0B;&#x8F7D;&#x65B9;&#x5F0F;&#xFF1A;
     docker pull registry.saiwentech.com:35000/mobile/IMAGE[:TAG]
     docker pull registry.saiwentech.com:35000/library/mysql:5.7.7_saiwen2
-</code></pre><hr>
-<pre><code>&#x53C2;&#x6570;&#x8BBE;&#x7F6E;
-/mnt/opt/data/ucp1.1.7/config/ucp/antx.properties
+</code></pre>
+<pre><code class="lang-vb">&#x53C2;&#x6570;&#x8BBE;&#x7F6E;
+/mnt/opt/data/ucp1<span class="hljs-number">.1</span><span class="hljs-number">.7</span>/config/ucp/antx.properties
 
 docker&#x53C2;&#x6570;&#x914D;&#x7F6E;
-/mnt/home/mobile/ucp1.1.7/install/ROOT/META-INF/autoconf/auto-config.xml
+/mnt/home/mobile/ucp1<span class="hljs-number">.1</span><span class="hljs-number">.7</span>/install/ROOT/META-INF/autoconf/<span class="hljs-keyword">auto</span>-config.xml
 
 &#x6E90;&#x6587;&#x4EF6;&#x4F4D;&#x7F6E;
-/mnt/home/mobile/ucp1.1.7
+/mnt/home/mobile/ucp1<span class="hljs-number">.1</span><span class="hljs-number">.7</span>
 
 
 
 &#x521D;&#x59CB;&#x5316;&#x65F6;&#x53EF;&#x80FD;&#x4E0D;&#x80FD;&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x521B;&#x5EFA;  
 &#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;
-CREATE DATABASE UCPPLUS DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE UCPPLUS <span class="hljs-keyword">DEFAULT</span> CHARACTER <span class="hljs-keyword">SET</span> utf8 COLLATE utf8_general_ci;
 
 
-mysql &#x6DFB;&#x52A0;&#x914D;&#x7F6E;&#x6587;&#x4EF6; /mnt/opt/data/ucp1.1.7/mysql/conf/add.cnf
+mysql &#x6DFB;&#x52A0;&#x914D;&#x7F6E;&#x6587;&#x4EF6; /mnt/opt/data/ucp1<span class="hljs-number">.1</span><span class="hljs-number">.7</span>/mysql/conf/add.cnf
 
 [mysqld]
-sql_mode=&apos;NO_ENGINE_SUBSTITUTION&apos;
-</code></pre><h2 id="2&#x3001;docker&#x5B89;&#x88C5;&#x95EE;&#x9898;">2&#x3001;docker&#x5B89;&#x88C5;&#x95EE;&#x9898;</h2>
+sql_mode=<span class="hljs-comment">&apos;NO_ENGINE_SUBSTITUTION&apos;</span>
+</code></pre>
+<h2 id="2&#x3001;docker&#x5B89;&#x88C5;&#x95EE;&#x9898;">2&#x3001;docker&#x5B89;&#x88C5;&#x95EE;&#x9898;</h2>
 <h3 id="21&#x3001;&#x4F7F;&#x7528;-yum-&#x5B89;&#x88C5;">2.1&#x3001;&#x4F7F;&#x7528; yum &#x5B89;&#x88C5;</h3>
 <pre><code>http://www.runoob.com/docker/centos-docker-install.html
 Docker &#x8981;&#x6C42; CentOS &#x7CFB;&#x7EDF;&#x7684;&#x5185;&#x6838;&#x7248;&#x672C;&#x9AD8;&#x4E8E; 3.10 &#xFF0C;&#x67E5;&#x770B;&#x672C;&#x9875;&#x9762;&#x7684;&#x524D;&#x63D0;&#x6761;&#x4EF6;&#x6765;&#x9A8C;&#x8BC1;&#x4F60;&#x7684;CentOS &#x7248;&#x672C;&#x662F;&#x5426;&#x652F;&#x6301; Docker &#x3002;
@@ -1378,18 +1380,18 @@ Docker &#x8981;&#x6C42; CentOS &#x7CFB;&#x7EDF;&#x7684;&#x5185;&#x6838;&#x7248;&
 [root@runoob ~]# yum -y install docker-io
 
 [root@runoob ~]# service docker start
-</code></pre><pre><code>&#x955C;&#x50CF;&#x52A0;&#x901F;
+</code></pre><pre><code class="lang-json">&#x955C;&#x50CF;&#x52A0;&#x901F;
 
  /etc/docker/daemon.json
 {
-  &quot;registry-mirrors&quot;: [&quot;http://hub-mirror.c.163.com&quot;]
+  <span class="hljs-string">&quot;registry-mirrors&quot;</span>: [<span class="hljs-string">&quot;http://hub-mirror.c.163.com&quot;</span>]
 }
 
-&#x955C;&#x50CF;&#x52A0;&#x901F; &#x963F;&#x91CC;&#x4E91; &#x9488;&#x5BF9;Docker&#x5BA2;&#x6237;&#x7AEF;&#x7248;&#x672C;&#x5927;&#x4E8E;1.10.0&#x7684;&#x7528;&#x6237;
+&#x955C;&#x50CF;&#x52A0;&#x901F; &#x963F;&#x91CC;&#x4E91; &#x9488;&#x5BF9;Docker&#x5BA2;&#x6237;&#x7AEF;&#x7248;&#x672C;&#x5927;&#x4E8E;<span class="hljs-number">1.10</span><span class="hljs-number">.0</span>&#x7684;&#x7528;&#x6237;
 sudo mkdir -p /etc/docker
-sudo tee /etc/docker/daemon.json &lt;&lt;-&apos;EOF&apos;
+sudo tee /etc/docker/daemon.json &lt;&lt;-<span class="hljs-string">&apos;EOF&apos;</span>
 {
-  &quot;registry-mirrors&quot;: [&quot;https://eo6mflje.mirror.aliyuncs.com&quot;]
+  <span class="hljs-string">&quot;registry-mirrors&quot;</span>: [<span class="hljs-string">&quot;https://eo6mflje.mirror.aliyuncs.com&quot;</span>]
 }
 EOF
 sudo systemctl daemon-reload
@@ -1401,24 +1403,25 @@ docker info
 
 Dockers &#x670D;&#x52A1;&#x5F00;&#x673A;&#x542F;&#x52A8;&#xFF1A;
 sudo systemctl enable docker.service
-</code></pre><pre><code>&#x5B89;&#x88C5;docker&#xFF0C;&#x542F;&#x52A8;&#x4E0D;&#x6210;&#x529F;&#xFF0C;&#x62A5;&#x9519;&#x4FE1;&#x606F;  
+</code></pre>
+<pre><code class="lang-sh">&#x5B89;&#x88C5;docker&#xFF0C;&#x542F;&#x52A8;&#x4E0D;&#x6210;&#x529F;&#xFF0C;&#x62A5;&#x9519;&#x4FE1;&#x606F;  
 https://www.2cto.com/net/201803/730799.html
 
-Error starting daemon: SELinux is not supported with the overlay2 graph driver on this kernel. Either boot into a newer kernel or disable selinux in docker (--selinux-enabled=false)
+Error starting daemon: SELinux is not supported with the overlay2 graph driver on this kernel. Either boot into a newer kernel or <span class="hljs-built_in">disable</span> selinux <span class="hljs-keyword">in</span> docker (--selinux-enabled=<span class="hljs-literal">false</span>)
 
-&#x610F;&#x601D;&#x662F;&#x8BF4;&#xFF1A;&#x6B64;linux&#x7684;&#x5185;&#x6838;&#x4E2D;&#x7684;SELinux&#x4E0D;&#x652F;&#x6301; overlay2 graph driver &#xFF0C;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x6709;&#x4E24;&#x4E2A;&#xFF0C;&#x8981;&#x4E48;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x65B0;&#x5185;&#x6838;&#xFF0C;&#x8981;&#x4E48;&#x5C31;&#x5728;docker&#x91CC;&#x7981;&#x7528;selinux&#xFF0C;--selinux-enabled=false
+&#x610F;&#x601D;&#x662F;&#x8BF4;&#xFF1A;&#x6B64;linux&#x7684;&#x5185;&#x6838;&#x4E2D;&#x7684;SELinux&#x4E0D;&#x652F;&#x6301; overlay2 graph driver &#xFF0C;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x6709;&#x4E24;&#x4E2A;&#xFF0C;&#x8981;&#x4E48;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x65B0;&#x5185;&#x6838;&#xFF0C;&#x8981;&#x4E48;&#x5C31;&#x5728;docker&#x91CC;&#x7981;&#x7528;selinux&#xFF0C;--selinux-enabled=<span class="hljs-literal">false</span>
 
 &#x91CD;&#x65B0;&#x7F16;&#x8F91;docker&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;
 
 vi /etc/sysconfig/docker
 
-&#x8BBE;&#x7F6E; --selinux-enabled=false
+&#x8BBE;&#x7F6E; --selinux-enabled=<span class="hljs-literal">false</span>
 
 &#x7136;&#x540E;systemctl start docker
 
 
 &#x767B;&#x9646;&#x4ED3;&#x5E93;&#x5931;&#x8D25;&#x65F6;&#xFF1A;
-[root@localhost ~]# docker login http://registry.saiwentech.com:35000
+[root@localhost ~]<span class="hljs-comment"># docker login http://registry.saiwentech.com:35000</span>
 Username: yqxu
 Password: 
 Error response from daemon: Get https://registry.saiwentech.com:35000/v1/users/: http: server gave HTTP response to HTTPS client
@@ -1430,8 +1433,8 @@ Error response from daemon: Get https://registry.saiwentech.com:35000/v1/users/:
 &#x518D;&#x91CD;&#x542F;
 systemctl daemon-reload
 sudo systemctl restart docker
-</code></pre><pre><code>
-Ubuntu 16.04&#xFF08;LTS&#xFF09;&#x5B89;&#x88C5;dockerI
+</code></pre>
+<pre><code class="lang-c">Ubuntu <span class="hljs-number">16.04</span>&#xFF08;LTS&#xFF09;&#x5B89;&#x88C5;dockerI
 
 $ sudo apt-get update
 
@@ -1446,7 +1449,8 @@ $ systemctl status docker
 $ sudo systemctl start docker
 
 sudo apt-get update &amp;&amp; sudo apt-get upgrade
-</code></pre><hr>
+</code></pre>
+<hr>
 <h3 id="22&#x3001;&#x5B89;&#x88C5;mongo">2.2&#x3001;&#x5B89;&#x88C5;mongo</h3>
 <pre><code>http://www.runoob.com/docker/docker-install-mongodb.html
 docker search mongo    &#x67E5;&#x627E;Docker Hub&#x4E0A;&#x7684;mongo&#x955C;&#x50CF;
@@ -1479,7 +1483,7 @@ You are using 1.3.3, from July 2015.
 
 You need to upgrade to a more recent version to use the version 2 format configuration files.
 </code></pre><h3 id="24&#x3001;&#x963F;&#x91CC;&#x4E91;&#x955C;&#x50CF;push">2.4&#x3001;&#x963F;&#x91CC;&#x4E91;&#x955C;&#x50CF;push</h3>
-<pre><code>
+<pre><code class="lang-c">
 * &#x955C;&#x50CF;&#x4E0A;&#x4F20;&#x963F;&#x91CC;&#x4E91; cr.console.aliyun.com
 
 
@@ -1487,11 +1491,12 @@ You need to upgrade to a more recent version to use the version 2 format configu
   $ sudo docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/saiwen/ucp:[&#x955C;&#x50CF;&#x7248;&#x672C;&#x53F7;]
   $ sudo docker push registry.cn-hangzhou.aliyuncs.com/saiwen/ucp:[&#x955C;&#x50CF;&#x7248;&#x672C;&#x53F7;]
 
-  sudo docker push registry.cn-hangzhou.aliyuncs.com/saiwen/ucp:1.1.7
-  sudo docker push registry.cn-hangzhou.aliyuncs.com/saiwen/ucp:mysql_5.7.7
-  sodu docker push registry.cn-hangzhou.aliyuncs.com/saiwen/ucp:mongo_3.2.9
-</code></pre><h3 id="25&#x3001;&#x6D4B;&#x8BD5;-run-&#x8FD0;&#x884C;&#x5BB9;&#x5668;">2.5&#x3001;&#x6D4B;&#x8BD5; run &#x8FD0;&#x884C;&#x5BB9;&#x5668;</h3>
-<pre><code>docker run --name base -tid 170.18.10.40/library/baseenv:base /bin/bash
+  sudo docker push registry.cn-hangzhou.aliyuncs.com/saiwen/ucp:<span class="hljs-number">1.1</span><span class="hljs-number">.7</span>
+  sudo docker push registry.cn-hangzhou.aliyuncs.com/saiwen/ucp:mysql_5<span class="hljs-number">.7</span><span class="hljs-number">.7</span>
+  sodu docker push registry.cn-hangzhou.aliyuncs.com/saiwen/ucp:mongo_3<span class="hljs-number">.2</span><span class="hljs-number">.9</span>
+</code></pre>
+<h3 id="25&#x3001;&#x6D4B;&#x8BD5;-run-&#x8FD0;&#x884C;&#x5BB9;&#x5668;">2.5&#x3001;&#x6D4B;&#x8BD5; run &#x8FD0;&#x884C;&#x5BB9;&#x5668;</h3>
+<pre><code class="lang-js">docker run --name base -tid 170.18.10.40/library/baseenv:base /bin/bash
 
 dockcer pull tomcat:6.0.53
 
@@ -1507,63 +1512,65 @@ docker run -p 3306:3306 --name mymysql -v
 
 /mnt/opt/data/ucp1.1.7/mysql/data:/mysql_data -e
 MYSQL_ROOT_PASSWORD=Saiwen.web123 -d registry.cn-hangzhou.aliyuncs.com/saiwen/ucp:mysql_5.7.7
-</code></pre><h2 id="3&#x3001;&#x5176;&#x4ED6;">3&#x3001;&#x5176;&#x4ED6;</h2>
-<pre><code>&#x5220;&#x9664;&#x955C;&#x50CF;
-root@SZX1000041894:/home# docker tag centos 10.229.43.217:4000/xcb/centos
-root@SZX1000041894:/home# docker push 10.229.43.217:4000/xcb/centos
-Thepushrefersto a repository [10.229.43.217:4000/xcb/centos]
-5f70bf18a086: Pushed 
-4012bfb3d628: Pushed
-latest: digest: sha256:5b367dbc03f141bb5246b0dff6d5fc9c83d8b8d363d0962f3b7d344340e458f6 size: 1331
+</code></pre>
+<h2 id="3&#x3001;&#x5176;&#x4ED6;">3&#x3001;&#x5176;&#x4ED6;</h2>
+<pre><code class="lang-c">&#x5220;&#x9664;&#x955C;&#x50CF;
+root@SZX1000041894:/home<span class="hljs-meta"># docker tag centos 10.229.43.217:4000/xcb/centos</span>
+root@SZX1000041894:/home<span class="hljs-meta"># docker push 10.229.43.217:4000/xcb/centos</span>
+Thepushrefersto a repository [<span class="hljs-number">10.229</span><span class="hljs-number">.43</span><span class="hljs-number">.217</span>:<span class="hljs-number">4000</span>/xcb/centos]
+<span class="hljs-number">5f</span>70bf18a086: Pushed 
+<span class="hljs-number">4012</span>bfb3d628: Pushed
+latest: digest: sha256:<span class="hljs-number">5</span>b367dbc03f141bb5246b0dff6d5fc9c83d8b8d363d0962f3b7d344340e458f6 size: <span class="hljs-number">1331</span>
 
 
-curl -I -X DELETE http://10.229.43.217:4000/v2/xcb/centos/manifests/sha256:5b367dbc03f141bb5246b0dff6d5fc9c83d8b8d363d0962f3b7d344340e458f6
+curl -I -X DELETE http:<span class="hljs-comment">//10.229.43.217:4000/v2/xcb/centos/manifests/sha256:5b367dbc03f141bb5246b0dff6d5fc9c83d8b8d363d0962f3b7d344340e458f6</span>
 
 
-[root@localhost ~]# docker push 170.18.10.40/mobile/ucp:1.1.7
-The push refers to a repository [170.18.10.40/mobile/ucp]
-1f3c218e7747: Pushed 
-1aa8eb5ec174: Pushed 
+[root@localhost ~]<span class="hljs-meta"># docker push 170.18.10.40/mobile/ucp:1.1.7</span>
+The push refers to a repository [<span class="hljs-number">170.18</span><span class="hljs-number">.10</span><span class="hljs-number">.40</span>/mobile/ucp]
+<span class="hljs-number">1f</span>3c218e7747: Pushed 
+<span class="hljs-number">1</span>aa8eb5ec174: Pushed 
 e2d49ccaa5a2: Layer already exists 
-9d90c60e9085: Layer already exists 
+<span class="hljs-number">9</span>d90c60e9085: Layer already exists 
 a4bfb611c9db: Layer already exists 
 d73c31c5daa6: Layer already exists 
-1.1.7: digest: sha256:4868e041e23b987836a92e86bcc1620845fb0a81bcb0f6bf53f23f2bc58acbae size: 1588
+<span class="hljs-number">1.1</span><span class="hljs-number">.7</span>: digest: sha256:<span class="hljs-number">4868e041</span>e23b987836a92e86bcc1620845fb0a81bcb0f6bf53f23f2bc58acbae size: <span class="hljs-number">1588</span>
 
 
-curl -I -X DELETE http://170.18.10.40/v2/mobile/ucp/manifests/sha256:4868e041e23b987836a92e86bcc1620845fb0a81bcb0f6bf53f23f2bc58acbae
+curl -I -X DELETE http:<span class="hljs-comment">//170.18.10.40/v2/mobile/ucp/manifests/sha256:4868e041e23b987836a92e86bcc1620845fb0a81bcb0f6bf53f23f2bc58acbae</span>
 
-curl -I -X DELETE http://170.18.10.40/v2/ucpplus-b/ucp/manifests/sha256:2ddac3e05213f1f42f8e9cbe6780cad526a43ac8b3fc7deff5f8321400288e9e
-</code></pre><pre><code>  923  cd /mnt/home/mobile/ucp2.0/install/
+curl -I -X DELETE http:<span class="hljs-comment">//170.18.10.40/v2/ucpplus-b/ucp/manifests/sha256:2ddac3e05213f1f42f8e9cbe6780cad526a43ac8b3fc7deff5f8321400288e9e</span>
+</code></pre>
+<pre><code class="lang-sh">  923  <span class="hljs-built_in">cd</span> /mnt/home/mobile/ucp2.0/install/
   924  tar -xzvf coreplus.tar.gz 
   925  docker images
   926  docker pull 170.18.10.40/library/mysql:5.7.7_saiwen2
   927  docker images
   928  docker rmi 02db488f8684
   929  docker images
-  930  exit
+  930  <span class="hljs-built_in">exit</span>
   931  &#x573A;&#x5730;
-  932  cd /mnt/home/mobile/ucp2.0/
-  933  docker build -f docker/Dockerfile  -t ucp:2.0 .
-  934  docker run -it -v /mnt/opt/data/ucp2.0/config/ucp/:/opt/saiwentech/autoconfig/conf/ ucp:2.0 config -d
+  932  <span class="hljs-built_in">cd</span> /mnt/home/mobile/ucp2.0/
+  933  docker build <span class="hljs-_">-f</span> docker/Dockerfile  -t ucp:2.0 .
+  934  docker run -it -v /mnt/opt/data/ucp2.0/config/ucp/:/opt/saiwentech/autoconfig/conf/ ucp:2.0 config <span class="hljs-_">-d</span>
   935  docker images
-  936  cd ..
+  936  <span class="hljs-built_in">cd</span> ..
   937  docker ps
-  938  docker-compose -f docker-compose-ucp2.yml up -d
+  938  docker-compose <span class="hljs-_">-f</span> docker-compose-ucp2.yml up <span class="hljs-_">-d</span>
   939  docker ps
-  940  docker exec -it 859b4b980ab6 /bin/bash
-  941  docker run -it -v /mnt/opt/data/ucp2.0/config/ucp/:/opt/saiwentech/autoconfig/conf/ ucp:2.0 config -d
-  942  docker exec -it 859b4b980ab6 /bin/bash
+  940  docker <span class="hljs-built_in">exec</span> -it 859b4b980ab6 /bin/bash
+  941  docker run -it -v /mnt/opt/data/ucp2.0/config/ucp/:/opt/saiwentech/autoconfig/conf/ ucp:2.0 config <span class="hljs-_">-d</span>
+  942  docker <span class="hljs-built_in">exec</span> -it 859b4b980ab6 /bin/bash
   943  docker commit 859b4b980ab6 ucp:2.0
-  944  docker run -it -v /mnt/opt/data/ucp2.0/config/ucp/:/opt/saiwentech/autoconfig/conf/ ucp:2.0 config -d
+  944  docker run -it -v /mnt/opt/data/ucp2.0/config/ucp/:/opt/saiwentech/autoconfig/conf/ ucp:2.0 config <span class="hljs-_">-d</span>
   945  docker ps
-  946  docker exec -it 859b4b980ab6 /bin/bash
+  946  docker <span class="hljs-built_in">exec</span> -it 859b4b980ab6 /bin/bash
   947  docker commit 859b4b980ab6 ucp:2.0
-  948  docker run -it -v /mnt/opt/data/ucp2.0/config/ucp/:/opt/saiwentech/autoconfig/conf/ ucp:2.0 config -d
-  949  docker exec -it 859b4b980ab6 /bin/bash
-  950  docker run -it -v /mnt/opt/data/ucp2.0/config/ucp/:/opt/saiwentech/autoconfig/conf/ ucp:2.0 config -d
-  951  docker exec -it 859b4b980ab6 /bin/bash
-  952  docker run -it -v /mnt/opt/data/ucp2.0/config/ucp/:/opt/saiwentech/autoconfig/conf/ ucp:2.0 config -d
+  948  docker run -it -v /mnt/opt/data/ucp2.0/config/ucp/:/opt/saiwentech/autoconfig/conf/ ucp:2.0 config <span class="hljs-_">-d</span>
+  949  docker <span class="hljs-built_in">exec</span> -it 859b4b980ab6 /bin/bash
+  950  docker run -it -v /mnt/opt/data/ucp2.0/config/ucp/:/opt/saiwentech/autoconfig/conf/ ucp:2.0 config <span class="hljs-_">-d</span>
+  951  docker <span class="hljs-built_in">exec</span> -it 859b4b980ab6 /bin/bash
+  952  docker run -it -v /mnt/opt/data/ucp2.0/config/ucp/:/opt/saiwentech/autoconfig/conf/ ucp:2.0 config <span class="hljs-_">-d</span>
   953  docker stop mobile_ucp_db_1 mobile_ucp_mongo_db_1 mobile_ucp_1 
   954  docker rmi ucp:2.0
   955  docker rm 8e58c63d6a20
@@ -1572,47 +1579,48 @@ curl -I -X DELETE http://170.18.10.40/v2/ucpplus-b/ucp/manifests/sha256:2ddac3e0
   958  docker rmi ucp:2.0
   959  docker rm d1c87aa7a49a
   960  docker rmi ucp:2.0
-  961  cd ucp2.0/
-  962  docker build -f docker/Dockerfile  -t ucp:2.0 .
-  963  docker run -it -v /mnt/opt/data/ucp2.0/config/ucp/:/opt/saiwentech/autoconfig/conf/ ucp:2.0 config -d
+  961  <span class="hljs-built_in">cd</span> ucp2.0/
+  962  docker build <span class="hljs-_">-f</span> docker/Dockerfile  -t ucp:2.0 .
+  963  docker run -it -v /mnt/opt/data/ucp2.0/config/ucp/:/opt/saiwentech/autoconfig/conf/ ucp:2.0 config <span class="hljs-_">-d</span>
   964  docker rmi ucp:2.0
   965  docker rm e9c4c426b598
   966  docker rmi ucp:2.0
-  967  docker build -f docker/Dockerfile  -t ucp:2.0 .
-  968  docker run -it -v /mnt/opt/data/ucp2.0/config/ucp/:/opt/saiwentech/autoconfig/conf/ ucp:2.0 config -d
-  969  cd ..
-  970  docker-compose -f docker-compose-ucp2.yml up -d
+  967  docker build <span class="hljs-_">-f</span> docker/Dockerfile  -t ucp:2.0 .
+  968  docker run -it -v /mnt/opt/data/ucp2.0/config/ucp/:/opt/saiwentech/autoconfig/conf/ ucp:2.0 config <span class="hljs-_">-d</span>
+  969  <span class="hljs-built_in">cd</span> ..
+  970  docker-compose <span class="hljs-_">-f</span> docker-compose-ucp2.yml up <span class="hljs-_">-d</span>
   971  docker stop mobile_ucp_db_1 mobile_ucp_mongo_db_1 mobile_ucp_1 
-  972  docker-compose -f docker-compose-ucp2.yml up -d
+  972  docker-compose <span class="hljs-_">-f</span> docker-compose-ucp2.yml up <span class="hljs-_">-d</span>
   973  docker stop mobile_ucp_db_1 mobile_ucp_mongo_db_1 mobile_ucp_1 
-  974  docker-compose -f docker-compose-ucp2.yml up -d
+  974  docker-compose <span class="hljs-_">-f</span> docker-compose-ucp2.yml up <span class="hljs-_">-d</span>
   975  docker ps
-  976  docker exec it 15f0e8ed94d3 /bin/bash
-  977  docker exec -it 15f0e8ed94d3 /bin/bash
-  978  docker exec -it dbdde7107159 /bin/bash
-  979  docker exec -it 15f0e8ed94d3 /bin/bash
+  976  docker <span class="hljs-built_in">exec</span> it 15f0e8ed94d3 /bin/bash
+  977  docker <span class="hljs-built_in">exec</span> -it 15f0e8ed94d3 /bin/bash
+  978  docker <span class="hljs-built_in">exec</span> -it dbdde7107159 /bin/bash
+  979  docker <span class="hljs-built_in">exec</span> -it 15f0e8ed94d3 /bin/bash
   980  docker stop mobile_ucp_db_1 mobile_ucp_mongo_db_1 mobile_ucp_1 
-  981  docker-compose -f docker-compose-ucp2.yml up -d
+  981  docker-compose <span class="hljs-_">-f</span> docker-compose-ucp2.yml up <span class="hljs-_">-d</span>
   982  docker ps
-  983  docker exec -it  15f0e8ed94d3  /bin/bash
+  983  docker <span class="hljs-built_in">exec</span> -it  15f0e8ed94d3  /bin/bash
   984  docker ps
-  985  docker exec -it  3bc7d7b7ee35  /bin/bash
+  985  docker <span class="hljs-built_in">exec</span> -it  3bc7d7b7ee35  /bin/bash
   986  docker ps
-  987  docker exec -it 15f0e8ed94d3  /bin/bash
+  987  docker <span class="hljs-built_in">exec</span> -it 15f0e8ed94d3  /bin/bash
   988  docker stop mobile_ucp_1
-  989  docker-compose -f docker-compose-ucp2.yml up -d
+  989  docker-compose <span class="hljs-_">-f</span> docker-compose-ucp2.yml up <span class="hljs-_">-d</span>
   990  docker ps
-  991  docker exec -it 3bc7d7b7ee35  /bin/bash
+  991  docker <span class="hljs-built_in">exec</span> -it 3bc7d7b7ee35  /bin/bash
   992  docker stop mobile_ucp_db_1 mobile_ucp_mongo_db_1 mobile_ucp_1 
-  993  docker-compose -f docker-compose-ucp2.yml up -d
+  993  docker-compose <span class="hljs-_">-f</span> docker-compose-ucp2.yml up <span class="hljs-_">-d</span>
   994  docker stop mobile_ucp_1
-  995  docker-compose -f docker-compose-ucp2.yml up -d
+  995  docker-compose <span class="hljs-_">-f</span> docker-compose-ucp2.yml up <span class="hljs-_">-d</span>
   996  docker ps
-  997  docker exec -it 15f0e8ed94d3 /bin/bash
+  997  docker <span class="hljs-built_in">exec</span> -it 15f0e8ed94d3 /bin/bash
   998  rm -rf /mnt/opt/data/ucp2.0/mysql/data
   999  docker ps
- 1000  docker exec -it 15f0e8ed94d3 /bin/bas
-</code></pre><pre><code> &#x505C;&#x6B62;&#x5BB9;&#x5668;
+ 1000  docker <span class="hljs-built_in">exec</span> -it 15f0e8ed94d3 /bin/bas
+</code></pre>
+<pre><code class="lang-js"> &#x505C;&#x6B62;&#x5BB9;&#x5668;
  docker stop mobile_ucp_db_1 mobile_ucp_mongo_db_1 mobile_ucp_1
 
  &#x542F;&#x52A8;&#x5BB9;&#x5668;
@@ -1620,17 +1628,18 @@ curl -I -X DELETE http://170.18.10.40/v2/ucpplus-b/ucp/manifests/sha256:2ddac3e0
  docker-compose -f docker-compose-ucp2.yml up -d
 
  &#x91CD;&#x542F;&#x4E4B;&#x540E;&#x63D0;&#x4EA4;&#x955C;&#x50CF;
- docker commit 15f0e8ed94d3 ucp:2.0
+ docker commit <span class="hljs-number">15</span>f0e8ed94d3 ucp:<span class="hljs-number">2.0</span>
 
  &#x5BFC;&#x51FA;&#x955C;&#x50CF;
- docker save -o ucp2.0.tar ucp:2.0
+ docker save -o ucp2<span class="hljs-number">.0</span>.tar ucp:<span class="hljs-number">2.0</span>
 
  &#x8FDB;&#x5165;&#x5BB9;&#x5668;
- docker exec -it 15f0e8ed94d3 /bin/bash
+ docker exec -it <span class="hljs-number">15</span>f0e8ed94d3 /bin/bash
 
  &#x8FDB;&#x5165;&#x6570;&#x636E;&#x5E93;
  mysql -uroot -pSaiwen.web123
 </code></pre>
+
                                 
                                 </section>
                             
@@ -1669,7 +1678,7 @@ curl -I -X DELETE http://170.18.10.40/v2/ucpplus-b/ucp/manifests/sha256:2ddac3e0
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"docker","level":"3.2.1","depth":2,"next":{"title":"gitNote","level":"3.2.2","depth":2,"path":"编程/运维/gitNote.md","ref":"编程/运维/gitNote.md","articles":[]},"previous":{"title":"运维","level":"3.2","depth":1,"ref":"","articles":[{"title":"docker","level":"3.2.1","depth":2,"path":"编程/运维/docker.md","ref":"编程/运维/docker.md","articles":[]},{"title":"gitNote","level":"3.2.2","depth":2,"path":"编程/运维/gitNote.md","ref":"编程/运维/gitNote.md","articles":[]},{"title":"linuxNote","level":"3.2.3","depth":2,"path":"编程/运维/linuxNote-x.md","ref":"编程/运维/linuxNote-x.md","articles":[]},{"title":"nginx笔记","level":"3.2.4","depth":2,"path":"编程/运维/nginx笔记.md","ref":"编程/运维/nginx笔记.md","articles":[]},{"title":"shell语法","level":"3.2.5","depth":2,"path":"编程/运维/shell语法.md","ref":"编程/运维/shell语法.md","articles":[]},{"title":"定时执行脚本","level":"3.2.6","depth":2,"path":"编程/运维/定时执行脚本.md","ref":"编程/运维/定时执行脚本.md","articles":[]},{"title":"gitbook部署博客","level":"3.2.7","depth":2,"path":"编程/运维/gitbook部署博客.md","ref":"编程/运维/gitbook部署博客.md","articles":[]},{"title":"vuepress构建项目","level":"3.2.8","depth":2,"path":"编程/运维/vuepress构建项目.md","ref":"编程/运维/vuepress构建项目.md","articles":[]},{"title":"gitlab、github绑定自定义域名","level":"3.2.9","depth":2,"path":"编程/运维/gitlab、github绑定自定义域名.md","ref":"编程/运维/gitlab、github绑定自定义域名.md","articles":[]},{"title":"git平台docsify布署markdown文件","level":"3.2.10","depth":2,"path":"编程/运维/git平台docsify布署markdown文件.md","ref":"编程/运维/git平台docsify布署markdown文件.md","articles":[]},{"title":"gitlab、github、gitee布署mkdocs主题仓库","level":"3.2.11","depth":2,"path":"编程/运维/gitlab、github、gitee布署mkdocs主题仓库.md","ref":"编程/运维/gitlab、github、gitee布署mkdocs主题仓库.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/运维/docker.md","mtime":"2022-03-28T03:42:40.168Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-11T08:32:02.297Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"docker","level":"3.2.1","depth":2,"next":{"title":"gitNote","level":"3.2.2","depth":2,"path":"编程/运维/gitNote.md","ref":"编程/运维/gitNote.md","articles":[]},"previous":{"title":"运维","level":"3.2","depth":1,"ref":"","articles":[{"title":"docker","level":"3.2.1","depth":2,"path":"编程/运维/docker.md","ref":"编程/运维/docker.md","articles":[]},{"title":"gitNote","level":"3.2.2","depth":2,"path":"编程/运维/gitNote.md","ref":"编程/运维/gitNote.md","articles":[]},{"title":"linuxNote","level":"3.2.3","depth":2,"path":"编程/运维/linuxNote-x.md","ref":"编程/运维/linuxNote-x.md","articles":[]},{"title":"nginx笔记","level":"3.2.4","depth":2,"path":"编程/运维/nginx笔记.md","ref":"编程/运维/nginx笔记.md","articles":[]},{"title":"shell语法","level":"3.2.5","depth":2,"path":"编程/运维/shell语法.md","ref":"编程/运维/shell语法.md","articles":[]},{"title":"定时执行脚本","level":"3.2.6","depth":2,"path":"编程/运维/定时执行脚本.md","ref":"编程/运维/定时执行脚本.md","articles":[]},{"title":"gitbook部署博客","level":"3.2.7","depth":2,"path":"编程/运维/gitbook部署博客.md","ref":"编程/运维/gitbook部署博客.md","articles":[]},{"title":"vuepress构建项目","level":"3.2.8","depth":2,"path":"编程/运维/vuepress构建项目.md","ref":"编程/运维/vuepress构建项目.md","articles":[]},{"title":"gitlab、github绑定自定义域名","level":"3.2.9","depth":2,"path":"编程/运维/gitlab、github绑定自定义域名.md","ref":"编程/运维/gitlab、github绑定自定义域名.md","articles":[]},{"title":"git平台docsify布署markdown文件","level":"3.2.10","depth":2,"path":"编程/运维/git平台docsify布署markdown文件.md","ref":"编程/运维/git平台docsify布署markdown文件.md","articles":[]},{"title":"gitlab、github、gitee布署mkdocs主题仓库","level":"3.2.11","depth":2,"path":"编程/运维/gitlab、github、gitee布署mkdocs主题仓库.md","ref":"编程/运维/gitlab、github、gitee布署mkdocs主题仓库.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/运维/docker.md","mtime":"2022-06-17T05:43:30.587Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-17T08:46:43.576Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
