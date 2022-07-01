@@ -1293,75 +1293,131 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="mongo">mongo</h1>
-<p><br></p>
-<ul>
-<li><a href="#introducer">1&#x3001;&#x8BF4;&#x660E;</a></li>
-<li><a href="#crud">2&#x3001;&#x589E;&#x5220;&#x6539;&#x67E5;</a></li>
-<li><a href="#innerDocument">3&#x3001;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;mongo&#x5185;&#x5D4C;&#x6587;&#x6863;&#x7684;&#x67E5;&#x8BE2;&#x4E0E;&#x4FDD;&#x5B58;&#x3001;</a></li>
-</ul>
- <h2 id="introducer"></h2>
-
 <h2 id="1&#x3001;&#x8BF4;&#x660E;">1&#x3001;&#x8BF4;&#x660E;</h2>
-<pre><code>SQL&#x672F;&#x8BED;/&#x6982;&#x5FF5;     MongoDB&#x672F;&#x8BED;/&#x6982;&#x5FF5;     &#x89E3;&#x91CA;/&#x8BF4;&#x660E;
-database         database             &#x6570;&#x636E;&#x5E93;
-table             collection             &#x6570;&#x636E;&#x5E93;&#x8868;/&#x96C6;&#x5408;
-row             document             &#x6570;&#x636E;&#x8BB0;&#x5F55;&#x884C;/&#x6587;&#x6863;
-column             field                 &#x6570;&#x636E;&#x5B57;&#x6BB5;/&#x57DF;
-index             index                 &#x7D22;&#x5F15;
-table             joins                   &#x8868;&#x8FDE;&#x63A5;,MongoDB&#x4E0D;&#x652F;&#x6301;
-primary         key     primary key     &#x4E3B;&#x952E;,MongoDB&#x81EA;&#x52A8;&#x5C06;_id&#x5B57;&#x6BB5;&#x8BBE;&#x7F6E;&#x4E3A;&#x4E3B;&#x952E;
-</code></pre><pre><code>&#x542F;&#x52A8;mongo    /opt/sudytech/mongodb           ./bin/mongod --config mongo.conf
-                                             ./bin/mongod --config /opt/sudytech/mongodb/conf/mongo.conf 
+<table>
+<thead>
+<tr>
+<th>SQL&#x672F;&#x8BED;</th>
+<th>MongoDB&#x672F;&#x8BED;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>database</td>
+<td>database</td>
+<td>&#x6570;&#x636E;&#x5E93;</td>
+</tr>
+<tr>
+<td>table</td>
+<td>collection</td>
+<td>&#x6570;&#x636E;&#x5E93;&#x8868;/&#x96C6;&#x5408;</td>
+</tr>
+<tr>
+<td>row</td>
+<td>document</td>
+<td>&#x6570;&#x636E;&#x8BB0;&#x5F55;&#x884C;/&#x6587;&#x6863;</td>
+</tr>
+<tr>
+<td>column</td>
+<td>field</td>
+<td>&#x6570;&#x636E;&#x5B57;&#x6BB5;/&#x57DF;</td>
+</tr>
+<tr>
+<td>index</td>
+<td>index</td>
+<td>&#x7D22;&#x5F15;</td>
+</tr>
+<tr>
+<td>table</td>
+<td>joins</td>
+<td>&#x8868;&#x8FDE;&#x63A5;&#xFF0C;MongoDB&#x4E0D;&#x652F;&#x6301;</td>
+</tr>
+<tr>
+<td>primary</td>
+<td>key   primary key</td>
+<td>&#x4E3B;&#x952E;&#xFF0C;MongoDB&#x81EA;&#x52A8;&#x5C06;_id&#x5B57;&#x6BB5;&#x8BBE;&#x7F6E;&#x4E3A;&#x4E3B;&#x952E;</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-js">&#x542F;&#x52A8;mongo    /opt/sutech/mongodb           ./bin/mongod --config mongo.conf
+                                             ./bin/mongod --config /opt/sutech/mongodb/conf/mongo.conf 
 
 &#x542F;&#x52A8;mongo
-  /opt/sudytech/mongodb/bin/mongod --dbpath=/opt/sudytech/mongodb/data --logpath=/opt/sudytech/mongodb/logs --logappend  --port=27017 --fork
+/opt/sutech/mongodb/bin/mongod --dbpath=<span class="hljs-regexp">/opt/</span>sutech/mongodb/data --logpath=<span class="hljs-regexp">/opt/</span>sutech/mongodb/logs --logappend  --port=<span class="hljs-number">27017</span> --fork
 
 &#x767B;&#x9646;mongo
-cd /opt/sudytech/mongodb/bin
+cd /opt/sutech/mongodb/bin
 mongo
-</code></pre><pre><code>&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;
-    use test
-    db.test.insert({&quot;name&quot;:&quot;111&quot;})
-
-&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;    
-    use test
-    db.dropDatabase()
-
-&#x663E;&#x793A;&#x6570;&#x636E;&#x5E93;      show dbs
+</code></pre>
+<pre><code class="lang-sh">&#x663E;&#x793A;&#x6570;&#x636E;&#x5E93;      show dbs
 &#x663E;&#x793A;&#x96C6;&#x5408;&#xFF08;&#x8868;&#xFF09;  show collections
 &#x663E;&#x793A;&#x6587;&#x6863;&#xFF08;&#x884C;&#xFF09;  db.test.find()
-&#x590D;&#x5236;&#x6570;&#x636E;&#x5E93;      db.copyDatabase(&lt;from_dbname&gt;, &lt;to_dbname&gt;, &lt;from_hostname&gt;);  &#x4F8B;&#x5982;&#xFF1A;db.copyDatabase(&apos;test&apos;,&apos;test1&apos;);
+&#x590D;&#x5236;&#x6570;&#x636E;&#x5E93;      db.copyDatabase(&lt;from_dbname&gt;, &lt;to_dbname&gt;, &lt;from_hostname&gt;);  &#x4F8B;&#x5982;&#xFF1A;db.copyDatabase(<span class="hljs-string">&apos;test&apos;</span>,<span class="hljs-string">&apos;test1&apos;</span>);
+
+&#x521B;&#x5EFA;&#x6570;&#x636E;&#x5E93;
+    use <span class="hljs-built_in">test</span>
+    db.test.insert({<span class="hljs-string">&quot;name&quot;</span>:<span class="hljs-string">&quot;111&quot;</span>})
+
+&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;    
+    use <span class="hljs-built_in">test</span>
+    db.dropDatabase()
 
 
 &#x6309;&#x65F6;&#x95F4;&#x67E5;&#x8BE2;
-db.getCollection(&apos;mongomessage&apos;).find({createTime:{$gt:ISODate(&quot;2018-06-28T22:00:00.000Z&quot;)}}).count
+db.getCollection(<span class="hljs-string">&apos;mongomessage&apos;</span>).find({createTime:{<span class="hljs-variable">$gt</span>:ISODate(<span class="hljs-string">&quot;2018-06-28T22:00:00.000Z&quot;</span>)}}).count
 
-db.getCollection(&apos;mongomessage&apos;).find({fromAddress:&apos;uc_b:(71133)&#x4E00;&#x5361;&#x901A;&#x4F59;&#x989D;&#x63D0;&#x9192;&apos;,createTime:{$gt:ISODate(&quot;2018-06-28T22:00:00.000Z&quot;)}}).count()
+db.getCollection(<span class="hljs-string">&apos;mongomessage&apos;</span>).find({fromAddress:<span class="hljs-string">&apos;uc_b:(71133)&#x4E00;&#x5361;&#x901A;&#x4F59;&#x989D;&#x63D0;&#x9192;&apos;</span>,createTime:{<span class="hljs-variable">$gt</span>:ISODate(<span class="hljs-string">&quot;2018-06-28T22:00:00.000Z&quot;</span>)}}).count()
 
-db.getCollection(&apos;mongomessage&apos;).find({fromAddress:&apos;uc_b:(71135)&#x5B66;&#x751F;&#x8BFE;&#x8868;&#x4FE1;&#x606F;&#x63D0;&#x9192;&apos;,createTime:{$gt:ISODate(&quot;2018-06-28&quot;)}}).count()
+db.getCollection(<span class="hljs-string">&apos;mongomessage&apos;</span>).find({fromAddress:<span class="hljs-string">&apos;uc_b:(71135)&#x5B66;&#x751F;&#x8BFE;&#x8868;&#x4FE1;&#x606F;&#x63D0;&#x9192;&apos;</span>,createTime:{<span class="hljs-variable">$gt</span>:ISODate(<span class="hljs-string">&quot;2018-06-28&quot;</span>)}}).count()
 
-db.getCollection(&apos;mongomessage&apos;).find({fromAddress:&apos;uc_b:(71134)&#x6559;&#x5E08;&#x8BFE;&#x8868;&#x4FE1;&#x606F;&#x63D0;&#x9192;&apos;,createTime:{$gt:ISODate(&quot;2018-06-28T22:00:00.000Z&quot;)}}).count()
-</code></pre><pre><code>&#x5BFC;&#x51FA;&#x4E00;&#x4E2A;&#x8868;&#xFF08;&#x6587;&#x6863;&#xFF09;  E:\Program Files (x86)\mongo\bin&gt;mongoexport -d ucpplus1 -c mongomsgbody -o e:\mongomsgbody.bak.json
-&#x5BFC;&#x5165;&#x4E00;&#x4E2A;&#x8868;&#xFF08;&#x6587;&#x6863;&#xFF09;  E:\Program Files (x86)\mongo\bin&gt;  mongoimport -d test -c mongo1 e:\mongomsgbody.bak.json
+db.getCollection(<span class="hljs-string">&apos;mongomessage&apos;</span>).find({fromAddress:<span class="hljs-string">&apos;uc_b:(71134)&#x6559;&#x5E08;&#x8BFE;&#x8868;&#x4FE1;&#x606F;&#x63D0;&#x9192;&apos;</span>,createTime:{<span class="hljs-variable">$gt</span>:ISODate(<span class="hljs-string">&quot;2018-06-28T22:00:00.000Z&quot;</span>)}}).count()
+</code></pre>
+<pre><code class="lang-java">&#x5BFC;&#x51FA;&#x4E00;&#x4E2A;&#x8868;&#xFF08;&#x6587;&#x6863;&#xFF09;  E:\<span class="hljs-function">Program <span class="hljs-title">Files</span> <span class="hljs-params">(x86)</span>\mongo\bin&gt;mongoexport -d ucpplus1 -c mongomsgbody -o e:\mongomsgbody.bak.json
+&#x5BFC;&#x5165;&#x4E00;&#x4E2A;&#x8868;&#xFF08;&#x6587;&#x6863;&#xFF09;  E:\Program <span class="hljs-title">Files</span> <span class="hljs-params">(x86)</span>\mongo\bin&gt;mongoimport -d test -c mongo1 e:\mongomsgbody.bak.json
 
 
-&#x5BFC;&#x51FA;&#x6570;&#x636E;&#x5E93;&#xFF08;&#x5907;&#x4EFD;&#xFF09;  E:\Program Files (x86)\mongo\bin&gt;  mongodump -d ucpplus1 -o e:\my_mongodb_dump
-&#x5BFC;&#x5165;&#x6570;&#x636E;&#x5E93;&#xFF08;&#x8FD8;&#x539F;&#xFF09;  E:\Program Files (x86)\mongo\bin&gt;mongorestore -d ucpplus3 e:\ucpplus1_dump\ucpplus1
+&#x5BFC;&#x51FA;&#x6570;&#x636E;&#x5E93;&#xFF08;&#x5907;&#x4EFD;&#xFF09;  E:\Program <span class="hljs-title">Files</span> <span class="hljs-params">(x86)</span>\mongo\bin&gt;mongodump -d ucpplus1 -o e:\my_mongodb_dump
+&#x5BFC;&#x5165;&#x6570;&#x636E;&#x5E93;&#xFF08;&#x8FD8;&#x539F;&#xFF09;  E:\Program <span class="hljs-title">Files</span> <span class="hljs-params">(x86)</span>\mongo\bin&gt;mongorestore -d ucpplus3 e:\ucpplus1_dump\ucpplus1
+
 &#xFF08;&#x8FD8;&#x539F;&#x65F6;&#x7684;&#x6570;&#x636E;&#x76EE;&#x5F55;&#x5FC5;&#x987B;&#x662F;&#x539F;&#x6765;&#x65B0;&#x5EFA;&#x7684;&#x76EE;&#x5F55;&#x4E0E;&#x5907;&#x4EFD;&#x7684;&#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;&#x7ED3;&#x5408;&#x3002;&#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;&#x4E0E;&#x539F;&#x6765;&#x4E00;&#x6837;&#x662F;&#x8FD8;&#x539F;&#x6570;&#x636E;&#x3002;&#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;&#x4E0D;&#x4E00;&#x6837;&#x4F1A;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#xFF09;
-https://www.cnblogs.com/qingtianyu2015/p/5968400.html
+
+https:<span class="hljs-comment">//www.cnblogs.com/qingtianyu2015/p/5968400.html</span>
 
 ./mongodump -d ucpplus -o /home/mongobak/ucpplus/
-</code></pre><h2 id="crud"></h2>
+</span></code></pre>
+<hr>
+<pre><code class="lang-js">
+{ <span class="hljs-string">&quot;_id&quot;</span> : ObjectId(<span class="hljs-string">&quot;4e3f42f36266b5845052c03d&quot;</span>), <span class="hljs-string">&quot;Bpid&quot;</span> : [ { <span class="hljs-string">&quot;$ref&quot;</span> : <span class="hljs-string">&quot;B&quot;</span>, <span class="hljs-string">&quot;$id&quot;</span> : ObjectId(<span class="hljs-string">&quot;4e3f3de16266b5845052c036&quot;</span>) } ], <span class="hljs-string">&quot;value&quot;</span> : <span class="hljs-number">5</span> }  
 
+http:<span class="hljs-comment">//lhkzyz.iteye.com/blog/1669796</span>
+&#x5185;&#x5D4C;&#x6587;&#x6863;&#x67E5;&#x8BE2;
+    db.teacher.find(<span class="hljs-string">&quot;$elemMatch&quot;</span>:{<span class="hljs-string">&quot;students.age&quot;</span>:<span class="hljs-string">&quot;15&quot;</span>,<span class="hljs-string">&quot;students.hobby&quot;</span>:<span class="hljs-string">&quot;football&quot;</span>})  
+
+    db.teacher.find({<span class="hljs-string">&quot;students:&quot;</span>{<span class="hljs-string">&quot;$elemMatch&quot;</span>:{<span class="hljs-string">&quot;age&quot;</span>:<span class="hljs-string">&quot;15&quot;</span>,<span class="hljs-string">&quot;hobby&quot;</span>:<span class="hljs-string">&quot;football&quot;</span>}}})  
+
+
+&#x6B63;&#x5219;&#x67E5;&#x8BE2; &#xFF08;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;&#xFF09;
+    db.getCollection(<span class="hljs-string">&apos;channelmessagestate&apos;</span>).find({ <span class="hljs-string">&quot;orignTo&quot;</span> : { <span class="hljs-string">&quot;$regex&quot;</span> : <span class="hljs-string">&quot;.*uc_u:\\(2\\).*&quot;</span> , <span class="hljs-string">&quot;$options&quot;</span> : <span class="hljs-string">&quot;i&quot;</span>} } )
+
+    db.getCollection(<span class="hljs-string">&apos;channelmessagestate&apos;</span>).find({<span class="hljs-string">&quot;recipientBy.address&quot;</span>:{ <span class="hljs-string">&quot;$regex&quot;</span> : <span class="hljs-string">&quot;.*uc_u:\\(2\\).*&quot;</span> , <span class="hljs-string">&quot;$options&quot;</span> : <span class="hljs-string">&quot;i&quot;</span>} } )
+
+http:<span class="hljs-comment">//www.runoob.com/mongodb/mongodb-query.html</span>
+
+
+&#x6392;&#x5E8F;  sort()&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x6392;&#x5E8F;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x5E76;&#x4F7F;&#x7528; <span class="hljs-number">1</span> &#x548C; <span class="hljs-number">-1</span> &#x6765;&#x6307;&#x5B9A;&#x6392;&#x5E8F;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5176;&#x4E2D; <span class="hljs-number">1</span> &#x4E3A;&#x5347;&#x5E8F;&#x6392;&#x5217;&#xFF0C;&#x800C;<span class="hljs-number">-1</span>&#x662F;&#x7528;&#x4E8E;&#x964D;&#x5E8F;&#x6392;&#x5217;&#x3002;
+
+db.getCollection(<span class="hljs-string">&apos;mongomessage&apos;</span>).find({}).sort({<span class="hljs-string">&quot;createTime&quot;</span>:<span class="hljs-number">-1</span>})
+</code></pre>
 <h2 id="2&#x3001;&#x589E;&#x5220;&#x6539;&#x67E5;">2&#x3001;&#x589E;&#x5220;&#x6539;&#x67E5;</h2>
-<pre><code>1 &#x5217;&#x51FA;&#x5E76;&#x9009;&#x7528;
+<pre><code class="lang-sql">1 &#x5217;&#x51FA;&#x5E76;&#x9009;&#x7528;
 
 1.1 &#x5217;&#x51FA;&#x6240;&#x6709;&#x6570;&#x636E;&#x5E93;
-
 
 &gt; show dbs 
 local  0.000GB
 myblog 0.000GB
+
 
 1.2 &#x4F7F;&#x7528;&#x67D0;&#x4E2A;&#x6570;&#x636E;&#x5E93;
 
@@ -1382,6 +1438,7 @@ sessions
 users
 wangduanduan
 
+
 2 &#x63D2;&#x5165;&#x6570;&#x636E; insert(value)
 
 // &#x5728;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x96C6;&#x5408;&#x4E2D;&#x63D2;&#x5165;&#x6570;&#x636E;
@@ -1391,76 +1448,73 @@ Inserted 1 record(s) in 43ms
 // &#x5728;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x96C6;&#x5408;&#x4E2D;&#x63D2;&#x5165;&#x6570;&#x636E;,&#x96C6;&#x5408;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x96C6;&#x5408;&#x5E76;&#x63D2;&#x5165;
 &gt; db.students.insert({name:&apos;hh&apos;,age:23})
 Inserted 1 record(s) in 72ms
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-number">3</span> &#x67E5;&#x8BE2; find(option)
 
-3 &#x67E5;&#x8BE2; find(option)
-
-3.1 &#x67E5;&#x8BE2;&#x96C6;&#x5408;&#x91CC;&#x6240;&#x6709;&#x7684;&#x6587;&#x6863;
-
+<span class="hljs-number">3.1</span> &#x67E5;&#x8BE2;&#x96C6;&#x5408;&#x91CC;&#x6240;&#x6709;&#x7684;&#x6587;&#x6863;
 
 &gt; db.users.find()
-/* 1 */
+<span class="hljs-comment">/* 1 */</span>
 {
-  &quot;_id&quot; : ObjectId(&quot;583e908453be942d0c5419dc&quot;),
-  &quot;login_name&quot; : &quot;wangduanduan&quot;,
-  &quot;password&quot; : &quot;wrong age&quot;
+  <span class="hljs-string">&quot;_id&quot;</span> : ObjectId(<span class="hljs-string">&quot;583e908453be942d0c5419dc&quot;</span>),
+  <span class="hljs-string">&quot;login_name&quot;</span> : <span class="hljs-string">&quot;wangduanduan&quot;</span>,
+  <span class="hljs-string">&quot;password&quot;</span> : <span class="hljs-string">&quot;wrong age&quot;</span>
 }
 
-/* 2 */
+<span class="hljs-comment">/* 2 */</span>
 {
-  &quot;_id&quot; : ObjectId(&quot;583ed2a5cc9a937db049616d&quot;),
-  &quot;login_name&quot; : &quot;hh&quot;,
-  &quot;password&quot; : &quot;sdfsdf&quot;
+  <span class="hljs-string">&quot;_id&quot;</span> : ObjectId(<span class="hljs-string">&quot;583ed2a5cc9a937db049616d&quot;</span>),
+  <span class="hljs-string">&quot;login_name&quot;</span> : <span class="hljs-string">&quot;hh&quot;</span>,
+  <span class="hljs-string">&quot;password&quot;</span> : <span class="hljs-string">&quot;sdfsdf&quot;</span>
 }
 
-/* 3 */
+<span class="hljs-comment">/* 3 */</span>
 {
-  &quot;_id&quot; : ObjectId(&quot;583fb2e9b12f8b7a7aa37572&quot;),
-  &quot;name&quot; : &quot;wangduanduan&quot;,
-  &quot;age&quot; : 34.0
+  <span class="hljs-string">&quot;_id&quot;</span> : ObjectId(<span class="hljs-string">&quot;583fb2e9b12f8b7a7aa37572&quot;</span>),
+  <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;wangduanduan&quot;</span>,
+  <span class="hljs-string">&quot;age&quot;</span> : <span class="hljs-number">34.0</span>
 }
 
-/* 4 */
+<span class="hljs-comment">/* 4 */</span>
 {
-  &quot;_id&quot; : ObjectId(&quot;583fb707b12f8b7a7aa37573&quot;),
-  &quot;name&quot; : &quot;hh&quot;,
-  &quot;age&quot; : 23.0
+  <span class="hljs-string">&quot;_id&quot;</span> : ObjectId(<span class="hljs-string">&quot;583fb707b12f8b7a7aa37573&quot;</span>),
+  <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;hh&quot;</span>,
+  <span class="hljs-string">&quot;age&quot;</span> : <span class="hljs-number">23.0</span>
 }
 
-3.2 &#x6309;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;&#x6587;&#x6863;
+<span class="hljs-number">3.2</span> &#x6309;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;&#x6587;&#x6863;
 
-&gt; db.users.find({name:&apos;wangduanduan&apos;})
-/* 1 */
+&gt; db.users.find({name:<span class="hljs-string">&apos;wangduanduan&apos;</span>})
+<span class="hljs-comment">/* 1 */</span>
 {
-  &quot;_id&quot; : ObjectId(&quot;583fb2e9b12f8b7a7aa37572&quot;),
-  &quot;name&quot; : &quot;wangduanduan&quot;,
-  &quot;age&quot; : 34.0
+  <span class="hljs-string">&quot;_id&quot;</span> : ObjectId(<span class="hljs-string">&quot;583fb2e9b12f8b7a7aa37572&quot;</span>),
+  <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;wangduanduan&quot;</span>,
+  <span class="hljs-string">&quot;age&quot;</span> : <span class="hljs-number">34.0</span>
 }
 
 &#x6CE8;&#x610F;
 
-
-// &#x8FD9;&#x662F;&#x9519;&#x7684;&#xFF0C;&#x67E5;&#x4E0D;&#x5230;&#x7ED3;&#x679C;
-&gt; db.users.find({_id:&apos;583fb2e9b12f8b7a7aa37572&apos;})
-Fetched 0 record(s) in 1ms
-
+<span class="hljs-comment">// &#x8FD9;&#x662F;&#x9519;&#x7684;&#xFF0C;&#x67E5;&#x4E0D;&#x5230;&#x7ED3;&#x679C;</span>
+&gt; db.users.find({_id:<span class="hljs-string">&apos;583fb2e9b12f8b7a7aa37572&apos;</span>})
+Fetched <span class="hljs-number">0</span> record(s) <span class="hljs-keyword">in</span> <span class="hljs-number">1</span>ms
 
 
-// &#x8FD9;&#x662F;&#x6B63;&#x786E;&#x7684;
-&gt; db.users.find({_id:ObjectId(&apos;583fb2e9b12f8b7a7aa37572&apos;)})
-/* 1 */
+<span class="hljs-comment">// &#x8FD9;&#x662F;&#x6B63;&#x786E;&#x7684;</span>
+&gt; db.users.find({_id:ObjectId(<span class="hljs-string">&apos;583fb2e9b12f8b7a7aa37572&apos;</span>)})
+<span class="hljs-comment">/* 1 */</span>
 {
-  &quot;_id&quot; : ObjectId(&quot;583fb2e9b12f8b7a7aa37572&quot;),
-  &quot;name&quot; : &quot;wangduanduan&quot;,
-  &quot;age&quot; : 34.0
+  <span class="hljs-string">&quot;_id&quot;</span> : ObjectId(<span class="hljs-string">&quot;583fb2e9b12f8b7a7aa37572&quot;</span>),
+  <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;wangduanduan&quot;</span>,
+  <span class="hljs-string">&quot;age&quot;</span> : <span class="hljs-number">34.0</span>
 }
 
-3.3 &#x67E5;&#x8BE2;&#x96C6;&#x5408;&#x5185;&#x6587;&#x6863;&#x7684;&#x4E2A;&#x6570;
 
+<span class="hljs-number">3.3</span> &#x67E5;&#x8BE2;&#x96C6;&#x5408;&#x5185;&#x6587;&#x6863;&#x7684;&#x4E2A;&#x6570;
 
 &gt; db.users.count()
-4
+<span class="hljs-number">4</span>
 
-3.4 &#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;
+<span class="hljs-number">3.4</span> &#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;
 
 $gt: &#x5927;&#x4E8E;
 
@@ -1473,88 +1527,87 @@ $lte: &#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;
 $ne: &#x4E0D;&#x7B49;&#x4E8E;
 
 
-// &#x67E5;&#x8BE2;&#x7528;&#x6237;&#x91CC;&#x5E74;&#x9F84;&#x5927;&#x4E8E;30&#x5C81;&#x7684;&#x4EBA;&#xFF0C; &#x5176;&#x4ED6;&#x6761;&#x4EF6;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;
-&gt; db.user.find({age:{$gt:30}})
+<span class="hljs-comment">// &#x67E5;&#x8BE2;&#x7528;&#x6237;&#x91CC;&#x5E74;&#x9F84;&#x5927;&#x4E8E;30&#x5C81;&#x7684;&#x4EBA;&#xFF0C; &#x5176;&#x4ED6;&#x6761;&#x4EF6;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;</span>
+&gt; db.user.find({age:{$gt:<span class="hljs-number">30</span>}})
 
-/* 1 */
+<span class="hljs-comment">/* 1 */</span>
 {
-  &quot;_id&quot; : ObjectId(&quot;583fb2e9b12f8b7a7aa37572&quot;),
-  &quot;name&quot; : &quot;wangduanduan&quot;,
-  &quot;age&quot; : 34.0
+  <span class="hljs-string">&quot;_id&quot;</span> : ObjectId(<span class="hljs-string">&quot;583fb2e9b12f8b7a7aa37572&quot;</span>),
+  <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;wangduanduan&quot;</span>,
+  <span class="hljs-string">&quot;age&quot;</span> : <span class="hljs-number">34.0</span>
 }
 
-3.5 &#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;
 
-3.5.1 &#x4E0E;
+<span class="hljs-number">3.5</span> &#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;
 
-// &#x67E5;&#x8BE2;&#x540D;&#x5B57;&#x662F;wangduanduan,age=34&#x7684;&#x7528;&#x6237;
-&gt; db.users.find({name:&apos;wangduanduan&apos;,age:34})
-/* 1 */
+<span class="hljs-number">3.5</span><span class="hljs-number">.1</span> &#x4E0E;
+
+<span class="hljs-comment">// &#x67E5;&#x8BE2;&#x540D;&#x5B57;&#x662F;wangduanduan,age=34&#x7684;&#x7528;&#x6237;</span>
+&gt; db.users.find({name:<span class="hljs-string">&apos;wangduanduan&apos;</span>,age:<span class="hljs-number">34</span>})
+<span class="hljs-comment">/* 1 */</span>
 {
-  &quot;_id&quot; : ObjectId(&quot;583fb2e9b12f8b7a7aa37572&quot;),
-  &quot;name&quot; : &quot;wangduanduan&quot;,
-  &quot;age&quot; : 34.0
+  <span class="hljs-string">&quot;_id&quot;</span> : ObjectId(<span class="hljs-string">&quot;583fb2e9b12f8b7a7aa37572&quot;</span>),
+  <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;wangduanduan&quot;</span>,
+  <span class="hljs-string">&quot;age&quot;</span> : <span class="hljs-number">34.0</span>
 }
 
-3.5.2 $in &#x6216;
+<span class="hljs-number">3.5</span><span class="hljs-number">.2</span> $<span class="hljs-keyword">in</span> &#x6216;
 
-
-// &#x67E5;&#x8BE2;&#x540D;&#x5B57;&#x662F;wangduanduan,&#x6216;hh&#x7684;&#x7528;&#x6237;
-&gt; db.users.find({name:{$in:[&apos;wangduanduan&apos;,&apos;hh&apos;]}})
-/* 1 */
+<span class="hljs-comment">// &#x67E5;&#x8BE2;&#x540D;&#x5B57;&#x662F;wangduanduan,&#x6216;hh&#x7684;&#x7528;&#x6237;</span>
+&gt; db.users.find({name:{$<span class="hljs-keyword">in</span>:[<span class="hljs-string">&apos;wangduanduan&apos;</span>,<span class="hljs-string">&apos;hh&apos;</span>]}})
+<span class="hljs-comment">/* 1 */</span>
 {
-  &quot;_id&quot; : ObjectId(&quot;583fb2e9b12f8b7a7aa37572&quot;),
-  &quot;name&quot; : &quot;wangduanduan&quot;,
-  &quot;age&quot; : 34.0
+  <span class="hljs-string">&quot;_id&quot;</span> : ObjectId(<span class="hljs-string">&quot;583fb2e9b12f8b7a7aa37572&quot;</span>),
+  <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;wangduanduan&quot;</span>,
+  <span class="hljs-string">&quot;age&quot;</span> : <span class="hljs-number">34.0</span>
 }
 
-3.5.3 $nin &#x975E;
+<span class="hljs-number">3.5</span><span class="hljs-number">.3</span> $nin &#x975E;
 
-
-// &#x67E5;&#x8BE2;&#x540D;&#x5B57;&#x4E0D;&#x662F;wangduanduan&#x6216;&#x8005;hh&#x7684;&#x7528;&#x6237;
-&gt; db.users.find({name:{$nin:[&apos;wangduanduan&apos;,&apos;hh&apos;]}})
-/* 1 */
+<span class="hljs-comment">// &#x67E5;&#x8BE2;&#x540D;&#x5B57;&#x4E0D;&#x662F;wangduanduan&#x6216;&#x8005;hh&#x7684;&#x7528;&#x6237;</span>
+&gt; db.users.find({name:{$nin:[<span class="hljs-string">&apos;wangduanduan&apos;</span>,<span class="hljs-string">&apos;hh&apos;</span>]}})
+<span class="hljs-comment">/* 1 */</span>
 {
-  &quot;_id&quot; : ObjectId(&quot;583e908453be942d0c5419dc&quot;),
-  &quot;login_name&quot; : &quot;wangduanduan&quot;,
-  &quot;password&quot; : &quot;wrong age&quot;
+  <span class="hljs-string">&quot;_id&quot;</span> : ObjectId(<span class="hljs-string">&quot;583e908453be942d0c5419dc&quot;</span>),
+  <span class="hljs-string">&quot;login_name&quot;</span> : <span class="hljs-string">&quot;wangduanduan&quot;</span>,
+  <span class="hljs-string">&quot;password&quot;</span> : <span class="hljs-string">&quot;wrong age&quot;</span>
 }
 
-/* 2 */
+<span class="hljs-comment">/* 2 */</span>
 {
-  &quot;_id&quot; : ObjectId(&quot;583ed2a5cc9a937db049616d&quot;),
-  &quot;login_name&quot; : &quot;hh&quot;,
-  &quot;password&quot; : &quot;sdfsdf&quot;
+  <span class="hljs-string">&quot;_id&quot;</span> : ObjectId(<span class="hljs-string">&quot;583ed2a5cc9a937db049616d&quot;</span>),
+  <span class="hljs-string">&quot;login_name&quot;</span> : <span class="hljs-string">&quot;hh&quot;</span>,
+  <span class="hljs-string">&quot;password&quot;</span> : <span class="hljs-string">&quot;sdfsdf&quot;</span>
 }
 
-3.6 &#x6B63;&#x5219;&#x5339;&#x914D;
 
+<span class="hljs-number">3.6</span> &#x6B63;&#x5219;&#x5339;&#x914D;
 
-// &#x67E5;&#x8BE2;&#x540D;&#x5B57;&#x662F;&#x4E2D;&#x542B;&#x6709;duan&#x7684;&#x7528;&#x6237;
-&gt; db.users.find({name:/duan/})
-/* 1 */
+<span class="hljs-comment">// &#x67E5;&#x8BE2;&#x540D;&#x5B57;&#x662F;&#x4E2D;&#x542B;&#x6709;duan&#x7684;&#x7528;&#x6237;</span>
+&gt; db.users.find({name:<span class="hljs-regexp">/duan/</span>})
+<span class="hljs-comment">/* 1 */</span>
 {
-  &quot;_id&quot; : ObjectId(&quot;583fb2e9b12f8b7a7aa37572&quot;),
-  &quot;name&quot; : &quot;wangduanduan&quot;,
-  &quot;age&quot; : 34.0
+  <span class="hljs-string">&quot;_id&quot;</span> : ObjectId(<span class="hljs-string">&quot;583fb2e9b12f8b7a7aa37572&quot;</span>),
+  <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;wangduanduan&quot;</span>,
+  <span class="hljs-string">&quot;age&quot;</span> : <span class="hljs-number">34.0</span>
 }
 
-/* 2 */
+<span class="hljs-comment">/* 2 */</span>
 {
-  &quot;_id&quot; : ObjectId(&quot;583fc919b12f8b7a7aa37575&quot;),
-  &quot;name&quot; : &quot;wangduanduan&quot;,
-  &quot;age&quot; : 45.0
+  <span class="hljs-string">&quot;_id&quot;</span> : ObjectId(<span class="hljs-string">&quot;583fc919b12f8b7a7aa37575&quot;</span>),
+  <span class="hljs-string">&quot;name&quot;</span> : <span class="hljs-string">&quot;wangduanduan&quot;</span>,
+  <span class="hljs-string">&quot;age&quot;</span> : <span class="hljs-number">45.0</span>
 }
 
-3.7 &#x5927;&#x62DB;$where
 
+<span class="hljs-number">3.7</span> &#x5927;&#x62DB;$where
 
-// &#x8FD4;&#x56DE;&#x542B;&#x6709;login_name&#x5B57;&#x6BB5;&#x7684;&#x6587;&#x6863;
-db.getCollection(&apos;users&apos;).find({$where:function(){
-  return !!this.login_name;
+<span class="hljs-comment">// &#x8FD4;&#x56DE;&#x542B;&#x6709;login_name&#x5B57;&#x6BB5;&#x7684;&#x6587;&#x6863;</span>
+db.getCollection(<span class="hljs-string">&apos;users&apos;</span>).find({$where:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">return</span> !!<span class="hljs-keyword">this</span>.login_name;
 }})
-
-4 &#x66F4;&#x65B0; update();
+</code></pre>
+<pre><code class="lang-sql">4 &#x66F4;&#x65B0; update();
 
 4.1 &#x6574;&#x4F53;&#x66F4;&#x65B0;
 
@@ -1595,6 +1648,7 @@ db.student.update({&quot;name&quot;:&quot;&#x674E;&#x56DB;&quot;,&quot;class&quo
 // upadate &#x7684;&#x7B2C;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x6210;true&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F1A;&#x6279;&#x91CF;&#x66F4;&#x65B0;
 &gt; db.users.update({name:&apos;wangduanduan&apos;},{$set:{age:1891}},false,true)
 
+
 5 &#x5220;&#x9664;
 
 // &#x5220;&#x9664;&#x67D0;&#x4E9B;&#x6587;&#x6863;
@@ -1603,48 +1657,12 @@ db.person.remove({&quot;name&quot;:&quot;joe&quot;})
 // &#x5220;&#x9664;&#x6574;&#x4E2A;&#x96C6;&#x5408;
 db.test1.remove({})   &#x5220;&#x9664;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6587;&#x6863;
 db.test1.drop()       &#x5220;&#x9664;&#x96C6;&#x5408;
-
-&#x590D;&#x5236;&#x6570;&#x636E;&#x5E93;      db.copyDatabase(&lt;from_dbname&gt;, &lt;to_dbname&gt;, &lt;from_hostname&gt;);  &#x4F8B;&#x5982;&#xFF1A;db.copyDatabase(&apos;test&apos;,&apos;test1&apos;);
-
-&#x5BFC;&#x51FA;&#x4E00;&#x4E2A;&#x8868;&#xFF08;&#x6587;&#x6863;&#xFF09;  E:\Program Files (x86)\mongo\bin&gt;mongoexport -d ucpplus1 -c mongomsgbody -o e:\mongomsgbody.bak.json
-&#x5BFC;&#x5165;&#x4E00;&#x4E2A;&#x8868;&#xFF08;&#x6587;&#x6863;&#xFF09;  E:\Program Files (x86)\mongo\bin&gt;  mongoimport -d test -c mongo1 e:\mongomsgbody.bak.json
-
-
-&#x5BFC;&#x51FA;&#x6570;&#x636E;&#x5E93;&#xFF08;&#x5907;&#x4EFD;&#xFF09;  E:\Program Files (x86)\mongo\bin&gt;  mongodump -d ucpplus1 -o e:\my_mongodb_dump
-&#x5BFC;&#x5165;&#x6570;&#x636E;&#x5E93;&#xFF08;&#x8FD8;&#x539F;&#xFF09;  E:\Program Files (x86)\mongo\bin&gt;mongorestore -d ucpplus3 e:\ucpplus1_dump\ucpplus1
-&#xFF08;&#x8FD8;&#x539F;&#x65F6;&#x7684;&#x6570;&#x636E;&#x76EE;&#x5F55;&#x5FC5;&#x987B;&#x662F;&#x539F;&#x6765;&#x65B0;&#x5EFA;&#x7684;&#x76EE;&#x5F55;&#x4E0E;&#x5907;&#x4EFD;&#x7684;&#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;&#x7ED3;&#x5408;&#x3002;&#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;&#x4E0E;&#x539F;&#x6765;&#x4E00;&#x6837;&#x662F;&#x8FD8;&#x539F;&#x6570;&#x636E;&#x3002;&#x6570;&#x636E;&#x5E93;&#x540D;&#x79F0;&#x4E0D;&#x4E00;&#x6837;&#x4F1A;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#xFF09;
-https://www.cnblogs.com/qingtianyu2015/p/5968400.html
-
-./mongodump -d ucpplus -o /home/mongobak/ucpplus/
-
-
-{ &quot;_id&quot; : ObjectId(&quot;4e3f42f36266b5845052c03d&quot;), &quot;Bpid&quot; : [ { &quot;$ref&quot; : &quot;B&quot;, &quot;$id&quot; : ObjectId(&quot;4e3f3de16266b5845052c036&quot;) } ], &quot;value&quot; : 5 }  
-
-http://lhkzyz.iteye.com/blog/1669796
-&#x5185;&#x5D4C;&#x6587;&#x6863;&#x67E5;&#x8BE2;
-    db.teacher.find(&quot;$elemMatch&quot;:{&quot;students.age&quot;:&quot;15&quot;,&quot;students.hobby&quot;:&quot;football&quot;})  
-
-    db.teacher.find({&quot;students:&quot;{&quot;$elemMatch&quot;:{&quot;age&quot;:&quot;15&quot;,&quot;hobby&quot;:&quot;football&quot;}}})  
-
-
-    &#x6B63;&#x5219;&#x67E5;&#x8BE2; &#xFF08;&#x5FFD;&#x7565;&#x5927;&#x5C0F;&#x5199;&#xFF09;
-    db.getCollection(&apos;channelmessagestate&apos;).find({ &quot;orignTo&quot; : { &quot;$regex&quot; : &quot;.*uc_u:\\(2\\).*&quot; , &quot;$options&quot; : &quot;i&quot;} } )
-    db.getCollection(&apos;channelmessagestate&apos;).find({&quot;recipientBy.address&quot;:{ &quot;$regex&quot; : &quot;.*uc_u:\\(2\\).*&quot; , &quot;$options&quot; : &quot;i&quot;} } )
-
-http://www.runoob.com/mongodb/mongodb-query.html
-
-
-&#x6392;&#x5E8F;  sort()&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x6392;&#x5E8F;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x5E76;&#x4F7F;&#x7528; 1 &#x548C; -1 &#x6765;&#x6307;&#x5B9A;&#x6392;&#x5E8F;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5176;&#x4E2D; 1 &#x4E3A;&#x5347;&#x5E8F;&#x6392;&#x5217;&#xFF0C;&#x800C;-1&#x662F;&#x7528;&#x4E8E;&#x964D;&#x5E8F;&#x6392;&#x5217;&#x3002;
-
-db.getCollection(&apos;mongomessage&apos;).find({}).sort({&quot;createTime&quot;:-1})
-</code></pre> <h2 id="innerDocument"></h2>
-
+</code></pre>
 <h2 id="3&#x3001;&#x5185;&#x5D4C;&#x6587;&#x6863;">3&#x3001;&#x5185;&#x5D4C;&#x6587;&#x6863;</h2>
 <blockquote>
 <p>&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;mongo&#x5185;&#x5D4C;&#x6587;&#x6863;&#x7684;&#x67E5;&#x8BE2;&#x4E0E;&#x4FDD;&#x5B58;</p>
 </blockquote>
-<pre><code>
-&#x4E00;&#x3001;&#x5185;&#x5D4C;&#x6587;&#x6863;&#xFF08;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF09;
+<pre><code class="lang-sql">&#x4E00;&#x3001;&#x5185;&#x5D4C;&#x6587;&#x6863;&#xFF08;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF09;
     &quot;recipientBy&quot; : {                                    // &#x53D1;&#x7ED9;&#x7528;&#x6237;&#x65F6;&#x6536;&#x4EF6;&#x4EBA;&#x7C7B;&#x578B;&#x3001;id&#x3001;&#x540D;&#x79F0;
             &quot;type&quot; : 0,
             &quot;address&quot; : &quot;uc_u:(2)71070001&quot;                   
@@ -1663,49 +1681,49 @@ db.demo.update({people_id:2, &quot;albums.id&quot;:2}, { $set : {&quot;albums.$.
 
 
 db.demo.update({ &quot;_id&quot; : { &quot;$oid&quot; : &quot;5ac2de789e15ae8da0b49493&quot;}},{ &quot;$set&quot; : { &quot;recipientBy.address&quot; : &quot;uc_b:(12)&#x5F20;hezi&quot;}})
-</code></pre><pre><code>
-2&#x3001;&#x5185;&#x5D4C;&#x6587;&#x6863;&#xFF08;&#x6570;&#x7EC4;&#x5185;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;&#xFF09;
-&quot;mongoChannelTargets&quot; : [                         //&#x6536;&#x4EF6;&#x5BF9;&#x8C61;              
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-number">2</span>&#x3001;&#x5185;&#x5D4C;&#x6587;&#x6863;&#xFF08;&#x6570;&#x7EC4;&#x5185;&#x591A;&#x4E2A;&#x5BF9;&#x8C61;&#xFF09;
+<span class="hljs-string">&quot;mongoChannelTargets&quot;</span> : [                         <span class="hljs-comment">//&#x6536;&#x4EF6;&#x5BF9;&#x8C61;              </span>
         {
-            &quot;channelIds&quot; : [ 
-                3, 
-                4
+            <span class="hljs-string">&quot;channelIds&quot;</span> : [ 
+                <span class="hljs-number">3</span>, 
+                <span class="hljs-number">4</span>
             ],
-            &quot;address&quot; : &quot;uc_o:(8)&#x91D1;&#x667A;&quot;,              //&#x6536;&#x4EF6;&#x4EBA;&#x4E3A;&#x673A;&#x6784;
-            &quot;type&quot; : 0
+            <span class="hljs-string">&quot;address&quot;</span> : <span class="hljs-string">&quot;uc_o:(8)&#x91D1;&#x667A;&quot;</span>,              <span class="hljs-comment">//&#x6536;&#x4EF6;&#x4EBA;&#x4E3A;&#x673A;&#x6784;</span>
+            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-number">0</span>
         }, 
         {
-            &quot;channelIds&quot; : [ 
-                3, 
-                4
+            <span class="hljs-string">&quot;channelIds&quot;</span> : [ 
+                <span class="hljs-number">3</span>, 
+                <span class="hljs-number">4</span>
             ],
-            &quot;address&quot; : &quot;uc_u:(7)&#x7EC4;&#x7528;&#x6237;1&quot;,          //&#x6536;&#x4EF6;&#x4EBA;&#x4E3A;&#x7528;&#x6237;
-            &quot;type&quot; : 0
+            <span class="hljs-string">&quot;address&quot;</span> : <span class="hljs-string">&quot;uc_u:(7)&#x7EC4;&#x7528;&#x6237;1&quot;</span>,          <span class="hljs-comment">//&#x6536;&#x4EF6;&#x4EBA;&#x4E3A;&#x7528;&#x6237;</span>
+            <span class="hljs-string">&quot;type&quot;</span> : <span class="hljs-number">0</span>
         }]
 
 
-https://blog.csdn.net/drifterj/article/details/7833883
-db.blogs.find({&quot;comment&quot;:{&quot;$elemMatch&quot;:{&quot;author&quot;:&quot;joe&quot;, &quot;score&quot;:{&quot;$gte&quot;:3}}}});  
+https:<span class="hljs-comment">//blog.csdn.net/drifterj/article/details/7833883</span>
+db.blogs.find({<span class="hljs-string">&quot;comment&quot;</span>:{<span class="hljs-string">&quot;$elemMatch&quot;</span>:{<span class="hljs-string">&quot;author&quot;</span>:<span class="hljs-string">&quot;joe&quot;</span>, <span class="hljs-string">&quot;score&quot;</span>:{<span class="hljs-string">&quot;$gte&quot;</span>:<span class="hljs-number">3</span>}}}});  
 
 
 
-https://blog.csdn.net/qq_20127333/article/details/51508863
+https:<span class="hljs-comment">//blog.csdn.net/qq_20127333/article/details/51508863</span>
 &#x64CD;&#x4F5C;&#x7B26;:$set&#x4FEE;&#x6539;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;
 
-&#x4F8B;&#x53E5;:db.blog.update({&quot;comments.testAdd&quot;:&quot;T&quot;},{$set:{&quot;comments.$.testAdd&quot;:&quot;z&quot;}});
+&#x4F8B;&#x53E5;:db.blog.update({<span class="hljs-string">&quot;comments.testAdd&quot;</span>:<span class="hljs-string">&quot;T&quot;</span>},{$set:{<span class="hljs-string">&quot;comments.$.testAdd&quot;</span>:<span class="hljs-string">&quot;z&quot;</span>}});
 
-&#x8FD9;&#x91CC;&#x6CE8;&#x610F;&#x7B2C;&#x4E00;&#x4E2A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x5FC5;&#x987B;&#x6570;&#x7EC4;.&#x5B57;&#x6BB5;&#x540D;&#xFF0C;&#x5426;&#x5219;&#x4FEE;&#x6539;&#x5931;&#x8D25;&#xFF0C;&#x6709;&#x4EBA;&#x53EF;&#x80FD;&#x4F1A;&#x95EE;&#x540E;&#x9762;&#x7684;{&quot;comments.$.testAdd&quot;:&quot;z&quot;}&#x4E2D;&#x7684;$&#x7B26;&#x662F;&#x5E72;&#x561B;&#x7528;&#x7684;,&#x4ED6;&#x5728;&#x8FD9;&#x91CC;&#x9762;&#x4EE3;&#x8868;&#x7684;&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x6570;&#x7EC4;&#x7684;&#x4E0B;&#x8868;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x660E;&#x786E;&#x7684;&#x77E5;&#x9053;&#x4E0B;&#x6807;&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x5199;&#xFF0C;&#x6BD4;&#x5982;&#x4E0B;&#x8868;&#x4E3A;0&#xFF1A;{&quot;comments.0.testAdd&quot;:&quot;z&quot;}&#xFF0C;&#x4F46;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#x6211;&#x4EEC;&#x662F;&#x4E0D;&#x77E5;&#x9053;&#x4E0B;&#x6807;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x7528;&#x901A;&#x914D;&#x7B26;$&#x6765;&#x8868;&#x793A;&#xFF0C;&#x8FD9;&#x6837;&#x53EA;&#x4F1A;&#x4FEE;&#x6539;&#x5339;&#x914D;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x5339;&#x914D;&#x5230;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x70B9;&#x9700;&#x8981;&#x6CE8;&#x610F;
+&#x8FD9;&#x91CC;&#x6CE8;&#x610F;&#x7B2C;&#x4E00;&#x4E2A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x5FC5;&#x987B;&#x6570;&#x7EC4;.&#x5B57;&#x6BB5;&#x540D;&#xFF0C;&#x5426;&#x5219;&#x4FEE;&#x6539;&#x5931;&#x8D25;&#xFF0C;&#x6709;&#x4EBA;&#x53EF;&#x80FD;&#x4F1A;&#x95EE;&#x540E;&#x9762;&#x7684;{<span class="hljs-string">&quot;comments.$.testAdd&quot;</span>:<span class="hljs-string">&quot;z&quot;</span>}&#x4E2D;&#x7684;$&#x7B26;&#x662F;&#x5E72;&#x561B;&#x7528;&#x7684;,&#x4ED6;&#x5728;&#x8FD9;&#x91CC;&#x9762;&#x4EE3;&#x8868;&#x7684;&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x6570;&#x7EC4;&#x7684;&#x4E0B;&#x8868;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x660E;&#x786E;&#x7684;&#x77E5;&#x9053;&#x4E0B;&#x6807;&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x5199;&#xFF0C;&#x6BD4;&#x5982;&#x4E0B;&#x8868;&#x4E3A;<span class="hljs-number">0</span>&#xFF1A;{<span class="hljs-string">&quot;comments.0.testAdd&quot;</span>:<span class="hljs-string">&quot;z&quot;</span>}&#xFF0C;&#x4F46;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#x6211;&#x4EEC;&#x662F;&#x4E0D;&#x77E5;&#x9053;&#x4E0B;&#x6807;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x7528;&#x901A;&#x914D;&#x7B26;$&#x6765;&#x8868;&#x793A;&#xFF0C;&#x8FD9;&#x6837;&#x53EA;&#x4F1A;&#x4FEE;&#x6539;&#x5339;&#x914D;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x5339;&#x914D;&#x5230;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x70B9;&#x9700;&#x8981;&#x6CE8;&#x610F;
 
 
-https://blog.csdn.net/leshami/article/details/55192965 
+https:<span class="hljs-comment">//blog.csdn.net/leshami/article/details/55192965 </span>
  db.students.update(
-        ... { _id: 7, &quot;grades.grade&quot;: 85 },
-        ... { $set: { &quot;grades.$.grade1&quot; : 6 } })
+        ... { _id: <span class="hljs-number">7</span>, <span class="hljs-string">&quot;grades.grade&quot;</span>: <span class="hljs-number">85</span> },
+        ... { $set: { <span class="hljs-string">&quot;grades.$.grade1&quot;</span> : <span class="hljs-number">6</span> } })
 
  db.demo.update(        
-{ &quot;mongoChannelTargets.address&quot; : &quot;uc_u:(2)&#x7EC4;&#x7528;&#x6237;111&quot; , &quot;_id&quot; : { &quot;$oid&quot; : &quot;5ac2de779e15ae8da0b49400&quot;}},{ &quot;$set&quot; : { &quot;mongoChannelTargets.$.address&quot; : &quot;uc_u:(11)&#x5F20;name&quot;}})
-</code></pre><pre><code>
- 3&#x3001;&#x5185;&#x5D4C;&#x6587;&#x6863;&#xFF08;&#x6570;&#x7EC4;&#xFF09;        
+{ <span class="hljs-string">&quot;mongoChannelTargets.address&quot;</span> : <span class="hljs-string">&quot;uc_u:(2)&#x7EC4;&#x7528;&#x6237;111&quot;</span> , <span class="hljs-string">&quot;_id&quot;</span> : { <span class="hljs-string">&quot;$oid&quot;</span> : <span class="hljs-string">&quot;5ac2de779e15ae8da0b49400&quot;</span>}},{ <span class="hljs-string">&quot;$set&quot;</span> : { <span class="hljs-string">&quot;mongoChannelTargets.$.address&quot;</span> : <span class="hljs-string">&quot;uc_u:(11)&#x5F20;name&quot;</span>}})
+</code></pre>
+<pre><code class="lang-java">3&#x3001;&#x5185;&#x5D4C;&#x6587;&#x6863;&#xFF08;&#x6570;&#x7EC4;&#xFF09;        
 to&quot; : [                                         //&#x6536;&#x4EF6;&#x4EBA;&#x7C7B;&#x578B;&#x3001;id&#x3001;&#x540D;&#x79F0;
         &quot;uc_o:(8)&#x91D1;&#x667A;&quot;,                 
         &quot;uc_g:(3)3&quot;, 
@@ -1725,6 +1743,10 @@ db.fruitshop.find({&quot;fruits&quot;:{&quot;$all&quot;:[&quot;apple&quot;,&quot
 
 http://www.cnblogs.com/ginb/p/6200721.html
 </code></pre>
+<hr>
+<p><a href="https://www.mongodb.com/docs/manual/" target="_blank">mongodb</a> &#x2002; <a href="https://www.runoob.com/mongodb/mongodb-tutorial.html" target="_blank">runoob</a> &#x2002; <a href="https://blog.xushufa.cn" target="_blank">blog.xushufa.cn</a></p>
+<hr>
+
                                 
                                 </section>
                             
@@ -1767,7 +1789,7 @@ http://www.cnblogs.com/ginb/p/6200721.html
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"mongo","level":"3.3.5","depth":2,"next":{"title":"数据库隔离级别","level":"3.3.6","depth":2,"path":"编程/数据库/数据库隔离级别.md","ref":"编程/数据库/数据库隔离级别.md","articles":[]},"previous":{"title":"redis","level":"3.3.4","depth":2,"path":"编程/数据库/redis.md","ref":"编程/数据库/redis.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/数据库/mongo.md","mtime":"2022-04-19T07:17:16.247Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-25T06:48:54.251Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"mongo","level":"3.3.5","depth":2,"next":{"title":"数据库隔离级别","level":"3.3.6","depth":2,"path":"编程/数据库/数据库隔离级别.md","ref":"编程/数据库/数据库隔离级别.md","articles":[]},"previous":{"title":"redis","level":"3.3.4","depth":2,"path":"编程/数据库/redis.md","ref":"编程/数据库/redis.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/数据库/mongo.md","mtime":"2022-07-01T10:31:03.537Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-01T11:07:45.691Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1790,10 +1812,6 @@ http://www.cnblogs.com/ginb/p/6200721.html
     
         
         <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         
