@@ -1298,65 +1298,75 @@
 </blockquote>
 <h2 id="&#x4E00;-&#x3001;logbin&#x65E5;&#x5FD7;">&#x4E00; &#x3001;logbin&#x65E5;&#x5FD7;</h2>
 <pre><code class="lang-sql"><span class="hljs-keyword">show</span> <span class="hljs-built_in">binary</span> <span class="hljs-keyword">logs</span>;
+
 <span class="hljs-keyword">show</span> <span class="hljs-keyword">master</span> <span class="hljs-keyword">status</span>;
 
 <span class="hljs-keyword">show</span> <span class="hljs-keyword">binlog</span> <span class="hljs-keyword">events</span> <span class="hljs-keyword">in</span> <span class="hljs-string">&apos;mysql-bin.000090&apos;</span> <span class="hljs-keyword">from</span> <span class="hljs-number">242985028</span> <span class="hljs-keyword">limit</span> <span class="hljs-number">0</span>,<span class="hljs-number">1000</span>
 </code></pre>
 <hr>
 <ul>
-<li>1&#x3001;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5F00;&#x542F;
-```mysql
-&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5F00;&#x542F;
-show global variables like &apos;%log_bin%&apos;;
-log_bin &#x4E3A; on &#x5219;&#x5DF2;&#x5F00;&#x542F;&#xFF0C;&#x4E3A; off&#x5219;&#x672A;&#x5F00;&#x542F;&#x3002;</li>
+<li>1&#x3001;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5F00;&#x542F;</li>
 </ul>
-<p>&#x67E5;&#x8BE2;&#x6240;&#x6709;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;
-show binary logs;</p>
-<p>&#x67E5;&#x8BE2;&#x6700;&#x8FD1;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;
-show master status;</p>
-<pre><code>
-- 2&#x3001;&#x5F00;&#x542F;log-bin&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;
-</code></pre><p>&#x627E;&#x5230;my.cnf &#x4E2D; [mysqld]  &#x6DFB;&#x52A0;&#x5982;&#x4E0B;
+<pre><code class="lang-sql">&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5F00;&#x542F;
+<span class="hljs-keyword">show</span> <span class="hljs-keyword">global</span> <span class="hljs-keyword">variables</span> <span class="hljs-keyword">like</span> <span class="hljs-string">&apos;%log_bin%&apos;</span>;
+log_bin &#x4E3A; on &#x5219;&#x5DF2;&#x5F00;&#x542F;&#xFF0C;&#x4E3A; off&#x5219;&#x672A;&#x5F00;&#x542F;&#x3002;
+
+&#x67E5;&#x8BE2;&#x6240;&#x6709;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;
+<span class="hljs-keyword">show</span> <span class="hljs-built_in">binary</span> <span class="hljs-keyword">logs</span>;
+
+&#x67E5;&#x8BE2;&#x6700;&#x8FD1;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;
+<span class="hljs-keyword">show</span> <span class="hljs-keyword">master</span> <span class="hljs-keyword">status</span>;
+</code></pre>
+<p><br></p>
+<ul>
+<li>2&#x3001;&#x5F00;&#x542F;log-bin&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;</li>
+</ul>
+<pre><code class="lang-js">&#x627E;&#x5230;my.cnf &#x4E2D; [mysqld]  &#x6DFB;&#x52A0;&#x5982;&#x4E0B;
 -- # binlog &#x914D;&#x7F6E;
-log-bin = D:\ProgramFiles\mysql-5.7.20-winx64\logs\mysql-bin.log
+log-bin = D:\\ProgramFiles\\mysql-5.7.20-winx64\\logs\\mysql-bin.log
 expire-logs-days = 14
 max-binlog-size = 500M
-server-id = 1</p>
-<pre><code>
-- 3&#x3001;&#x67E5;&#x8BE2; 
-```mysql
-SHOW BINLOG EVENTS [IN &apos;log_name&apos;] [FROM pos] [LIMIT [offset,] row_count]
+server-id = 1
+</code></pre>
+<p><br></p>
+<ul>
+<li>3&#x3001;&#x67E5;&#x8BE2; </li>
+</ul>
+<pre><code class="lang-sql"><span class="hljs-keyword">SHOW</span> <span class="hljs-keyword">BINLOG</span> <span class="hljs-keyword">EVENTS</span> [<span class="hljs-keyword">IN</span> <span class="hljs-string">&apos;log_name&apos;</span>] [<span class="hljs-keyword">FROM</span> pos] [<span class="hljs-keyword">LIMIT</span> [<span class="hljs-keyword">offset</span>,] <span class="hljs-keyword">row_count</span>]
 
-mysql&gt; show binlog events in &apos;mysql-bin.000001&apos; from 4 limit 0,5;
-+------------------+-----+----------------+-----------+-------------+---------------------------------------+
+mysql&gt; <span class="hljs-keyword">show</span> <span class="hljs-keyword">binlog</span> <span class="hljs-keyword">events</span> <span class="hljs-keyword">in</span> <span class="hljs-string">&apos;mysql-bin.000001&apos;</span> <span class="hljs-keyword">from</span> <span class="hljs-number">4</span> <span class="hljs-keyword">limit</span> <span class="hljs-number">0</span>,<span class="hljs-number">5</span>;
++<span class="hljs-comment">------------------+-----+----------------+-----------+-------------+---------------------------------------+</span>
 | Log_name         | Pos | Event_type     | Server_id | End_log_pos | Info                                  |
-+------------------+-----+----------------+-----------+-------------+---------------------------------------+
++<span class="hljs-comment">------------------+-----+----------------+-----------+-------------+---------------------------------------+</span>
 | mysql-bin.000001 |   4 | Format_desc    |         1 |         123 | Server ver: 5.7.20-log, Binlog ver: 4 |
 | mysql-bin.000001 | 123 | Previous_gtids |         1 |         154 |                                       |
-| mysql-bin.000001 | 154 | Anonymous_Gtid |         1 |         219 | SET @@SESSION.GTID_NEXT= &apos;ANONYMOUS&apos;  |
-| mysql-bin.000001 | 219 | Query          |         1 |         292 | BEGIN                                 |
-| mysql-bin.000001 | 292 | Table_map      |         1 |         375 | table_id: 125 (test.ins_car_team)    |
-+------------------+-----+----------------+-----------+-------------+---------------------------------------+
-5 rows in set (0.00 sec)
-</code></pre><p><a href="https://img-blog.csdnimg.cn/202008121825027.png#pic_center" data-lightbox="0eaf0734-4acd-40a2-85c6-9de0b8a3d688" data-title="t" target="_blank"><img src="https://img-blog.csdnimg.cn/202008121825027.png#pic_center" alt="t"></a></p>
+| mysql-bin.000001 | 154 | Anonymous_Gtid |         1 |         219 | <span class="hljs-keyword">SET</span> @@<span class="hljs-keyword">SESSION</span>.GTID_NEXT= <span class="hljs-string">&apos;ANONYMOUS&apos;</span>  |
+| mysql-<span class="hljs-keyword">bin</span><span class="hljs-number">.000001</span> | <span class="hljs-number">219</span> | <span class="hljs-keyword">Query</span>          |         <span class="hljs-number">1</span> |         <span class="hljs-number">292</span> | <span class="hljs-keyword">BEGIN</span>                                 |
+| mysql-<span class="hljs-keyword">bin</span><span class="hljs-number">.000001</span> | <span class="hljs-number">292</span> | Table_map      |         <span class="hljs-number">1</span> |         <span class="hljs-number">375</span> | table_id: <span class="hljs-number">125</span> (<span class="hljs-keyword">test</span>.ins_car_team)    |
++<span class="hljs-comment">------------------+-----+----------------+-----------+-------------+---------------------------------------+</span>
+<span class="hljs-number">5</span> <span class="hljs-keyword">rows</span> <span class="hljs-keyword">in</span> <span class="hljs-keyword">set</span> (<span class="hljs-number">0.00</span> sec)
+</code></pre>
+<p><a href="https://gitcode.net/xu180/imgs/-/raw/master/other/mysql-bin.png" data-lightbox="99f3d960-68fd-43a1-8b16-54f25ceaf04c" data-title="m" target="_blank"><img src="https://gitcode.net/xu180/imgs/-/raw/master/other/mysql-bin.png" alt="m"></a></p>
+<p><br></p>
 <p>4&#x3001;&#x5BFC;&#x51FA;&#x6587;&#x4EF6;</p>
-<pre><code>mysqlbinlog /var/lib/mysql/mysql-bin.000001 &gt; test.sql;
-</code></pre><pre><code>&#x8868;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF08;mysql 5.7.2&#x4EE5;&#x4E0B;&#x7248;&#x672C;&#x65E0;&#x6548; &#xFF09;
+<pre><code class="lang-sql">mysqlbinlog /var/lib/mysql/mysql-bin.000001 &gt; test.sql;
+</code></pre>
+<pre><code>&#x8868;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#xFF08;mysql 5.7.2&#x4EE5;&#x4E0B;&#x7248;&#x672C;&#x65E0;&#x6548; &#xFF09;
 select TABLE_NAME,UPDATE_TIME from information_schema.TABLES where TABLE_SCHEMA=&apos;databaseTest&apos; order by UPDATE_TIME desc limit 10;
 </code></pre><h2 id="&#x4E8C;&#x3001;generallog&#x65E5;&#x5FD7;">&#x4E8C;&#x3001;general_log&#x65E5;&#x5FD7;</h2>
-<pre><code class="lang-vb">
-&#x662F;&#x5426;&#x5F00;&#x542F; general_log&#x65E5;&#x5FD7;
-show variables <span class="hljs-keyword">where</span> variable_name <span class="hljs-keyword">like</span> <span class="hljs-string">&quot;%general_log%&quot;</span> <span class="hljs-keyword">or</span> variable_name=<span class="hljs-string">&quot;log_output&quot;</span>;
+<pre><code class="lang-sh">&#x662F;&#x5426;&#x5F00;&#x542F; general_<span class="hljs-built_in">log</span>&#x65E5;&#x5FD7;
+show variables <span class="hljs-built_in">where</span> variable_name like <span class="hljs-string">&quot;%general_log%&quot;</span> or variable_name=<span class="hljs-string">&quot;log_output&quot;</span>;
 
 &#x5F00;&#x542F;
-<span class="hljs-keyword">set</span> <span class="hljs-keyword">global</span> general_log = <span class="hljs-keyword">on</span>;
-<span class="hljs-keyword">set</span> <span class="hljs-keyword">global</span> log_output = <span class="hljs-string">&quot;table&quot;</span>;
+<span class="hljs-built_in">set</span> global general_<span class="hljs-built_in">log</span> = on;
+<span class="hljs-built_in">set</span> global <span class="hljs-built_in">log</span>_output = <span class="hljs-string">&quot;table&quot;</span>;
 
 
 &#x67E5;&#x770B;sql
-<span class="hljs-keyword">select</span> * <span class="hljs-keyword">from</span> mysql.general_log <span class="hljs-keyword">where</span> argument <span class="hljs-keyword">like</span> <span class="hljs-comment">&apos;%select%&apos;   ORDER BY event_time DESC limit 100;</span>
+select * from mysql.general_<span class="hljs-built_in">log</span> <span class="hljs-built_in">where</span> argument like <span class="hljs-string">&apos;%select%&apos;</span>   ORDER BY event_time DESC <span class="hljs-built_in">limit</span> 100;
 </code></pre>
-<p><a href="https://gitee.com/xy180/imgs/raw/master/other/mysql.general_log.jpg" data-lightbox="6a101b3b-00ce-43dc-8c5b-4c56b35371be" data-title="1" target="_blank"><img src="https://gitee.com/xy180/imgs/raw/master/other/mysql.general_log.jpg" alt="1"></a></p>
+<p><a href="https://gitcode.net/xu180/imgs/-/raw/master/other/mysql.general_log.jpg" data-lightbox="7b4b9971-c119-4837-af5e-1bdc098b5639" data-title="g" target="_blank"><img src="https://gitcode.net/xu180/imgs/-/raw/master/other/mysql.general_log.jpg" alt="g"></a></p>
+<hr>
 
                                 
                                 </section>
@@ -1396,7 +1406,7 @@ show variables <span class="hljs-keyword">where</span> variable_name <span class
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"mysql开启log-bin日志","level":"3.3.7","depth":2,"next":{"title":"资料","level":"3.4","depth":1,"ref":"","articles":[{"title":"npm笔记","level":"3.4.1","depth":2,"path":"编程/资料/npm笔记.md","ref":"编程/资料/npm笔记.md","articles":[]},{"title":"jquery笔记","level":"3.4.2","depth":2,"path":"编程/资料/jquery笔记.md","ref":"编程/资料/jquery笔记.md","articles":[]},{"title":"二进制数负数","level":"3.4.3","depth":2,"path":"编程/资料/二进制数负数.md","ref":"编程/资料/二进制数负数.md","articles":[]},{"title":"javaScript笔记","level":"3.4.4","depth":2,"path":"编程/资料/javaScript笔记.md","ref":"编程/资料/javaScript笔记.md","articles":[]},{"title":"本地安装kafka","level":"3.4.5","depth":2,"path":"编程/资料/本地安装kafka.md","ref":"编程/资料/本地安装kafka.md","articles":[]},{"title":"本地安装consul","level":"3.4.6","depth":2,"path":"编程/资料/本地安装consul.md","ref":"编程/资料/本地安装consul.md","articles":[]},{"title":"本地安装zookeeper","level":"3.4.7","depth":2,"path":"编程/资料/本地安装zookeeper.md","ref":"编程/资料/本地安装zookeeper.md","articles":[]},{"title":"markdown常用语法","level":"3.4.8","depth":2,"path":"编程/资料/markdown常用语法.md","ref":"编程/资料/markdown常用语法.md","articles":[]},{"title":"window安装RabbitMQ","level":"3.4.9","depth":2,"path":"编程/资料/window安装RabbitMQ.md","ref":"编程/资料/window安装RabbitMQ.md","articles":[]},{"title":"pagefile.sys有几十个G，太大怎么办","level":"3.4.10","depth":2,"path":"编程/资料/pagefile.sys有几十个G，太大怎么办.md","ref":"编程/资料/pagefile.sys有几十个G，太大怎么办.md","articles":[]}]},"previous":{"title":"数据库隔离级别","level":"3.3.6","depth":2,"path":"编程/数据库/数据库隔离级别.md","ref":"编程/数据库/数据库隔离级别.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/数据库/mysql开启log-bin日志.md","mtime":"2022-04-19T07:17:45.668Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-01T11:07:45.691Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"mysql开启log-bin日志","level":"3.3.7","depth":2,"next":{"title":"资料","level":"3.4","depth":1,"ref":"","articles":[{"title":"npm笔记","level":"3.4.1","depth":2,"path":"编程/资料/npm笔记.md","ref":"编程/资料/npm笔记.md","articles":[]},{"title":"jquery笔记","level":"3.4.2","depth":2,"path":"编程/资料/jquery笔记.md","ref":"编程/资料/jquery笔记.md","articles":[]},{"title":"二进制数负数","level":"3.4.3","depth":2,"path":"编程/资料/二进制数负数.md","ref":"编程/资料/二进制数负数.md","articles":[]},{"title":"javaScript笔记","level":"3.4.4","depth":2,"path":"编程/资料/javaScript笔记.md","ref":"编程/资料/javaScript笔记.md","articles":[]},{"title":"本地安装kafka","level":"3.4.5","depth":2,"path":"编程/资料/本地安装kafka.md","ref":"编程/资料/本地安装kafka.md","articles":[]},{"title":"本地安装consul","level":"3.4.6","depth":2,"path":"编程/资料/本地安装consul.md","ref":"编程/资料/本地安装consul.md","articles":[]},{"title":"本地安装zookeeper","level":"3.4.7","depth":2,"path":"编程/资料/本地安装zookeeper.md","ref":"编程/资料/本地安装zookeeper.md","articles":[]},{"title":"markdown常用语法","level":"3.4.8","depth":2,"path":"编程/资料/markdown常用语法.md","ref":"编程/资料/markdown常用语法.md","articles":[]},{"title":"window安装RabbitMQ","level":"3.4.9","depth":2,"path":"编程/资料/window安装RabbitMQ.md","ref":"编程/资料/window安装RabbitMQ.md","articles":[]},{"title":"pagefile.sys有几十个G，太大怎么办","level":"3.4.10","depth":2,"path":"编程/资料/pagefile.sys有几十个G，太大怎么办.md","ref":"编程/资料/pagefile.sys有几十个G，太大怎么办.md","articles":[]}]},"previous":{"title":"数据库隔离级别","level":"3.3.6","depth":2,"path":"编程/数据库/数据库隔离级别.md","ref":"编程/数据库/数据库隔离级别.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/数据库/mysql开启log-bin日志.md","mtime":"2022-07-13T06:32:10.300Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-15T09:10:08.141Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

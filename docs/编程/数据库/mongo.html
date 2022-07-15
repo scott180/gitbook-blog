@@ -1340,8 +1340,9 @@
 </tr>
 </tbody>
 </table>
+<hr>
 <pre><code class="lang-js">&#x542F;&#x52A8;mongo    /opt/sutech/mongodb           ./bin/mongod --config mongo.conf
-                                             ./bin/mongod --config /opt/sutech/mongodb/conf/mongo.conf 
+                                           ./bin/mongod --config /opt/sutech/mongodb/conf/mongo.conf 
 
 &#x542F;&#x52A8;mongo
 /opt/sutech/mongodb/bin/mongod --dbpath=<span class="hljs-regexp">/opt/</span>sutech/mongodb/data --logpath=<span class="hljs-regexp">/opt/</span>sutech/mongodb/logs --logappend  --port=<span class="hljs-number">27017</span> --fork
@@ -1350,6 +1351,7 @@
 cd /opt/sutech/mongodb/bin
 mongo
 </code></pre>
+<hr>
 <pre><code class="lang-sh">&#x663E;&#x793A;&#x6570;&#x636E;&#x5E93;      show dbs
 &#x663E;&#x793A;&#x96C6;&#x5408;&#xFF08;&#x8868;&#xFF09;  show collections
 &#x663E;&#x793A;&#x6587;&#x6863;&#xFF08;&#x884C;&#xFF09;  db.test.find()
@@ -1373,6 +1375,7 @@ db.getCollection(<span class="hljs-string">&apos;mongomessage&apos;</span>).find
 
 db.getCollection(<span class="hljs-string">&apos;mongomessage&apos;</span>).find({fromAddress:<span class="hljs-string">&apos;uc_b:(71134)&#x6559;&#x5E08;&#x8BFE;&#x8868;&#x4FE1;&#x606F;&#x63D0;&#x9192;&apos;</span>,createTime:{<span class="hljs-variable">$gt</span>:ISODate(<span class="hljs-string">&quot;2018-06-28T22:00:00.000Z&quot;</span>)}}).count()
 </code></pre>
+<hr>
 <pre><code class="lang-java">&#x5BFC;&#x51FA;&#x4E00;&#x4E2A;&#x8868;&#xFF08;&#x6587;&#x6863;&#xFF09;  E:\<span class="hljs-function">Program <span class="hljs-title">Files</span> <span class="hljs-params">(x86)</span>\mongo\bin&gt;mongoexport -d ucpplus1 -c mongomsgbody -o e:\mongomsgbody.bak.json
 &#x5BFC;&#x5165;&#x4E00;&#x4E2A;&#x8868;&#xFF08;&#x6587;&#x6863;&#xFF09;  E:\Program <span class="hljs-title">Files</span> <span class="hljs-params">(x86)</span>\mongo\bin&gt;mongoimport -d test -c mongo1 e:\mongomsgbody.bak.json
 
@@ -1789,7 +1792,7 @@ http://www.cnblogs.com/ginb/p/6200721.html
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"mongo","level":"3.3.5","depth":2,"next":{"title":"数据库隔离级别","level":"3.3.6","depth":2,"path":"编程/数据库/数据库隔离级别.md","ref":"编程/数据库/数据库隔离级别.md","articles":[]},"previous":{"title":"redis","level":"3.3.4","depth":2,"path":"编程/数据库/redis.md","ref":"编程/数据库/redis.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/数据库/mongo.md","mtime":"2022-07-01T10:31:03.537Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-01T11:07:45.691Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"mongo","level":"3.3.5","depth":2,"next":{"title":"数据库隔离级别","level":"3.3.6","depth":2,"path":"编程/数据库/数据库隔离级别.md","ref":"编程/数据库/数据库隔离级别.md","articles":[]},"previous":{"title":"redis","level":"3.3.4","depth":2,"path":"编程/数据库/redis.md","ref":"编程/数据库/redis.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/数据库/mongo.md","mtime":"2022-07-13T06:33:12.247Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-15T09:10:08.141Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

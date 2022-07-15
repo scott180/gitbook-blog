@@ -1294,46 +1294,53 @@
                                 
                                 <h1 id="jquery&#x7B14;&#x8BB0;">jquery&#x7B14;&#x8BB0;</h1>
 <h2 id="1&#x3001;&#x5BFC;&#x5165;jquery">1&#x3001;&#x5BFC;&#x5165;jquery</h2>
-<pre><code>&#x9ED1;&#x9A6C;&#x7B2C;&#x5341;&#x671F;
-
-&#x5B89;&#x88C5;&#x63D2;&#x4EF6; jsPlugin4Myeclipse.rar
-&#x5BFC;&#x5165;&#x7C7B;&#x5E93; &lt;script src=&quot;../js/jquery-1.4.2.js&quot;&gt;&lt;/script&gt;
+<pre><code class="lang-js">jQuery&#x662F;&#x4E00;&#x4E2A;&#x5FEB;&#x901F;&#x3001;&#x7B80;&#x6D01;&#x7684;JavaScript&#x6846;&#x67B6;&#xFF0C;&#x662F;&#x7EE7;Prototype&#x4E4B;&#x540E;&#x53C8;&#x4E00;&#x4E2A;&#x4F18;&#x79C0;&#x7684;JavaScript&#x4EE3;&#x7801;&#x5E93;&#xFF08;&#x6846;&#x67B6;&#xFF09;&#x4E8E;<span class="hljs-number">2006</span>&#x5E74;<span class="hljs-number">1</span>&#x6708;&#x7531;JohnResig&#x53D1;&#x5E03;&#x3002;
+jQuery&#x8BBE;&#x8BA1;&#x7684;&#x5B97;&#x65E8;&#x662F;&#x201C;writeLess&#xFF0C;DoMore&#x201D;&#xFF0C;&#x5373;&#x5021;&#x5BFC;&#x5199;&#x66F4;&#x5C11;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x505A;&#x66F4;&#x591A;&#x7684;&#x4E8B;&#x60C5;&#x3002;
 
 
-    window.onload &#x8FD9;&#x4E2A;&#x8868;&#x793A;&#x52A0;&#x8F7D;&#x5B8C;&#x9875;&#x9762;&#x6240;&#x6709;&#x4E1C;&#x897F;&#x4EE5;&#x540E;&#x624D;&#x6267;&#x884C;
-    window.load&#x8FD9;&#x4E2A;&#x5E94;&#x8BE5;&#x53EA;&#x662F;&#x8868;&#x660E;&#x4E8B;&#x4EF6;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x5E76;&#x672A;&#x6267;&#x884C;&#xFF0C;&#x6BD4;&#x5982;click&#x8868;&#x793A;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#xFF0C;&#x4F46;&#x4ED6;&#x5E76;&#x672A;&#x6267;&#x884C;&#xFF0C;&#x5FC5;&#x987B;&#x7528;&#x4E0A;onclick&#x4ED6;&#x624D;&#x4F1A;&#x6267;&#x884C; 
+&#x9ED1;&#x9A6C;&#x7B2C;&#x5341;&#x671F;
+&#x5BFC;&#x5165;&#x7C7B;&#x5E93; &lt;script src=<span class="hljs-string">&quot;../js/jquery-1.4.2.js&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
 
-    window.onload&#x5FC5;&#x987B;&#x7B49;&#x5230;&#x9875;&#x9762;&#x5185;&#x5305;&#x62EC;&#x56FE;&#x7247;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x52A0;&#x8F7D;&#x5B8C;&#x6BD5;&#x540E;&#x624D;&#x80FD;&#x6267;&#x884C;&#xFF0C;$(document).ready()&#x662F;DOM&#x7ED3;&#x6784;&#x7ED8;&#x5236;&#x5B8C;&#x6BD5;&#x540E;&#x5C31;&#x6267;&#x884C;&#xFF0C;&#x4E0D;&#x5FC5;&#x7B49;&#x5230;&#x52A0;&#x8F7D;&#x5B8C;&#x6BD5;
-    window.onload&#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x7F16;&#x5199;&#x591A;&#x4E2A;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A;window.onload&#x65B9;&#x6CD5;&#xFF0C;&#x53EA;&#x4F1A;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#xFF0C;$(document).ready()&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x7F16;&#x5199;&#x591A;&#x4E2A;&#xFF0C;&#x5E76;&#x4E14;&#x90FD;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x6267;&#x884C;
-    window.onload&#x6CA1;&#x6709;&#x7B80;&#x5316;&#x5199;&#x6CD5;&#xFF0C;$(document).ready(function(){})&#x53EF;&#x4EE5;&#x7B80;&#x5199;&#x6210;$(function(){})   $().ready(function(){})
+https:<span class="hljs-comment">//cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js</span>
+https:<span class="hljs-comment">//cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js</span>
+
+<span class="hljs-built_in">window</span>.onload  &#x8FD9;&#x4E2A;&#x8868;&#x793A;&#x52A0;&#x8F7D;&#x5B8C;&#x9875;&#x9762;&#x6240;&#x6709;&#x4E1C;&#x897F;&#x4EE5;&#x540E;&#x624D;&#x6267;&#x884C;&#x3002;
+<span class="hljs-built_in">window</span>.load    &#x8FD9;&#x4E2A;&#x53EA;&#x662F;&#x8868;&#x660E;&#x4E8B;&#x4EF6;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x5E76;&#x672A;&#x6267;&#x884C;&#xFF0C;&#x6BD4;&#x5982;click&#x8868;&#x793A;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#xFF0C;&#x4F46;&#x4ED6;&#x5E76;&#x672A;&#x6267;&#x884C;&#xFF0C;&#x5FC5;&#x987B;&#x7528;&#x4E0A;onclick&#x4ED6;&#x624D;&#x4F1A;&#x6267;&#x884C;&#x3002;
+
+<span class="hljs-built_in">window</span>.onload &#x5FC5;&#x987B;&#x7B49;&#x5230;&#x9875;&#x9762;&#x5185;&#x5305;&#x62EC;&#x56FE;&#x7247;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x52A0;&#x8F7D;&#x5B8C;&#x6BD5;&#x540E;&#x624D;&#x80FD;&#x6267;&#x884C;&#xFF0C;$(<span class="hljs-built_in">document</span>).ready()&#x662F;DOM&#x7ED3;&#x6784;&#x7ED8;&#x5236;&#x5B8C;&#x6BD5;&#x540E;&#x5C31;&#x6267;&#x884C;&#xFF0C;&#x4E0D;&#x5FC5;&#x7B49;&#x5230;&#x52A0;&#x8F7D;&#x5B8C;&#x6BD5;&#x3002;
+<span class="hljs-built_in">window</span>.onload &#x4E0D;&#x80FD;&#x540C;&#x65F6;&#x7F16;&#x5199;&#x591A;&#x4E2A;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x591A;&#x4E2A;<span class="hljs-built_in">window</span>.onload&#x65B9;&#x6CD5;&#xFF0C;&#x53EA;&#x4F1A;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#xFF0C;$(<span class="hljs-built_in">document</span>).ready()&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x7F16;&#x5199;&#x591A;&#x4E2A;&#xFF0C;&#x5E76;&#x4E14;&#x90FD;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x6267;&#x884C;&#x3002;
+<span class="hljs-built_in">window</span>.onload &#x6CA1;&#x6709;&#x7B80;&#x5316;&#x5199;&#x6CD5;&#xFF0C;$(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{})&#x53EF;&#x4EE5;&#x7B80;&#x5199;&#x6210;$(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{})   $().ready(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{}) &#x3002;
 
 
-    //&#x51FD;&#x6570;&#x5F53;&#x505A;&#x53C2;&#x6570;&#x3002;&#x51FD;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;
-        $().ready(L);
-        function L(){
-            alert(222);
-        }    
-        //&#x76F8;&#x5F53;&#x4E8E;
-        $().ready(function(){//&#x533F;&#x540D;&#x51FD;&#x6570;
-            alert(333);
-        });
-</code></pre><pre><code>jquery &#x548C; dom &#x7684;&#x8F6C;&#x6362;
-    &lt;script type=&quot;text/javascript&quot;&gt;
-        window.onload = function(){
+<span class="hljs-comment">//&#x51FD;&#x6570;&#x5F53;&#x505A;&#x53C2;&#x6570;&#x3002;&#x51FD;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;</span>
+$().ready(L);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">L</span>(<span class="hljs-params"></span>)</span>{
+    alert(<span class="hljs-number">222</span>);
+}
 
-            //dom&#x5BF9;&#x8C61;&#x8F6C;&#x6362;jquery
-            var domObj = document.getElementById(&quot;username&quot;);
-            var jqueryObj = $(domObj);
-            //alert(jqueryObj);
+<span class="hljs-comment">//&#x76F8;&#x5F53;&#x4E8E;</span>
+$().ready(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{ <span class="hljs-comment">//&#x533F;&#x540D;&#x51FD;&#x6570;</span>
+    alert(<span class="hljs-number">333</span>);
+});
+</code></pre>
+<pre><code class="lang-java">jquery &#x548C; dom &#x7684;&#x8F6C;&#x6362;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    window.onload = function(){
 
-            //jquery&#x8F6C;&#x6362;dom&#x3002;jquery&#x662F;&#x6570;&#x7EC4;
-            var jquery1=$(&quot;#username&quot;);
-            var dom1=jquery1.get(0);
-            var dom2=jquery1[0];
-            //alert(dom1+&quot;-&quot;+dom2);
-        }
-    &lt;/script&gt;
-</code></pre><h2 id="2&#x3001;&#x9009;&#x62E9;&#x5668;">2&#x3001;&#x9009;&#x62E9;&#x5668;</h2>
+        //dom&#x5BF9;&#x8C61;&#x8F6C;&#x6362;jquery
+        var domObj = document.getElementById(&quot;username&quot;);
+        var jqueryObj = $(domObj);
+        //alert(jqueryObj);
+
+        //jquery&#x8F6C;&#x6362;dom&#x3002;jquery&#x662F;&#x6570;&#x7EC4;
+        var jquery1=$(&quot;#username&quot;);
+        var dom1=jquery1.get(0);
+        var dom2=jquery1[0];
+        //alert(dom1+&quot;-&quot;+dom2);
+    }
+&lt;/script&gt;
+</code></pre>
+<h2 id="2&#x3001;&#x9009;&#x62E9;&#x5668;">2&#x3001;&#x9009;&#x62E9;&#x5668;</h2>
 <pre><code class="lang-js">&#x57FA;&#x672C;&#x9009;&#x62E9;&#x5668;  $(<span class="hljs-string">&quot;#1&quot;</span>)
     &lt;script type=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;
         <span class="hljs-comment">//&lt;input type=&quot;button&quot; id=&quot;b1&quot; value=&quot;&#x6539;&#x53D8;id&#x4E3A;1&#x7684;&#x80CC;&#x666F;&#x8272;&quot;&gt;</span>
@@ -1393,69 +1400,70 @@
         });
   <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
 </code></pre>
-<pre><code>&#x5C42;&#x6B21;&#x9009;&#x62E9;&#x5668;  &#x5B50;&#x9009;&#x62E9;&#x5668; $(&quot;#one&gt;div&quot;)
-      &lt;script type=&quot;text/javascript&quot;&gt;
-        //&lt;input type=&quot;button&quot; id=&quot;b1&quot; value=&quot;&#x6539;&#x53D8;body&#x5185;div&#x7684;&#x989C;&#x8272;&quot;&gt;
-        $(&quot;#b1&quot;).click(function(){
-            $(&quot;body div&quot;).css(&quot;background-color&quot;,&quot;red&quot;);
+<pre><code class="lang-js">&#x5C42;&#x6B21;&#x9009;&#x62E9;&#x5668;  &#x5B50;&#x9009;&#x62E9;&#x5668; $(<span class="hljs-string">&quot;#one&gt;div&quot;</span>)
+      &lt;script type=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;
+        <span class="hljs-comment">//&lt;input type=&quot;button&quot; id=&quot;b1&quot; value=&quot;&#x6539;&#x53D8;body&#x5185;div&#x7684;&#x989C;&#x8272;&quot;&gt;</span>
+        $(<span class="hljs-string">&quot;#b1&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            $(<span class="hljs-string">&quot;body div&quot;</span>).css(<span class="hljs-string">&quot;background-color&quot;</span>,<span class="hljs-string">&quot;red&quot;</span>);
         });
 
-        //&lt;input type=&quot;button&quot; id=&quot;b2&quot; value=&quot;&#x6539;&#x53D8;id&#x4E3A;one&#x7684;&#x5B50;div&#x7684;&#x989C;&#x8272;&quot;&gt;
-        $(&quot;#b2&quot;).click(function(){
-            $(&quot;#one&gt;div&quot;).css(&quot;background-color&quot;,&quot;blue&quot;);
+        <span class="hljs-comment">//&lt;input type=&quot;button&quot; id=&quot;b2&quot; value=&quot;&#x6539;&#x53D8;id&#x4E3A;one&#x7684;&#x5B50;div&#x7684;&#x989C;&#x8272;&quot;&gt;</span>
+        $(<span class="hljs-string">&quot;#b2&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            $(<span class="hljs-string">&quot;#one&gt;div&quot;</span>).css(<span class="hljs-string">&quot;background-color&quot;</span>,<span class="hljs-string">&quot;blue&quot;</span>);
             });
 
-        //&lt;input type=&quot;button&quot; id=&quot;b3&quot; value=&quot;&#x6539;&#x53D8;id&#x4E3A;one&#x4E0B;&#x4E00;&#x4E2A;div&#x7684;&#x989C;&#x8272;&quot;&gt;
-        $(&quot;#b3&quot;).click(function(){
-            $(&quot;#one+div&quot;).css(&quot;background-color&quot;,&quot;black&quot;);
+        <span class="hljs-comment">//&lt;input type=&quot;button&quot; id=&quot;b3&quot; value=&quot;&#x6539;&#x53D8;id&#x4E3A;one&#x4E0B;&#x4E00;&#x4E2A;div&#x7684;&#x989C;&#x8272;&quot;&gt;</span>
+        $(<span class="hljs-string">&quot;#b3&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            $(<span class="hljs-string">&quot;#one+div&quot;</span>).css(<span class="hljs-string">&quot;background-color&quot;</span>,<span class="hljs-string">&quot;black&quot;</span>);
             });
 
-        //&lt;input type=&quot;button&quot; id=&quot;b4&quot; value=&quot;&#x6539;&#x53D8;id&#x4E3A;two&#x5144;&#x5F1F;div&#x7684;&#x989C;&#x8272;&quot;&gt;
-        $(&quot;#b4&quot;).click(function(){
-            $(&quot;#two&quot;).parent().children(&quot;div&quot;).css(&quot;background-color&quot;,&quot;#aaccaa&quot;);
+        <span class="hljs-comment">//&lt;input type=&quot;button&quot; id=&quot;b4&quot; value=&quot;&#x6539;&#x53D8;id&#x4E3A;two&#x5144;&#x5F1F;div&#x7684;&#x989C;&#x8272;&quot;&gt;</span>
+        $(<span class="hljs-string">&quot;#b4&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            $(<span class="hljs-string">&quot;#two&quot;</span>).parent().children(<span class="hljs-string">&quot;div&quot;</span>).css(<span class="hljs-string">&quot;background-color&quot;</span>,<span class="hljs-string">&quot;#aaccaa&quot;</span>);
         });
 
-        //&lt;input type=&quot;button&quot; id=&quot;b5&quot; value=&quot;&#x6539;&#x53D8;id&#x4E3A;one&#x540E;&#x9762;div&#x7684;&#x989C;&#x8272;&quot;&gt;
-        $(&quot;#b5&quot;).click(function(){
-                $(&quot;#one~div&quot;).css(&quot;background-color&quot;,&quot;grey&quot;);
+        <span class="hljs-comment">//&lt;input type=&quot;button&quot; id=&quot;b5&quot; value=&quot;&#x6539;&#x53D8;id&#x4E3A;one&#x540E;&#x9762;div&#x7684;&#x989C;&#x8272;&quot;&gt;</span>
+        $(<span class="hljs-string">&quot;#b5&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                $(<span class="hljs-string">&quot;#one~div&quot;</span>).css(<span class="hljs-string">&quot;background-color&quot;</span>,<span class="hljs-string">&quot;grey&quot;</span>);
                 });
-    &lt;/script&gt;
+    <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
 
 
-&#x8FC7;&#x6EE4;&#x9009;&#x62E9;&#x5668;  &#x5076;&#x6570; $(&quot;div:even&quot;)
-    &lt;script type=&quot;text/javascript&quot;&gt;
-        $(&quot;#b1&quot;).click(function(){
-            $(&quot;div:first&quot;).css(&quot;background-color&quot;,&quot;red&quot;);
+&#x8FC7;&#x6EE4;&#x9009;&#x62E9;&#x5668;  &#x5076;&#x6570; $(<span class="hljs-string">&quot;div:even&quot;</span>)
+    &lt;script type=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;
+        $(<span class="hljs-string">&quot;#b1&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            $(<span class="hljs-string">&quot;div:first&quot;</span>).css(<span class="hljs-string">&quot;background-color&quot;</span>,<span class="hljs-string">&quot;red&quot;</span>);
         });
 
-        $(&quot;#b11&quot;).click(function(){
-            $(&quot;div:last&quot;).css(&quot;background-color&quot;,&quot;grey&quot;);
+        $(<span class="hljs-string">&quot;#b11&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            $(<span class="hljs-string">&quot;div:last&quot;</span>).css(<span class="hljs-string">&quot;background-color&quot;</span>,<span class="hljs-string">&quot;grey&quot;</span>);
         });
 
-        $(&quot;#b2&quot;).click(function(){
-            $(&quot;div:not(#o2)&quot;).css(&quot;background-color&quot;,&quot;yellow&quot;);
+        $(<span class="hljs-string">&quot;#b2&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            $(<span class="hljs-string">&quot;div:not(#o2)&quot;</span>).css(<span class="hljs-string">&quot;background-color&quot;</span>,<span class="hljs-string">&quot;yellow&quot;</span>);
         });
 
-        //&lt;input type=&quot;button&quot; id=&quot;b3&quot; value=&quot;&#x6539;&#x53D8;&#x7D22;&#x5F15;&#x662F;&#x5076;&#x6570;div&#x7684;&#x989C;&#x8272;&quot;&gt;
-        $(&quot;#b3&quot;).click(function(){
-            $(&quot;div:even&quot;).css(&quot;background-color&quot;,&quot;grey&quot;);
-            //$(&quot;div:odd&quot;).css(&quot;background-color&quot;,&quot;green&quot;);//&#x5947;&#x6570;
+        <span class="hljs-comment">//&lt;input type=&quot;button&quot; id=&quot;b3&quot; value=&quot;&#x6539;&#x53D8;&#x7D22;&#x5F15;&#x662F;&#x5076;&#x6570;div&#x7684;&#x989C;&#x8272;&quot;&gt;</span>
+        $(<span class="hljs-string">&quot;#b3&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            $(<span class="hljs-string">&quot;div:even&quot;</span>).css(<span class="hljs-string">&quot;background-color&quot;</span>,<span class="hljs-string">&quot;grey&quot;</span>);
+            <span class="hljs-comment">//$(&quot;div:odd&quot;).css(&quot;background-color&quot;,&quot;green&quot;);//&#x5947;&#x6570;</span>
         });
 
-        $(&quot;#b4&quot;).click(function(){
-            $(&quot;div:gt(3)&quot;).css(&quot;background-color&quot;,&quot;red&quot;);
-            //$(&quot;div:eq(3)&quot;).css(&quot;background-color&quot;,&quot;red&quot;);
-            //$(&quot;div:lt(3)&quot;).css(&quot;background-color&quot;,&quot;red&quot;);
+        $(<span class="hljs-string">&quot;#b4&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            $(<span class="hljs-string">&quot;div:gt(3)&quot;</span>).css(<span class="hljs-string">&quot;background-color&quot;</span>,<span class="hljs-string">&quot;red&quot;</span>);
+            <span class="hljs-comment">//$(&quot;div:eq(3)&quot;).css(&quot;background-color&quot;,&quot;red&quot;);</span>
+            <span class="hljs-comment">//$(&quot;div:lt(3)&quot;).css(&quot;background-color&quot;,&quot;red&quot;);</span>
         });
 
-        $(&quot;#b5&quot;).click(function(){
-            //div:gt(3) &#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;div:gt(3):lt(1)&#x662F;&#x4EE5;div:gt(3)&#x4E3A;&#x57FA;&#x7840;&#x7684;&#x6570;&#x7EC4;
-            //$(&quot;div:gt(3):lt(1)&quot;).css(&quot;background-color&quot;,&quot;red&quot;);
+        $(<span class="hljs-string">&quot;#b5&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+            <span class="hljs-comment">//div:gt(3) &#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;div:gt(3):lt(1)&#x662F;&#x4EE5;div:gt(3)&#x4E3A;&#x57FA;&#x7840;&#x7684;&#x6570;&#x7EC4;</span>
+            <span class="hljs-comment">//$(&quot;div:gt(3):lt(1)&quot;).css(&quot;background-color&quot;,&quot;red&quot;);</span>
 
-            $(&quot;div:lt(5):gt(2)&quot;).css(&quot;background-color&quot;,&quot;red&quot;);//&#x5927;&#x4E8E;2&#xFF0C;&#x5C0F;&#x4E8E;5&#x7684;&#x7D22;&#x5F15;
+            $(<span class="hljs-string">&quot;div:lt(5):gt(2)&quot;</span>).css(<span class="hljs-string">&quot;background-color&quot;</span>,<span class="hljs-string">&quot;red&quot;</span>);<span class="hljs-comment">//&#x5927;&#x4E8E;2&#xFF0C;&#x5C0F;&#x4E8E;5&#x7684;&#x7D22;&#x5F15;</span>
         });
-    &lt;/script&gt;
-</code></pre><pre><code class="lang-js">table&#x884C;&#x80CC;&#x666F;&#x8272;
+    <span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+</code></pre>
+<pre><code class="lang-js">table&#x884C;&#x80CC;&#x666F;&#x8272;
 &lt;script src=&quot;../js/jquery-1.4.2.js&quot;&gt;&lt;/script&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
     $().ready(function(){
@@ -1541,7 +1549,7 @@
     });
   &lt;/script&gt;
 </code></pre>
-<pre><code>&#x8868;&#x5355;&#x9009;&#x62E9;&#x5668;
+<pre><code class="lang-js">&#x8868;&#x5355;&#x9009;&#x62E9;&#x5668;
       &lt;html&gt;
       &lt;head&gt;
         &lt;title&gt;form_selector.html&lt;/title&gt;
@@ -1631,111 +1639,113 @@
         &lt;/script&gt;
       &lt;/body&gt;
     &lt;/html&gt;
-</code></pre><h2 id="3&#x3001;ajax">3&#x3001;ajax</h2>
-<pre><code>/**
+</code></pre>
+<h2 id="3&#x3001;ajax">3&#x3001;ajax</h2>
+<pre><code class="lang-js"><span class="hljs-comment">/**
  * &#x4F7F;&#x7528;ajax&#x67E5;&#x8BE2;&#x6570;&#x636E;
- */
-function queryMethod(){
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">queryMethod</span>(<span class="hljs-params"></span>)</span>{
     $.ajax({
-        url:&quot;../../AA&quot;,
-        data:{method:&apos;query&apos;},
-        success:function(data){
-            var jsonObj=eval(&quot;(&quot;+data+&quot;)&quot;);
-        //    alert(jsonObj);
-            for(var i=0;i&lt;jsonObj.length;i++){
-                var name=jsonObj[i].name;
-                var email = jsonObj[i].email;
-                var phone = jsonObj[i].phone;
-                var id = jsonObj[i].id;
-            //    alert(id);
-                $tr = $(&quot;&lt;tr/&gt;&quot;);
-                $inputId = $(&quot;&lt;input/&gt;&quot;).attr(&quot;type&quot;,&quot;hidden&quot;).attr(&quot;name&quot;,&quot;id&quot;).attr(&quot;value&quot;,id);
-                $nameTD = $(&quot;&lt;td/&gt;&quot;).text(name);
-                $emailTD = $(&quot;&lt;td/&gt;&quot;).text(email);
-                $phoneTD = $(&quot;&lt;td/&gt;&quot;).text(phone);
-                $delA = $(&quot;&lt;a/&gt;&quot;).text(&quot;&#x5220;&#x9664;&quot;).css(&quot;cursor&quot;,&quot;pointer&quot;).css(&quot;text-decoration&quot;,&quot;underline&quot;);
-                $delA.click(function(){
-                    if(window.confirm(&quot;&#x786E;&#x5B9A;&#x5220;&#x9664;&#x5417;&#xFF1F;&quot;)){
-                        deleteUser(this);
+        url:<span class="hljs-string">&quot;../../AA&quot;</span>,
+        data:{method:<span class="hljs-string">&apos;query&apos;</span>},
+        success:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+            <span class="hljs-keyword">var</span> jsonObj=<span class="hljs-built_in">eval</span>(<span class="hljs-string">&quot;(&quot;</span>+data+<span class="hljs-string">&quot;)&quot;</span>);
+        <span class="hljs-comment">//    alert(jsonObj);</span>
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i=<span class="hljs-number">0</span>;i&lt;jsonObj.length;i++){
+                <span class="hljs-keyword">var</span> name=jsonObj[i].name;
+                <span class="hljs-keyword">var</span> email = jsonObj[i].email;
+                <span class="hljs-keyword">var</span> phone = jsonObj[i].phone;
+                <span class="hljs-keyword">var</span> id = jsonObj[i].id;
+            <span class="hljs-comment">//    alert(id);</span>
+                $tr = $(<span class="hljs-string">&quot;&lt;tr/&gt;&quot;</span>);
+                $inputId = $(<span class="hljs-string">&quot;&lt;input/&gt;&quot;</span>).attr(<span class="hljs-string">&quot;type&quot;</span>,<span class="hljs-string">&quot;hidden&quot;</span>).attr(<span class="hljs-string">&quot;name&quot;</span>,<span class="hljs-string">&quot;id&quot;</span>).attr(<span class="hljs-string">&quot;value&quot;</span>,id);
+                $nameTD = $(<span class="hljs-string">&quot;&lt;td/&gt;&quot;</span>).text(name);
+                $emailTD = $(<span class="hljs-string">&quot;&lt;td/&gt;&quot;</span>).text(email);
+                $phoneTD = $(<span class="hljs-string">&quot;&lt;td/&gt;&quot;</span>).text(phone);
+                $delA = $(<span class="hljs-string">&quot;&lt;a/&gt;&quot;</span>).text(<span class="hljs-string">&quot;&#x5220;&#x9664;&quot;</span>).css(<span class="hljs-string">&quot;cursor&quot;</span>,<span class="hljs-string">&quot;pointer&quot;</span>).css(<span class="hljs-string">&quot;text-decoration&quot;</span>,<span class="hljs-string">&quot;underline&quot;</span>);
+                $delA.click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">window</span>.confirm(<span class="hljs-string">&quot;&#x786E;&#x5B9A;&#x5220;&#x9664;&#x5417;&#xFF1F;&quot;</span>)){
+                        deleteUser(<span class="hljs-keyword">this</span>);
                     }
                 });    
 
-                $delTD = $(&quot;&lt;td/&gt;&quot;).append($delA);
-                $updateA = $(&quot;&lt;a/&gt;&quot;).text(&quot;&#x4FEE;&#x6539;&quot;).css(&quot;text-decoration&quot;,&quot;underline&quot;);
-                $updateTD = $(&quot;&lt;td/&gt;&quot;).append($updateA);
+                $delTD = $(<span class="hljs-string">&quot;&lt;td/&gt;&quot;</span>).append($delA);
+                $updateA = $(<span class="hljs-string">&quot;&lt;a/&gt;&quot;</span>).text(<span class="hljs-string">&quot;&#x4FEE;&#x6539;&quot;</span>).css(<span class="hljs-string">&quot;text-decoration&quot;</span>,<span class="hljs-string">&quot;underline&quot;</span>);
+                $updateTD = $(<span class="hljs-string">&quot;&lt;td/&gt;&quot;</span>).append($updateA);
                 $tr.append($nameTD).append($emailTD).append($phoneTD).append($updateTD).append($delTD).append($inputId);
-                $(&quot;#user&gt;tbody&quot;).append($tr);
+                $(<span class="hljs-string">&quot;#user&gt;tbody&quot;</span>).append($tr);
             }
         },
-        error: function(XMLHttpRequest, textStatus, errorThrown){
-             alert(&quot;error&quot;);
+        error: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">XMLHttpRequest, textStatus, errorThrown</span>)</span>{
+             alert(<span class="hljs-string">&quot;error&quot;</span>);
         }
     });
 }    
 
-    public void getPersonAll(){
-        List&lt;Person&gt; persons=(ArrayList&lt;Person&gt;)this.getServletContext().getAttribute(&quot;persons&quot;);
-        String str=JSONArray.fromObject(persons).toString();
-        response.setContentType(&quot;text/html;charset=utf-8&quot;);
-        try {
+    public <span class="hljs-keyword">void</span> getPersonAll(){
+        List&lt;Person&gt; persons=(ArrayList&lt;Person&gt;)<span class="hljs-keyword">this</span>.getServletContext().getAttribute(<span class="hljs-string">&quot;persons&quot;</span>);
+        <span class="hljs-built_in">String</span> str=JSONArray.fromObject(persons).toString();
+        response.setContentType(<span class="hljs-string">&quot;text/html;charset=utf-8&quot;</span>);
+        <span class="hljs-keyword">try</span> {
             response.getWriter().println(str);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
+        } <span class="hljs-keyword">catch</span> (IOException e) {
+            <span class="hljs-comment">// TODO Auto-generated catch block</span>
             e.printStackTrace();
         }
     }
 
 
 ajax
-        $(&quot;#addUser&quot;).click(function(){
-                    var name=$(&quot;#name&quot;).val();
-                    var email=$(&quot;#email&quot;).val();
-                    var phone=$(&quot;#phone&quot;).val();
+        $(<span class="hljs-string">&quot;#addUser&quot;</span>).click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                    <span class="hljs-keyword">var</span> name=$(<span class="hljs-string">&quot;#name&quot;</span>).val();
+                    <span class="hljs-keyword">var</span> email=$(<span class="hljs-string">&quot;#email&quot;</span>).val();
+                    <span class="hljs-keyword">var</span> phone=$(<span class="hljs-string">&quot;#phone&quot;</span>).val();
                     $.ajax({
-                        url:&quot;../../AA&quot;,
+                        url:<span class="hljs-string">&quot;../../AA&quot;</span>,
 
-                        success:function(){
+                        success:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
 
-                            //alert(name+&quot;|&quot;+email+&quot;|&quot;+phone);
-                            var $updateA = $(&quot;&lt;a/&gt;&quot;).css(&quot;cursor&quot;,&quot;pointer&quot;).text(&quot;&#x4FEE;&#x6539;&quot;);
+                            <span class="hljs-comment">//alert(name+&quot;|&quot;+email+&quot;|&quot;+phone);</span>
+                            <span class="hljs-keyword">var</span> $updateA = $(<span class="hljs-string">&quot;&lt;a/&gt;&quot;</span>).css(<span class="hljs-string">&quot;cursor&quot;</span>,<span class="hljs-string">&quot;pointer&quot;</span>).text(<span class="hljs-string">&quot;&#x4FEE;&#x6539;&quot;</span>);
 
-                            $updateA.click(function(){
-                                updateUser(this);
+                            $updateA.click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                                updateUser(<span class="hljs-keyword">this</span>);
                             });
 
-                            var $delA = $(&quot;&lt;a/&gt;&quot;).css(&quot;cursor&quot;,&quot;pointer&quot;).css(&quot;text-decoration&quot;,&quot;underline&quot;).text(&quot;&#x5220;&#x9664;&quot;);
-                                $delA.click(function(){
-                                    if(window.confirm(&quot;&#x786E;&#x5B9A;&#x5220;&#x9664;&#x5417;&#xFF1F;&quot;)){
-                                        deleteUser(this);
+                            <span class="hljs-keyword">var</span> $delA = $(<span class="hljs-string">&quot;&lt;a/&gt;&quot;</span>).css(<span class="hljs-string">&quot;cursor&quot;</span>,<span class="hljs-string">&quot;pointer&quot;</span>).css(<span class="hljs-string">&quot;text-decoration&quot;</span>,<span class="hljs-string">&quot;underline&quot;</span>).text(<span class="hljs-string">&quot;&#x5220;&#x9664;&quot;</span>);
+                                $delA.click(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                                    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">window</span>.confirm(<span class="hljs-string">&quot;&#x786E;&#x5B9A;&#x5220;&#x9664;&#x5417;&#xFF1F;&quot;</span>)){
+                                        deleteUser(<span class="hljs-keyword">this</span>);
                                     }
                                 });            
-                            var $nameTD = $(&quot;&lt;td/&gt;&quot;).text(name);
-                            var $emailTD = $(&quot;&lt;td/&gt;&quot;).text(email);
-                            var $phoneTD = $(&quot;&lt;td/&gt;&quot;).text(phone);
-                            var $updateTD = $(&quot;&lt;td/&gt;&quot;).append($updateA);
-                            var $delTD = $(&quot;&lt;td/&gt;&quot;).append($delA);
+                            <span class="hljs-keyword">var</span> $nameTD = $(<span class="hljs-string">&quot;&lt;td/&gt;&quot;</span>).text(name);
+                            <span class="hljs-keyword">var</span> $emailTD = $(<span class="hljs-string">&quot;&lt;td/&gt;&quot;</span>).text(email);
+                            <span class="hljs-keyword">var</span> $phoneTD = $(<span class="hljs-string">&quot;&lt;td/&gt;&quot;</span>).text(phone);
+                            <span class="hljs-keyword">var</span> $updateTD = $(<span class="hljs-string">&quot;&lt;td/&gt;&quot;</span>).append($updateA);
+                            <span class="hljs-keyword">var</span> $delTD = $(<span class="hljs-string">&quot;&lt;td/&gt;&quot;</span>).append($delA);
 
-                            var $idHidden = $(&quot;&lt;input/&gt;&quot;).attr(&quot;type&quot;,&quot;hidden&quot;).attr(&quot;name&quot;,&quot;id&quot;).attr(&quot;value&quot;,count);
-                            var $userTR = $(&quot;&lt;tr/&gt;&quot;)
+                            <span class="hljs-keyword">var</span> $idHidden = $(<span class="hljs-string">&quot;&lt;input/&gt;&quot;</span>).attr(<span class="hljs-string">&quot;type&quot;</span>,<span class="hljs-string">&quot;hidden&quot;</span>).attr(<span class="hljs-string">&quot;name&quot;</span>,<span class="hljs-string">&quot;id&quot;</span>).attr(<span class="hljs-string">&quot;value&quot;</span>,count);
+                            <span class="hljs-keyword">var</span> $userTR = $(<span class="hljs-string">&quot;&lt;tr/&gt;&quot;</span>)
                                 .append($nameTD).append($emailTD).append($phoneTD)
                                 .append($updateTD).append($delTD).append($idHidden);
 
-                            $(&quot;table(#user)&gt;tbody&quot;).append($userTR);
+                            $(<span class="hljs-string">&quot;table(#user)&gt;tbody&quot;</span>).append($userTR);
                             count++;
                         },
 
                         data:{
-                            method:&apos;add&apos;,
+                            method:<span class="hljs-string">&apos;add&apos;</span>,
                             id:count,
                             name:name,
                             email:email,
                             phone:phone
                         },
-                        error:function(){
-                            alert(&quot;error&quot;);
+                        error:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                            alert(<span class="hljs-string">&quot;error&quot;</span>);
                         }
                     });
-</code></pre><h2 id="4&#x3001;function">4&#x3001;function</h2>
+</code></pre>
+<h2 id="4&#x3001;function">4&#x3001;function</h2>
 <pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span>&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;
 <span class="hljs-title">Function</span>&#x662F;&#x6700;&#x9876;&#x5C42;&#x5BF9;&#x8C61;
 &#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#x90FD;&#x6709;&#x53EF;&#x80FD;&#x6210;&#x4E3A;&#x4EFB;&#x4F55;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;
@@ -1856,123 +1866,124 @@ delegate &#x7ED9;&#x672A;&#x6765;&#x7684;&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x4E8B
             });
         });
 </code></pre>
-<pre><code>&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;                    
-        $().ready(function(){
+<pre><code class="lang-js">&#x81EA;&#x5B9A;&#x4E49;&#x4E8B;&#x4EF6;                    
+        $().ready(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
 
-            $(&quot;div&quot;).unbind(&quot;&#x5B66;&#x597D;java&quot;);
-            $(&quot;div&quot;).bind(&quot;&#x5B66;&#x597D;java&quot;,function(event,a){
+            $(<span class="hljs-string">&quot;div&quot;</span>).unbind(<span class="hljs-string">&quot;&#x5B66;&#x597D;java&quot;</span>);
+            $(<span class="hljs-string">&quot;div&quot;</span>).bind(<span class="hljs-string">&quot;&#x5B66;&#x597D;java&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event,a</span>)</span>{
                 alert(a);
             });
 
-            $(&quot;div&quot;).unbind(&quot;click&quot;);
-            $(&quot;div&quot;).bind(&quot;click&quot;,function(){
-                $(this).trigger(&quot;&#x5B66;&#x597D;java&quot;,5);
+            $(<span class="hljs-string">&quot;div&quot;</span>).unbind(<span class="hljs-string">&quot;click&quot;</span>);
+            $(<span class="hljs-string">&quot;div&quot;</span>).bind(<span class="hljs-string">&quot;click&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                $(<span class="hljs-keyword">this</span>).trigger(<span class="hljs-string">&quot;&#x5B66;&#x597D;java&quot;</span>,<span class="hljs-number">5</span>);
             });
 
 
-        //    $(&quot;p&quot;).unbind(&quot;&#x5B66;jquery&quot;);
-        //    $(&quot;p&quot;).bind(&quot;&#x5B66;jquery&quot;,function(event,a,b){
-        //        alert(a);
-        //        alert(b);
-        //    });
-        //    
-        //    $(&quot;p&quot;).unbind(&quot;click&quot;);
-        //    $(&quot;p&quot;).bind(&quot;click&quot;,function(){
-        //        $(this).trigger(&quot;&#x5B66;jquery&quot;,[2,3]);
-        //    });
+        <span class="hljs-comment">//    $(&quot;p&quot;).unbind(&quot;&#x5B66;jquery&quot;);</span>
+        <span class="hljs-comment">//    $(&quot;p&quot;).bind(&quot;&#x5B66;jquery&quot;,function(event,a,b){</span>
+        <span class="hljs-comment">//        alert(a);</span>
+        <span class="hljs-comment">//        alert(b);</span>
+        <span class="hljs-comment">//    });</span>
+        <span class="hljs-comment">//    </span>
+        <span class="hljs-comment">//    $(&quot;p&quot;).unbind(&quot;click&quot;);</span>
+        <span class="hljs-comment">//    $(&quot;p&quot;).bind(&quot;click&quot;,function(){</span>
+        <span class="hljs-comment">//        $(this).trigger(&quot;&#x5B66;jquery&quot;,[2,3]);</span>
+        <span class="hljs-comment">//    });</span>
 
-            $(&quot;p&quot;).unbind(&quot;&#x5B66;jquery&quot;);
-            $(&quot;p&quot;).bind(&quot;&#x5B66;jquery&quot;,function(event,obj){
+            $(<span class="hljs-string">&quot;p&quot;</span>).unbind(<span class="hljs-string">&quot;&#x5B66;jquery&quot;</span>);
+            $(<span class="hljs-string">&quot;p&quot;</span>).bind(<span class="hljs-string">&quot;&#x5B66;jquery&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event,obj</span>)</span>{
                 alert(obj.a);
                 alert(obj.b);
             });
 
-            $(&quot;p&quot;).unbind(&quot;click&quot;);
-            $(&quot;p&quot;).bind(&quot;click&quot;,function(){
-                $(this).trigger(&quot;&#x5B66;jquery&quot;,{
-                    a:&apos;aaa&apos;,
-                    b:&apos;bbb&apos;
+            $(<span class="hljs-string">&quot;p&quot;</span>).unbind(<span class="hljs-string">&quot;click&quot;</span>);
+            $(<span class="hljs-string">&quot;p&quot;</span>).bind(<span class="hljs-string">&quot;click&quot;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                $(<span class="hljs-keyword">this</span>).trigger(<span class="hljs-string">&quot;&#x5B66;jquery&quot;</span>,{
+                    a:<span class="hljs-string">&apos;aaa&apos;</span>,
+                    b:<span class="hljs-string">&apos;bbb&apos;</span>
                 });
             });
         });            
 
 
-        /**
+        <span class="hljs-comment">/**
          * &#x56DE;&#x8C03;&#x51FD;&#x6570;
-         */
-        function ajaxFunction(){
-            var xmlHttp;
-            try { // Firefox, Opera 8.0+, Safari
-                xmlHttp = new XMLHttpRequest();
+         */</span>
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ajaxFunction</span>(<span class="hljs-params"></span>)</span>{
+            <span class="hljs-keyword">var</span> xmlHttp;
+            <span class="hljs-keyword">try</span> { <span class="hljs-comment">// Firefox, Opera 8.0+, Safari</span>
+                xmlHttp = <span class="hljs-keyword">new</span> XMLHttpRequest();
             } 
-            catch (e) {
-                try {// Internet Explorer
-                    xmlHttp = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);
+            <span class="hljs-keyword">catch</span> (e) {
+                <span class="hljs-keyword">try</span> {<span class="hljs-comment">// Internet Explorer</span>
+                    xmlHttp = <span class="hljs-keyword">new</span> ActiveXObject(<span class="hljs-string">&quot;Msxml2.XMLHTTP&quot;</span>);
                 } 
-                catch (e) {
-                    try {
-                        xmlHttp = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+                <span class="hljs-keyword">catch</span> (e) {
+                    <span class="hljs-keyword">try</span> {
+                        xmlHttp = <span class="hljs-keyword">new</span> ActiveXObject(<span class="hljs-string">&quot;Microsoft.XMLHTTP&quot;</span>);
                     } 
-                    catch (e) {
+                    <span class="hljs-keyword">catch</span> (e) {
                     }
                 }
             }
-            return xmlHttp;
+            <span class="hljs-keyword">return</span> xmlHttp;
         }
 
-        var xmlHttp;
+        <span class="hljs-keyword">var</span> xmlHttp;
 
-        function ajax(json){
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ajax</span>(<span class="hljs-params">json</span>)</span>{
             xmlHttp = ajaxFunction();
-            xmlHttp.onreadystatechange = function(){
-                //&#x83B7;&#x53D6;ajax&#x5F53;&#x524D;&#x7684;&#x8BF7;&#x6C42;&#x72B6;&#x6001; ==4&#x5904;&#x7406;
-                if (xmlHttp.readyState == 4) {
-                    if (xmlHttp.status == 200) {
-                        //callback&#x5C31;&#x662F;&#x56DE;&#x8C03;&#x51FD;&#x6570;
+            xmlHttp.onreadystatechange = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+                <span class="hljs-comment">//&#x83B7;&#x53D6;ajax&#x5F53;&#x524D;&#x7684;&#x8BF7;&#x6C42;&#x72B6;&#x6001; ==4&#x5904;&#x7406;</span>
+                <span class="hljs-keyword">if</span> (xmlHttp.readyState == <span class="hljs-number">4</span>) {
+                    <span class="hljs-keyword">if</span> (xmlHttp.status == <span class="hljs-number">200</span>) {
+                        <span class="hljs-comment">//callback&#x5C31;&#x662F;&#x56DE;&#x8C03;&#x51FD;&#x6570;</span>
                         json.callback(xmlHttp.responseText);
                     }
                 }
             };
-            xmlHttp.open(json.method, json.url, true);
-            xmlHttp.setRequestHeader(&quot;Content-Type&quot;, &quot;application/x-www-form-urlencoded&quot;);
+            xmlHttp.open(json.method, json.url, <span class="hljs-literal">true</span>);
+            xmlHttp.setRequestHeader(<span class="hljs-string">&quot;Content-Type&quot;</span>, <span class="hljs-string">&quot;application/x-www-form-urlencoded&quot;</span>);
             xmlHttp.send(json.data);
         }
 
-        window.onload = function(){
+        <span class="hljs-built_in">window</span>.onload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
             ajax({
-                url:&apos;../AjaxServlet&apos;,
-                data:null,
-                method:&apos;post&apos;,
-                callback:function(data){
-                    alert(this);
+                url:<span class="hljs-string">&apos;../AjaxServlet&apos;</span>,
+                data:<span class="hljs-literal">null</span>,
+                method:<span class="hljs-string">&apos;post&apos;</span>,
+                callback:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+                    alert(<span class="hljs-keyword">this</span>);
                     alert(data);
                 }
             });
         };
 
 
-this
-        function Person(){
+<span class="hljs-keyword">this</span>
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Person</span>(<span class="hljs-params"></span>)</span>{
 
-            alert(this);  //&#x8C01;&#x8C03;&#x7528;&#xFF0C;this&#x5C31;&#x4EE3;&#x8868;&#x8C01;
+            alert(<span class="hljs-keyword">this</span>);  <span class="hljs-comment">//&#x8C01;&#x8C03;&#x7528;&#xFF0C;this&#x5C31;&#x4EE3;&#x8868;&#x8C01;</span>
 
         }
 
-        function Student(){
-            var d=3;
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Student</span>(<span class="hljs-params"></span>)</span>{
+            <span class="hljs-keyword">var</span> d=<span class="hljs-number">3</span>;
         }
 
         Student.per=Person;
         Student.per();
 
-        Person(); //&#x76F8;&#x5F53;&#x4E8E; window.Person(); this &#x662F;window
-        Person.call(Student);//&#x76F8;&#x5F53;&#x4E8E;Student.per();
+        Person(); <span class="hljs-comment">//&#x76F8;&#x5F53;&#x4E8E; window.Person(); this &#x662F;window</span>
+        Person.call(Student);<span class="hljs-comment">//&#x76F8;&#x5F53;&#x4E8E;Student.per();</span>
 
-        var json={
+        <span class="hljs-keyword">var</span> json={
             a:Person
         };
         json.a();
-</code></pre><hr>
+</code></pre>
+<hr>
 <pre><code class="lang-js"><span class="hljs-comment">/**
  * &#x81EA;&#x8C03;&#x51FD;&#x6570;
  * &#x95ED;&#x5305;&#xFF1A;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x5B9A;&#x4E49;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x5916;&#x90E8;&#x4F7F;&#x7528;
@@ -2045,121 +2056,120 @@ jquery plugin
 </code></pre>
 <hr>
 <h2 id="5&#x3001;&#x51FD;&#x6570;&#x8BF4;&#x660E;">5&#x3001;&#x51FD;&#x6570;&#x8BF4;&#x660E;</h2>
-<pre><code>
-//&#x51FD;&#x6570;&#x4E24;&#x79CD;&#x521B;&#x5EFA;&#x65B9;&#x5F0F;
-        var F1=function(){}
-        function F2(){
-            alert(1);
+<pre><code class="lang-js"><span class="hljs-comment">//&#x51FD;&#x6570;&#x4E24;&#x79CD;&#x521B;&#x5EFA;&#x65B9;&#x5F0F;</span>
+        <span class="hljs-keyword">var</span> F1=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{}
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">F2</span>(<span class="hljs-params"></span>)</span>{
+            alert(<span class="hljs-number">1</span>);
         }
-        var f3=new F2();
-        alert(typeof(F1));//&#x51FD;&#x6570;&#x540D; funciton
-        alert(typeof(F2));//&#x51FD;&#x6570;&#x540D; function
-        alert(typeof(f3));//&#x51FD;&#x6570;&#x5F15;&#x7528;object  
-        F2();//&#x51FD;&#x6570;&#x540D;&#x52A0;&#x62EC;&#x53F7;&#x8868;&#x793A;&#x8C03;&#x7528;&#x51FD;&#x6570;
+        <span class="hljs-keyword">var</span> f3=<span class="hljs-keyword">new</span> F2();
+        alert(<span class="hljs-keyword">typeof</span>(F1));<span class="hljs-comment">//&#x51FD;&#x6570;&#x540D; funciton</span>
+        alert(<span class="hljs-keyword">typeof</span>(F2));<span class="hljs-comment">//&#x51FD;&#x6570;&#x540D; function</span>
+        alert(<span class="hljs-keyword">typeof</span>(f3));<span class="hljs-comment">//&#x51FD;&#x6570;&#x5F15;&#x7528;object  </span>
+        F2();<span class="hljs-comment">//&#x51FD;&#x6570;&#x540D;&#x52A0;&#x62EC;&#x53F7;&#x8868;&#x793A;&#x8C03;&#x7528;&#x51FD;&#x6570;</span>
 
 &#x533F;&#x540D;&#x51FD;&#x6570;        
 
-    //&#x95ED;&#x5305; ()()
-    (function(i){
+    <span class="hljs-comment">//&#x95ED;&#x5305; ()()</span>
+    (<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">i</span>)</span>{
         alert(i);
-    })(11);
+    })(<span class="hljs-number">11</span>);
 
-    //&#x533F;&#x540D;&#x51FD;&#x6570;
-    var f=function(i){
+    <span class="hljs-comment">//&#x533F;&#x540D;&#x51FD;&#x6570;</span>
+    <span class="hljs-keyword">var</span> f=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">i</span>)</span>{
         alert(i);
     };
-    f(22);//&#x8C03;&#x7528;&#x51FD;&#x6570;
-    alert(typeof(f));//f&#x662F;function
+    f(<span class="hljs-number">22</span>);<span class="hljs-comment">//&#x8C03;&#x7528;&#x51FD;&#x6570;</span>
+    alert(<span class="hljs-keyword">typeof</span>(f));<span class="hljs-comment">//f&#x662F;function</span>
 
-    //&#x6709;&#x53C2;&#x51FD;&#x6570;
-    function F(i){
+    <span class="hljs-comment">//&#x6709;&#x53C2;&#x51FD;&#x6570;</span>
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">F</span>(<span class="hljs-params">i</span>)</span>{
         alert(i);
     }
-    var f2=new F(33);//&#x51FD;&#x6570;&#x540D;&#xFF08;&#xFF09;&#x8868;&#x793A;&#x8C03;&#x7528;&#x51FD;&#x6570;
-    alert(typeof(f2));//f2&#x662F;function
-    F(55);//&#x51FD;&#x6570;&#x540D;&#xFF08;&#xFF09;&#x8868;&#x793A;&#x8C03;&#x7528;&#x51FD;&#x6570;
+    <span class="hljs-keyword">var</span> f2=<span class="hljs-keyword">new</span> F(<span class="hljs-number">33</span>);<span class="hljs-comment">//&#x51FD;&#x6570;&#x540D;&#xFF08;&#xFF09;&#x8868;&#x793A;&#x8C03;&#x7528;&#x51FD;&#x6570;</span>
+    alert(<span class="hljs-keyword">typeof</span>(f2));<span class="hljs-comment">//f2&#x662F;function</span>
+    F(<span class="hljs-number">55</span>);<span class="hljs-comment">//&#x51FD;&#x6570;&#x540D;&#xFF08;&#xFF09;&#x8868;&#x793A;&#x8C03;&#x7528;&#x51FD;&#x6570;</span>
 
 
 
 
 
 
-//&#x4F8B;1 &#x51FD;&#x6570;&#x58F0;&#x660E;
-function F1(){
-    alert(&quot;function declaration 1&quot;);
+<span class="hljs-comment">//&#x4F8B;1 &#x51FD;&#x6570;&#x58F0;&#x660E;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">F1</span>(<span class="hljs-params"></span>)</span>{
+    alert(<span class="hljs-string">&quot;function declaration 1&quot;</span>);
 }
 
-//&#x4F8B;2 &#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x51FD;&#x6570;&#x662F;new&#x51FA;&#x6765;&#x7684;&#x7ACB;&#x523B;&#x6267;&#x884C;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x5148;&#x52A8;&#x6001;&#x521B;&#x5EFA;&#x4E86;&#x51FD;&#x6570;&#x518D;&#x5C06;&#x5176;&#x8C03;&#x7528; &#x3002;&#x5982;&#x4F8B;3
-var f2=new function(){
-    //alert(&quot;new function expression 2&quot;);
+<span class="hljs-comment">//&#x4F8B;2 &#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#x3002;&#x51FD;&#x6570;&#x662F;new&#x51FA;&#x6765;&#x7684;&#x7ACB;&#x523B;&#x6267;&#x884C;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x5148;&#x52A8;&#x6001;&#x521B;&#x5EFA;&#x4E86;&#x51FD;&#x6570;&#x518D;&#x5C06;&#x5176;&#x8C03;&#x7528; &#x3002;&#x5982;&#x4F8B;3</span>
+<span class="hljs-keyword">var</span> f2=<span class="hljs-keyword">new</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-comment">//alert(&quot;new function expression 2&quot;);</span>
 };
 
-//&#x4F8B;3
-function Fun3(){//&#x58F0;&#x660E;&#x51FD;&#x6570;
-    alert(&quot;function Fun3&quot;);
+<span class="hljs-comment">//&#x4F8B;3</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Fun3</span>(<span class="hljs-params"></span>)</span>{<span class="hljs-comment">//&#x58F0;&#x660E;&#x51FD;&#x6570;</span>
+    alert(<span class="hljs-string">&quot;function Fun3&quot;</span>);
 }
-var f31=new Fun3();//Fun3()&#x51FD;&#x6570;&#x540D;+&#x62EC;&#x53F7; &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x51FD;&#x6570;
-//alert(&quot;typeof(f31):  &quot;+typeof(f31));//Fun3&#x7684;&#x5F15;&#x7528;&#x8D4B;&#x503C;&#x7ED9;f31&#x3002;f31 &#x662F;object
-//alert(&quot;f31 &quot;+f31);
+<span class="hljs-keyword">var</span> f31=<span class="hljs-keyword">new</span> Fun3();<span class="hljs-comment">//Fun3()&#x51FD;&#x6570;&#x540D;+&#x62EC;&#x53F7; &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x51FD;&#x6570;</span>
+<span class="hljs-comment">//alert(&quot;typeof(f31):  &quot;+typeof(f31));//Fun3&#x7684;&#x5F15;&#x7528;&#x8D4B;&#x503C;&#x7ED9;f31&#x3002;f31 &#x662F;object</span>
+<span class="hljs-comment">//alert(&quot;f31 &quot;+f31);</span>
 f31;
 
-var f32=Fun3;//&#x5C06;Fun3&#x8D4B;&#x503C;&#x7ED9;f32&#x3002;f32&#x662F;function
-alert(&quot;typeof(f32)--&quot;+typeof(f32));//function
-f32();//&#x51FD;&#x6570;&#x540D;+&#x62EC;&#x53F7; &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x51FD;&#x6570;
+<span class="hljs-keyword">var</span> f32=Fun3;<span class="hljs-comment">//&#x5C06;Fun3&#x8D4B;&#x503C;&#x7ED9;f32&#x3002;f32&#x662F;function</span>
+alert(<span class="hljs-string">&quot;typeof(f32)--&quot;</span>+<span class="hljs-keyword">typeof</span>(f32));<span class="hljs-comment">//function</span>
+f32();<span class="hljs-comment">//&#x51FD;&#x6570;&#x540D;+&#x62EC;&#x53F7; &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x51FD;&#x6570;</span>
 alert(f32);
 
-//&#x4F8B;4 &#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;
-var f4=function(){
-    alert(&quot;function expression 4&quot;);
+<span class="hljs-comment">//&#x4F8B;4 &#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;</span>
+<span class="hljs-keyword">var</span> f4=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    alert(<span class="hljs-string">&quot;function expression 4&quot;</span>);
 };
 
 
-//alert(&quot;dec  &quot;+typeof(F1));//funciton
-//alert(&quot;exp  &quot;+typeof(f2));//function &#x662F;new &#x51FA;&#x6765;&#x7684;&#xFF0C;f2&#x662F;object
-//alert(&quot;exp  &quot;+typeof(f4));//function
+<span class="hljs-comment">//alert(&quot;dec  &quot;+typeof(F1));//funciton</span>
+<span class="hljs-comment">//alert(&quot;exp  &quot;+typeof(f2));//function &#x662F;new &#x51FA;&#x6765;&#x7684;&#xFF0C;f2&#x662F;object</span>
+<span class="hljs-comment">//alert(&quot;exp  &quot;+typeof(f4));//function</span>
 
 
 
 
-//&#x58F0;&#x660E;&#x51FD;&#x6570;
-function F1(){
-    alert(&quot;F1&quot;);
+<span class="hljs-comment">//&#x58F0;&#x660E;&#x51FD;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">F1</span>(<span class="hljs-params"></span>)</span>{
+    alert(<span class="hljs-string">&quot;F1&quot;</span>);
 
 }
 
-//&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;
-var f2=function(){
-    alert(&quot;F2&quot;);
+<span class="hljs-comment">//&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;</span>
+<span class="hljs-keyword">var</span> f2=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    alert(<span class="hljs-string">&quot;F2&quot;</span>);
 };
 
-//&#x8C03;&#x7528;&#x51FD;&#x6570;
-//F1();
-//f();
+<span class="hljs-comment">//&#x8C03;&#x7528;&#x51FD;&#x6570;</span>
+<span class="hljs-comment">//F1();</span>
+<span class="hljs-comment">//f();</span>
 
-//&#x58F0;&#x660E;&#x51FD;&#x6570;  &#x9700;&#x8981;&#x5728;function&#x52A0;&#x62EC;&#x53F7;&#x8F6C;&#x6362;&#x4E3A;&#x8868;&#x8FBE;&#x5F0F;&#x5728;&#x5176;&#x540E;&#x518D;&#x52A0;&#x4E0A;&#x62EC;&#x53F7;&#x624D;&#x80FD;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x51FD;&#x6570;
-(function F3(){
-    alert(&quot;F3&quot;);
+<span class="hljs-comment">//&#x58F0;&#x660E;&#x51FD;&#x6570;  &#x9700;&#x8981;&#x5728;function&#x52A0;&#x62EC;&#x53F7;&#x8F6C;&#x6362;&#x4E3A;&#x8868;&#x8FBE;&#x5F0F;&#x5728;&#x5176;&#x540E;&#x518D;&#x52A0;&#x4E0A;&#x62EC;&#x53F7;&#x624D;&#x80FD;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x51FD;&#x6570;</span>
+(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">F3</span>(<span class="hljs-params"></span>)</span>{
+    alert(<span class="hljs-string">&quot;F3&quot;</span>);
 
 })();
 
-//&#x5C06;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x8F6C;&#x6362;&#x4E3A;&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#x518D;&#x52A0;&#x62EC;&#x53F7;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x51FD;&#x6570;
-!function F31(){
-    alert(&quot;!!&quot;);
+<span class="hljs-comment">//&#x5C06;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x8F6C;&#x6362;&#x4E3A;&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#x518D;&#x52A0;&#x62EC;&#x53F7;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x51FD;&#x6570;</span>
+!<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">F31</span>(<span class="hljs-params"></span>)</span>{
+    alert(<span class="hljs-string">&quot;!!&quot;</span>);
 
 }();
 
-+function F32(){
-    alert(&quot;++&quot;);
++<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">F32</span>(<span class="hljs-params"></span>)</span>{
+    alert(<span class="hljs-string">&quot;++&quot;</span>);
 
 }();
 
--function F33(){
-    alert(&quot;--&quot;);
+-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">F33</span>(<span class="hljs-params"></span>)</span>{
+    alert(<span class="hljs-string">&quot;--&quot;</span>);
 
 }();
-//&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F; &#x540E;&#x9762;&#x52A0;&#x62EC;&#x53F7;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x51FD;&#x6570;
-var f3=function(){
-    alert(&quot;F4&quot;);
+<span class="hljs-comment">//&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F; &#x540E;&#x9762;&#x52A0;&#x62EC;&#x53F7;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x51FD;&#x6570;</span>
+<span class="hljs-keyword">var</span> f3=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    alert(<span class="hljs-string">&quot;F4&quot;</span>);
 }();
 
 
@@ -2169,53 +2179,54 @@ obj.myFunc();
 myFunc.call(obj,arg);
 myFunc.apply(obj,[arg1,arg2..]); 
 
-call&#x548C;apply&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#x73AF;&#x5883;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;this&#x7684;&#x6307;&#x5411;&#x3002;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;DOM&#x7684;&#x4F8B;&#x5B50;&#x6765;&#x7406;&#x89E3;&#x3002;
+call&#x548C;apply&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x91CD;&#x65B0;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#x73AF;&#x5883;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;<span class="hljs-keyword">this</span>&#x7684;&#x6307;&#x5411;&#x3002;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;DOM&#x7684;&#x4F8B;&#x5B50;&#x6765;&#x7406;&#x89E3;&#x3002;
 
-function changeStyle(attr, value){
-    this.style[attr] = value;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">changeStyle</span>(<span class="hljs-params">attr, value</span>)</span>{
+    <span class="hljs-keyword">this</span>.style[attr] = value;
 }
-var box = document.getElementById(&apos;box&apos;);
-window.changeStyle.call(box, &quot;height&quot;, &quot;200px&quot;);
+<span class="hljs-keyword">var</span> box = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;box&apos;</span>);
+<span class="hljs-built_in">window</span>.changeStyle.call(box, <span class="hljs-string">&quot;height&quot;</span>, <span class="hljs-string">&quot;200px&quot;</span>);
 
-call&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x5C06;&#x8981;&#x8C03;&#x7528;&#x6B64;&#x51FD;&#x6570;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;changeStyle&#x51FD;&#x6570;&#x5C06;&#x88AB;box&#x5BF9;&#x8C61;&#x8C03;&#x7528;&#xFF0C;this&#x6307;&#x5411;&#x4E86;box&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x7528;call&#x7684;&#x8BDD;&#xFF0C;&#x7A0B;&#x5E8F;&#x62A5;&#x9519;&#xFF0C;&#x56E0;&#x4E3A;window&#x5BF9;&#x8C61;&#x4E2D;&#x6CA1;&#x6709;style&#x5C5E;&#x6027;&#x3002;
+call&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x5C06;&#x8981;&#x8C03;&#x7528;&#x6B64;&#x51FD;&#x6570;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;changeStyle&#x51FD;&#x6570;&#x5C06;&#x88AB;box&#x5BF9;&#x8C61;&#x8C03;&#x7528;&#xFF0C;<span class="hljs-keyword">this</span>&#x6307;&#x5411;&#x4E86;box&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x7528;call&#x7684;&#x8BDD;&#xFF0C;&#x7A0B;&#x5E8F;&#x62A5;&#x9519;&#xFF0C;&#x56E0;&#x4E3A;<span class="hljs-built_in">window</span>&#x5BF9;&#x8C61;&#x4E2D;&#x6CA1;&#x6709;style&#x5C5E;&#x6027;&#x3002;
 apply&#x7684;&#x7528;&#x6CD5;:
 
-window.changeStyle.apply(box, [&apos;height&apos;, &apos;200px&apos;]);
+<span class="hljs-built_in">window</span>.changeStyle.apply(box, [<span class="hljs-string">&apos;height&apos;</span>, <span class="hljs-string">&apos;200px&apos;</span>]);
 
 
 call&#x7528;&#x6765;&#x8C03;&#x7528;&#x53E6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4F46;&#x8C03;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#x662F;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x5165;&#x7684;&#x3002;
-function A(name){//A &#x7C7B;
-    this.name=name;
-    this.showName=function(){
-        alert(this.name);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">A</span>(<span class="hljs-params">name</span>)</span>{<span class="hljs-comment">//A &#x7C7B;</span>
+    <span class="hljs-keyword">this</span>.name=name;
+    <span class="hljs-keyword">this</span>.showName=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        alert(<span class="hljs-keyword">this</span>.name);
     }
 }
 
-function B(name,age){ //B &#x7C7B;
-    this.name=name;
-    this.age=age;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">B</span>(<span class="hljs-params">name,age</span>)</span>{ <span class="hljs-comment">//B &#x7C7B;</span>
+    <span class="hljs-keyword">this</span>.name=name;
+    <span class="hljs-keyword">this</span>.age=age;
 }
-var a=new A(&quot;aaa&quot;); //a&#x5BF9;&#x8C61;&#x662F;&#x6709;showName&#x65B9;&#x6CD5;&#x7684;
-var b=new B(&apos;bbb&apos;,10);//b&#x5BF9;&#x8C61;&#x6CA1;&#x6709;showName&#x65B9;&#x6CD5;
-a.showName.call(b);//&#x4F46;&#x662F;&#x8FD9;&#x91CC;showName&#xFF0C;&#x663E;&#x793A;&#x7684;&#x662F;b&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;b&#x8C03;&#x7528;&#x4E86;a&#x7684;showName&#x65B9;&#x6CD5;
+<span class="hljs-keyword">var</span> a=<span class="hljs-keyword">new</span> A(<span class="hljs-string">&quot;aaa&quot;</span>); <span class="hljs-comment">//a&#x5BF9;&#x8C61;&#x662F;&#x6709;showName&#x65B9;&#x6CD5;&#x7684;</span>
+<span class="hljs-keyword">var</span> b=<span class="hljs-keyword">new</span> B(<span class="hljs-string">&apos;bbb&apos;</span>,<span class="hljs-number">10</span>);<span class="hljs-comment">//b&#x5BF9;&#x8C61;&#x6CA1;&#x6709;showName&#x65B9;&#x6CD5;</span>
+a.showName.call(b);<span class="hljs-comment">//&#x4F46;&#x662F;&#x8FD9;&#x91CC;showName&#xFF0C;&#x663E;&#x793A;&#x7684;&#x662F;b&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;b&#x8C03;&#x7528;&#x4E86;a&#x7684;showName&#x65B9;&#x6CD5;</span>
 
 call&#x6700;&#x7ECF;&#x5178;&#x7684;&#x5E94;&#x7528;&#x5C31;&#x662F;&#x7EE7;&#x627F;&#x3002;javascript&#x662F;&#x6CA1;&#x6709;&#x5BF9;&#x8C61;&#x7EE7;&#x627F;&#x6982;&#x5FF5;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x80FD;&#x7528;&#x4E00;&#x4E9B;&#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x3002;
-function A(name){//A &#x7C7B; &#x8FD8;&#x662F;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;A&#x6709;showName
-    this.name=name;
-    this.showName=function(){
-        alert(this.name);
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">A</span>(<span class="hljs-params">name</span>)</span>{<span class="hljs-comment">//A &#x7C7B; &#x8FD8;&#x662F;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;A&#x6709;showName</span>
+    <span class="hljs-keyword">this</span>.name=name;
+    <span class="hljs-keyword">this</span>.showName=<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+        alert(<span class="hljs-keyword">this</span>.name);
     }
 }
 
-function B(name,age){ //B &#x7C7B;&#xFF0C;
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">B</span>(<span class="hljs-params">name,age</span>)</span>{ <span class="hljs-comment">//B &#x7C7B;&#xFF0C;</span>
 
-    //B&#x7C7B;&#x4E2D;&#x901A;&#x8FC7;A.call&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x6267;&#x884C;&#x4E86;A(name),&#x4F46;&#x5728;A&#x4E2D;&#x6240;&#x6709;this&#x5176;&#x5B9E;&#x90FD;&#x662F;B&#x3002;&#x90A3;&#x4E48;B&#x5C31;&#x6709;name&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x62E5;&#x6709;showName&#x65B9;&#x6CD5;&#x4E86;&#x3002;
-    A.call(this,name);
-    this.age=age;
+    <span class="hljs-comment">//B&#x7C7B;&#x4E2D;&#x901A;&#x8FC7;A.call&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x6267;&#x884C;&#x4E86;A(name),&#x4F46;&#x5728;A&#x4E2D;&#x6240;&#x6709;this&#x5176;&#x5B9E;&#x90FD;&#x662F;B&#x3002;&#x90A3;&#x4E48;B&#x5C31;&#x6709;name&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x62E5;&#x6709;showName&#x65B9;&#x6CD5;&#x4E86;&#x3002;</span>
+    A.call(<span class="hljs-keyword">this</span>,name);
+    <span class="hljs-keyword">this</span>.age=age;
 }
-var b=new B(&apos;bbb&apos;,10);
-b.showName();//B&#x7EE7;&#x627F;&#x4E86;A&#xFF0C;&#x6240;&#x4EE5;b&#x4E5F;&#x6709;showName&#x65B9;&#x6CD5;&#x3002;
+<span class="hljs-keyword">var</span> b=<span class="hljs-keyword">new</span> B(<span class="hljs-string">&apos;bbb&apos;</span>,<span class="hljs-number">10</span>);
+b.showName();<span class="hljs-comment">//B&#x7EE7;&#x627F;&#x4E86;A&#xFF0C;&#x6240;&#x4EE5;b&#x4E5F;&#x6709;showName&#x65B9;&#x6CD5;&#x3002;</span>
 </code></pre>
+
                                 
                                 </section>
                             
@@ -2258,7 +2269,7 @@ b.showName();//B&#x7EE7;&#x627F;&#x4E86;A&#xFF0C;&#x6240;&#x4EE5;b&#x4E5F;&#x670
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"jquery笔记","level":"3.4.2","depth":2,"next":{"title":"二进制数负数","level":"3.4.3","depth":2,"path":"编程/资料/二进制数负数.md","ref":"编程/资料/二进制数负数.md","articles":[]},"previous":{"title":"npm笔记","level":"3.4.1","depth":2,"path":"编程/资料/npm笔记.md","ref":"编程/资料/npm笔记.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/资料/jquery笔记.md","mtime":"2022-04-12T02:59:51.020Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-01T11:07:45.691Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"jquery笔记","level":"3.4.2","depth":2,"next":{"title":"二进制数负数","level":"3.4.3","depth":2,"path":"编程/资料/二进制数负数.md","ref":"编程/资料/二进制数负数.md","articles":[]},"previous":{"title":"npm笔记","level":"3.4.1","depth":2,"path":"编程/资料/npm笔记.md","ref":"编程/资料/npm笔记.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/资料/jquery笔记.md","mtime":"2022-07-09T09:48:04.920Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-15T09:10:08.141Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
