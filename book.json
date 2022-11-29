@@ -7,7 +7,7 @@
             "xushufa": "https://xushufa.cn"
         }
     },
-    "plugins": ["-sharing", "sharing-plus", "lightbox", "page-toc-button","expandable-chapters","theme-comscore"],
+    "plugins": ["-sharing", "sharing-plus", "lightbox", "page-toc-button","expandable-chapters","theme-comscore","mermaid-gb3"],
     "pluginsConfig": {
         "sharing": {
             "all": []

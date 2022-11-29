@@ -12,6 +12,7 @@
         
         
     
+    
     <link rel="stylesheet" href="../../gitbook/style.css">
 
     
@@ -26,6 +27,10 @@
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
                 
             
                 
@@ -60,6 +65,9 @@
         
     
         
+    
+
+
     
 
         
@@ -209,6 +217,19 @@
             
                     
                     短期远行必备物品
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../../生活/随笔/我的原神旅行观测记录.html">
+            
+                <a href="../../生活/随笔/我的原神旅行观测记录.html">
+            
+                    
+                    我的原神旅行观测记录
             
                 </a>
             
@@ -916,7 +937,33 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.10" data-path="../资料/pagefile.sys有几十个G，太大怎么办.html">
+        <li class="chapter " data-level="3.4.10" data-path="../资料/markdown导出pdf方法优劣分析.html">
+            
+                <a href="../资料/markdown导出pdf方法优劣分析.html">
+            
+                    
+                    markdown导出pdf方法优劣分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.11" data-path="../资料/系统磁盘c盘清理垃圾文件方法一览.html">
+            
+                <a href="../资料/系统磁盘c盘清理垃圾文件方法一览.html">
+            
+                    
+                    系统磁盘c盘清理垃圾文件方法一览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.12" data-path="../资料/pagefile.sys有几十个G，太大怎么办.html">
             
                 <a href="../资料/pagefile.sys有几十个G，太大怎么办.html">
             
@@ -2109,6 +2156,18 @@ CONSTRAINT check_salary <span class="hljs-title">CHECK</span>
 
 &#x5973;&#x804C;&#x5458;&#x7684;&#x6761;&#x4EF6;&#x5012;&#x662F;&#x7B26;&#x5408;&#x4E86;&#xFF0C;&#x7537;&#x804C;&#x5458;&#x5C31;&#x65E0;&#x6CD5;&#x8F93;&#x5165;&#x4E86;&#x3002;
 </span></code></pre>
+<pre><code class="lang-sql"><span class="hljs-comment">-- case when&#x66F4;&#x65B0;</span>
+<span class="hljs-keyword">update</span> ins_xsf_purchase_detail <span class="hljs-keyword">set</span> 
+ purchase_gross_weight = <span class="hljs-keyword">CASE</span> 
+        <span class="hljs-keyword">WHEN</span> product_id = <span class="hljs-number">1</span> <span class="hljs-keyword">THEN</span> <span class="hljs-number">99</span>
+        <span class="hljs-keyword">WHEN</span> product_id = <span class="hljs-number">2</span> <span class="hljs-keyword">THEN</span> <span class="hljs-number">1</span> 
+ <span class="hljs-keyword">ELSE</span>    <span class="hljs-number">0</span> <span class="hljs-keyword">end</span>, 
+ gross_price = <span class="hljs-keyword">CASE</span> 
+        <span class="hljs-keyword">WHEN</span> product_id = <span class="hljs-number">2</span> <span class="hljs-keyword">THEN</span> <span class="hljs-number">900</span>
+        <span class="hljs-keyword">WHEN</span> product_id = <span class="hljs-number">2</span> <span class="hljs-keyword">THEN</span> <span class="hljs-number">1</span> 
+ <span class="hljs-keyword">ELSE</span>    <span class="hljs-number">0</span> <span class="hljs-keyword">end</span>,gross_weight_source=<span class="hljs-number">2</span>
+<span class="hljs-keyword">where</span> purchase_order=<span class="hljs-string">&apos;HZCCG20220906618201&apos;</span>;
+</code></pre>
 <h3 id="26&#x3001;&#x590D;&#x5236;&#x8868;&#x7ED3;&#x6784;&#x3001;&#x8868;&#x6570;&#x636E;">2.6&#x3001;&#x590D;&#x5236;&#x8868;&#x7ED3;&#x6784;&#x3001;&#x8868;&#x6570;&#x636E;</h3>
 <pre><code class="lang-java">
 Mysql&#x590D;&#x5236;&#x8868;&#x7ED3;&#x6784;&#x3001;&#x8868;&#x6570;&#x636E;&#x7684;&#x65B9;&#x6CD5;
@@ -2247,12 +2306,13 @@ mysql&gt; exit;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"mysqlNote","level":"3.3.1","depth":2,"next":{"title":"oracleNote","level":"3.3.2","depth":2,"path":"编程/数据库/oracleNote.md","ref":"编程/数据库/oracleNote.md","articles":[]},"previous":{"title":"数据库","level":"3.3","depth":1,"ref":"","articles":[{"title":"mysqlNote","level":"3.3.1","depth":2,"path":"编程/数据库/mysqlNote.md","ref":"编程/数据库/mysqlNote.md","articles":[]},{"title":"oracleNote","level":"3.3.2","depth":2,"path":"编程/数据库/oracleNote.md","ref":"编程/数据库/oracleNote.md","articles":[]},{"title":"ldapNote","level":"3.3.3","depth":2,"path":"编程/数据库/ldapNote.md","ref":"编程/数据库/ldapNote.md","articles":[]},{"title":"redis","level":"3.3.4","depth":2,"path":"编程/数据库/redis.md","ref":"编程/数据库/redis.md","articles":[]},{"title":"mongo","level":"3.3.5","depth":2,"path":"编程/数据库/mongo.md","ref":"编程/数据库/mongo.md","articles":[]},{"title":"数据库隔离级别","level":"3.3.6","depth":2,"path":"编程/数据库/数据库隔离级别.md","ref":"编程/数据库/数据库隔离级别.md","articles":[]},{"title":"mysql开启log-bin日志","level":"3.3.7","depth":2,"path":"编程/数据库/mysql开启log-bin日志.md","ref":"编程/数据库/mysql开启log-bin日志.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/数据库/mysqlNote.md","mtime":"2022-08-24T05:47:09.008Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-26T10:00:24.083Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"mysqlNote","level":"3.3.1","depth":2,"next":{"title":"oracleNote","level":"3.3.2","depth":2,"path":"编程/数据库/oracleNote.md","ref":"编程/数据库/oracleNote.md","articles":[]},"previous":{"title":"数据库","level":"3.3","depth":1,"ref":"","articles":[{"title":"mysqlNote","level":"3.3.1","depth":2,"path":"编程/数据库/mysqlNote.md","ref":"编程/数据库/mysqlNote.md","articles":[]},{"title":"oracleNote","level":"3.3.2","depth":2,"path":"编程/数据库/oracleNote.md","ref":"编程/数据库/oracleNote.md","articles":[]},{"title":"ldapNote","level":"3.3.3","depth":2,"path":"编程/数据库/ldapNote.md","ref":"编程/数据库/ldapNote.md","articles":[]},{"title":"redis","level":"3.3.4","depth":2,"path":"编程/数据库/redis.md","ref":"编程/数据库/redis.md","articles":[]},{"title":"mongo","level":"3.3.5","depth":2,"path":"编程/数据库/mongo.md","ref":"编程/数据库/mongo.md","articles":[]},{"title":"数据库隔离级别","level":"3.3.6","depth":2,"path":"编程/数据库/数据库隔离级别.md","ref":"编程/数据库/数据库隔离级别.md","articles":[]},{"title":"mysql开启log-bin日志","level":"3.3.7","depth":2,"path":"编程/数据库/mysql开启log-bin日志.md","ref":"编程/数据库/mysql开启log-bin日志.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","mermaid-gb3","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/数据库/mysqlNote.md","mtime":"2022-09-07T03:33:07.492Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-29T03:07:17.609Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     
@@ -2270,6 +2330,10 @@ mysql&gt; exit;
     
         
         <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
         
     
         
@@ -2300,6 +2364,8 @@ mysql&gt; exit;
         <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
         
     
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>

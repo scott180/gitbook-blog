@@ -1,0 +1,1686 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>markdown导出pdf方法优劣分析 · 无为徐生</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="系统磁盘c盘清理垃圾文件方法一览.html" />
+    
+    
+    <link rel="prev" href="window安装RabbitMQ.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/scott180/gitbook-blog" target="_blank" class="custom-link">github</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://xushufa.cn" target="_blank" class="custom-link">xushufa</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于我
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">生活</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <span>
+            
+                    
+                    随笔
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../生活/随笔/日常Note.html">
+            
+                <a href="../../生活/随笔/日常Note.html">
+            
+                    
+                    日常Note
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../生活/随笔/驾考记事.html">
+            
+                <a href="../../生活/随笔/驾考记事.html">
+            
+                    
+                    驾考记事
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../生活/随笔/健身与学习.html">
+            
+                <a href="../../生活/随笔/健身与学习.html">
+            
+                    
+                    健身与学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../生活/随笔/二十四式太极拳.html">
+            
+                <a href="../../生活/随笔/二十四式太极拳.html">
+            
+                    
+                    二十四式太极拳
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../../生活/随笔/短期远行必备物品.html">
+            
+                <a href="../../生活/随笔/短期远行必备物品.html">
+            
+                    
+                    短期远行必备物品
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../../生活/随笔/我的原神旅行观测记录.html">
+            
+                <a href="../../生活/随笔/我的原神旅行观测记录.html">
+            
+                    
+                    我的原神旅行观测记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <span>
+            
+                    
+                    文档
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../生活/文档/如何练好书法.html">
+            
+                <a href="../../生活/文档/如何练好书法.html">
+            
+                    
+                    如何练好书法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../生活/文档/文言文翻译网络流行语.html">
+            
+                <a href="../../生活/文档/文言文翻译网络流行语.html">
+            
+                    
+                    文言文翻译网络流行语
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../../生活/文档/安徽电信免费流量获取方法.html">
+            
+                <a href="../../生活/文档/安徽电信免费流量获取方法.html">
+            
+                    
+                    安徽电信免费流量获取方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../../生活/文档/安徽电信-流量来啦-每日必点.html">
+            
+                <a href="../../生活/文档/安徽电信-流量来啦-每日必点.html">
+            
+                    
+                    安徽电信-流量来啦-每日必点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.5" data-path="../../生活/文档/治疗失眠无限循环的有趣动图.html">
+            
+                <a href="../../生活/文档/治疗失眠无限循环的有趣动图.html">
+            
+                    
+                    治疗失眠无限循环的有趣动图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">编程</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <span>
+            
+                    
+                    java
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../java/java介绍.html">
+            
+                <a href="../java/java介绍.html">
+            
+                    
+                    java介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../java/javaNote.html">
+            
+                <a href="../java/javaNote.html">
+            
+                    
+                    javaNote
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../java/排序算法.html">
+            
+                <a href="../java/排序算法.html">
+            
+                    
+                    排序算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../java/java资料集.html">
+            
+                <a href="../java/java资料集.html">
+            
+                    
+                    java资料集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../java/布隆过滤器.html">
+            
+                <a href="../java/布隆过滤器.html">
+            
+                    
+                    布隆过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="../java/eclipse笔记.html">
+            
+                <a href="../java/eclipse笔记.html">
+            
+                    
+                    eclipse笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="../java/tomcat笔记.html">
+            
+                <a href="../java/tomcat笔记.html">
+            
+                    
+                    tomcat笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" data-path="../java/cpu过高分析.html">
+            
+                <a href="../java/cpu过高分析.html">
+            
+                    
+                    cpu过高分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.9" data-path="../java/mybatis笔记.html">
+            
+                <a href="../java/mybatis笔记.html">
+            
+                    
+                    mybatis笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.10" data-path="../java/springmvc笔记.html">
+            
+                <a href="../java/springmvc笔记.html">
+            
+                    
+                    springmvc笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.11" data-path="../java/servlet-jsp学习.html">
+            
+                <a href="../java/servlet-jsp学习.html">
+            
+                    
+                    servlet-jsp学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.12" data-path="../java/SpringCloud入门.html">
+            
+                <a href="../java/SpringCloud入门.html">
+            
+                    
+                    SpringCloud入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.13" data-path="../java/springboot启动banner图案.html">
+            
+                <a href="../java/springboot启动banner图案.html">
+            
+                    
+                    springboot启动banner图案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    运维
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" data-path="../运维/docker.html">
+            
+                <a href="../运维/docker.html">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" data-path="../运维/gitNote.html">
+            
+                <a href="../运维/gitNote.html">
+            
+                    
+                    gitNote
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" data-path="../运维/shell语法.html">
+            
+                <a href="../运维/shell语法.html">
+            
+                    
+                    shell语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" data-path="../运维/linuxNote-x.html">
+            
+                <a href="../运维/linuxNote-x.html">
+            
+                    
+                    linuxNote
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.5" data-path="../运维/nginx笔记.html">
+            
+                <a href="../运维/nginx笔记.html">
+            
+                    
+                    nginx笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.6" data-path="../运维/定时执行脚本.html">
+            
+                <a href="../运维/定时执行脚本.html">
+            
+                    
+                    定时执行脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.7" data-path="../运维/gitbook部署博客.html">
+            
+                <a href="../运维/gitbook部署博客.html">
+            
+                    
+                    gitbook部署博客
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.8" data-path="../运维/vuepress构建项目.html">
+            
+                <a href="../运维/vuepress构建项目.html">
+            
+                    
+                    vuepress构建项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.9" data-path="../运维/批量推送布署徐书法项目.html">
+            
+                <a href="../运维/批量推送布署徐书法项目.html">
+            
+                    
+                    批量推送布署徐书法项目
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.10" data-path="../运维/gitlab、github绑定自定义域名.html">
+            
+                <a href="../运维/gitlab、github绑定自定义域名.html">
+            
+                    
+                    gitlab、github绑定自定义域名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.11" data-path="../运维/git平台docsify布署markdown文件.html">
+            
+                <a href="../运维/git平台docsify布署markdown文件.html">
+            
+                    
+                    git平台docsify布署markdown文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.12" data-path="../运维/gitlab、github、gitee布署mkdocs主题仓库.html">
+            
+                <a href="../运维/gitlab、github、gitee布署mkdocs主题仓库.html">
+            
+                    
+                    gitlab、github、gitee布署mkdocs主题仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" data-path="../数据库/mysqlNote.html">
+            
+                <a href="../数据库/mysqlNote.html">
+            
+                    
+                    mysqlNote
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.2" data-path="../数据库/oracleNote.html">
+            
+                <a href="../数据库/oracleNote.html">
+            
+                    
+                    oracleNote
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.3" data-path="../数据库/ldapNote.html">
+            
+                <a href="../数据库/ldapNote.html">
+            
+                    
+                    ldapNote
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.4" data-path="../数据库/redis.html">
+            
+                <a href="../数据库/redis.html">
+            
+                    
+                    redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.5" data-path="../数据库/mongo.html">
+            
+                <a href="../数据库/mongo.html">
+            
+                    
+                    mongo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.6" data-path="../数据库/数据库隔离级别.html">
+            
+                <a href="../数据库/数据库隔离级别.html">
+            
+                    
+                    数据库隔离级别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3.7" data-path="../数据库/mysql开启log-bin日志.html">
+            
+                <a href="../数据库/mysql开启log-bin日志.html">
+            
+                    
+                    mysql开启log-bin日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                    资料
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" data-path="npm笔记.html">
+            
+                <a href="npm笔记.html">
+            
+                    
+                    npm笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="jquery笔记.html">
+            
+                <a href="jquery笔记.html">
+            
+                    
+                    jquery笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.3" data-path="二进制数负数.html">
+            
+                <a href="二进制数负数.html">
+            
+                    
+                    二进制数负数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.4" data-path="javaScript笔记.html">
+            
+                <a href="javaScript笔记.html">
+            
+                    
+                    javaScript笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.5" data-path="本地安装kafka.html">
+            
+                <a href="本地安装kafka.html">
+            
+                    
+                    本地安装kafka
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.6" data-path="本地安装consul.html">
+            
+                <a href="本地安装consul.html">
+            
+                    
+                    本地安装consul
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.7" data-path="本地安装zookeeper.html">
+            
+                <a href="本地安装zookeeper.html">
+            
+                    
+                    本地安装zookeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.8" data-path="markdown常用语法.html">
+            
+                <a href="markdown常用语法.html">
+            
+                    
+                    markdown常用语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.9" data-path="window安装RabbitMQ.html">
+            
+                <a href="window安装RabbitMQ.html">
+            
+                    
+                    window安装RabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.4.10" data-path="markdown导出pdf方法优劣分析.html">
+            
+                <a href="markdown导出pdf方法优劣分析.html">
+            
+                    
+                    markdown导出pdf方法优劣分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.11" data-path="系统磁盘c盘清理垃圾文件方法一览.html">
+            
+                <a href="系统磁盘c盘清理垃圾文件方法一览.html">
+            
+                    
+                    系统磁盘c盘清理垃圾文件方法一览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.12" data-path="pagefile.sys有几十个G，太大怎么办.html">
+            
+                <a href="pagefile.sys有几十个G，太大怎么办.html">
+            
+                    
+                    pagefile.sys有几十个G，太大怎么办
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">书法</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" >
+            
+                <span>
+            
+                    
+                    书法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../书法/书法/书法名帖.html">
+            
+                <a href="../../书法/书法/书法名帖.html">
+            
+                    
+                    书法名帖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.2" data-path="../../书法/书法/赤壁赋.html">
+            
+                <a href="../../书法/书法/赤壁赋.html">
+            
+                    
+                    赤壁赋
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.3" data-path="../../书法/书法/灵飞经.html">
+            
+                <a href="../../书法/书法/灵飞经.html">
+            
+                    
+                    灵飞经
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.4" data-path="../../书法/书法/多宝塔碑.html">
+            
+                <a href="../../书法/书法/多宝塔碑.html">
+            
+                    
+                    多宝塔碑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.5" data-path="../../书法/书法/《心经》书法.html">
+            
+                <a href="../../书法/书法/《心经》书法.html">
+            
+                    
+                    《心经》书法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.6" data-path="../../书法/书法/《兜沙经》书法.html">
+            
+                <a href="../../书法/书法/《兜沙经》书法.html">
+            
+                    
+                    《兜沙经》书法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.7" data-path="../../书法/书法/《多宝塔碑》单字版.html">
+            
+                <a href="../../书法/书法/《多宝塔碑》单字版.html">
+            
+                    
+                    《多宝塔碑》单字版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.8" data-path="../../书法/书法/文徵明小楷《千字文》.html">
+            
+                <a href="../../书法/书法/文徵明小楷《千字文》.html">
+            
+                    
+                    文徵明小楷《千字文》
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.9" data-path="../../书法/书法/文徵明小楷《草堂十志》.html">
+            
+                <a href="../../书法/书法/文徵明小楷《草堂十志》.html">
+            
+                    
+                    文徵明小楷《草堂十志》
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" >
+            
+                <span>
+            
+                    
+                    练习
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.2.1" data-path="../../书法/练习/关于我.html">
+            
+                <a href="../../书法/练习/关于我.html">
+            
+                    
+                    关于我
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.2" data-path="../../书法/练习/徐书法.html">
+            
+                <a href="../../书法/练习/徐书法.html">
+            
+                    
+                    徐书法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.3" data-path="../../书法/练习/无为徐生.html">
+            
+                <a href="../../书法/练习/无为徐生.html">
+            
+                    
+                    无为徐生
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.4" data-path="../../书法/练习/古文诗词.html">
+            
+                <a href="../../书法/练习/古文诗词.html">
+            
+                    
+                    古文诗词
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.5" data-path="../../书法/练习/笔名汉字频率分析.html">
+            
+                <a href="../../书法/练习/笔名汉字频率分析.html">
+            
+                    
+                    笔名汉字频率分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.6" data-path="../../书法/练习/书法练习轨迹ReadMe.html">
+            
+                <a href="../../书法/练习/书法练习轨迹ReadMe.html">
+            
+                    
+                    书法练习轨迹ReadMe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2.7" data-path="../../书法/练习/书法练习轨迹--明月几时有.html">
+            
+                <a href="../../书法/练习/书法练习轨迹--明月几时有.html">
+            
+                    
+                    书法练习轨迹--明月几时有
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" >
+            
+                <span>
+            
+                    
+                    轨迹
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.3.1" data-path="../../书法/轨迹/自序.html">
+            
+                <a href="../../书法/轨迹/自序.html">
+            
+                    
+                    自序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.2" data-path="../../书法/轨迹/诗词杂句.html">
+            
+                <a href="../../书法/轨迹/诗词杂句.html">
+            
+                    
+                    诗词杂句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.3" data-path="../../书法/轨迹/有感之杂说.html">
+            
+                <a href="../../书法/轨迹/有感之杂说.html">
+            
+                    
+                    有感之杂说
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.4" data-path="../../书法/轨迹/书法练习轨迹remark.html">
+            
+                <a href="../../书法/轨迹/书法练习轨迹remark.html">
+            
+                    
+                    书法练习轨迹remark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3.5" data-path="../../书法/轨迹/书法练习轨迹--明月几时有-无图版.html">
+            
+                <a href="../../书法/轨迹/书法练习轨迹--明月几时有-无图版.html">
+            
+                    
+                    书法练习轨迹--明月几时有-无图版
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >markdown导出pdf方法优劣分析</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="markdown&#x5BFC;&#x51FA;pdf&#x65B9;&#x6CD5;&#x4F18;&#x52A3;&#x5206;&#x6790;">markdown&#x5BFC;&#x51FA;pdf&#x65B9;&#x6CD5;&#x4F18;&#x52A3;&#x5206;&#x6790;</h1>
+<p><br></p>
+<p><code>md2pdf</code>  <code>pandoc</code>  <code>Typora</code>  <code>MarkText</code>  <code>PDFPatcher</code>  --20220903</p>
+<blockquote>
+<p><a href="https://web.xushufa.cn" target="_blank">xushufa</a> &#x2002; <a href="https://blog.xushufa.cn" target="_blank">blog</a> &#x2002; <a href="https://gitlab.com/xuyq123/mynotes" target="_blank">gitlab</a> &#x2002; <a href="https://gitee.com/xy180/MyNotes" target="_blank">gitee</a> </p>
+</blockquote>
+<h2 id="1-&#x6982;&#x8FF0;">1 &#x6982;&#x8FF0;</h2>
+<h3 id="11-&#x76EE;&#x6807;">1.1 &#x76EE;&#x6807;</h3>
+<p>markdown&#x5BFC;&#x51FA;pdf&#x671F;&#x671B;&#x8FBE;&#x5230;&#x7406;&#x60F3;&#x6548;&#x679C;&#xFF1A;</p>
+<ul>
+<li><strong>&#x5185;&#x5BB9;&#x4E0D;&#x4E22;&#x5931;</strong>&#xFF0C;&#x6807;&#x9898;&#x3001;&#x6B63;&#x6587;&#x3001;&#x9AD8;&#x4EAE;&#x3001;&#x4EE3;&#x7801;&#x5757;&#x7B49;&#x5185;&#x5BB9;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#xFF0C;&#x5373;&#x4F7F;&#x662F;&#x4EE3;&#x7801;&#x5757;&#x4E5F;&#x80FD;&#x65E0;&#x635F;&#x5BFC;&#x51FA;&#x3002;</li>
+<li><strong>&#x683C;&#x5F0F;&#x4E0D;&#x53D8;&#x5F62;</strong>&#xFF0C;&#x5B57;&#x4F53;&#x3001;&#x6837;&#x5F0F;&#x4E0E;markdown&#x770B;&#x5230;&#x7684;&#x57FA;&#x672C;&#x4E00;&#x81F4;&#x3002;</li>
+<li><strong>&#x6709;&#x56FE;&#x7247;</strong>&#xFF0C;markdown&#x7684;&#x56FE;&#x7247;&#x4E0D;&#x8BBA;&#x662F;&#x7F51;&#x7EDC;&#x94FE;&#x63A5;&#x8FD8;&#x662F;base64&#x90FD;&#x80FD;&#x6B63;&#x5E38;&#x5BFC;&#x51FA;&#x3002;</li>
+<li><strong>&#x6709;&#x4E66;&#x7B7E;</strong>&#xFF0C;markdown&#x7684;&#x4E00;&#x4E8C;&#x4E09;&#x56DB;&#x7EA7;&#x6807;&#x9898;&#x5C31;&#x662F;pdf&#x7684;&#x4E66;&#x7B7E;&#x3002;</li>
+<li><strong>&#x64CD;&#x4F5C;&#x7B80;&#x5355;</strong>&#xFF0C;&#x4E00;&#x952E;&#x5BFC;&#x51FA;&#xFF0C;&#x9AD8;&#x6548;&#x65B9;&#x4FBF;&#x3002;</li>
+</ul>
+<hr>
+<h3 id="12-&#x8BF4;&#x660E;">1.2 &#x8BF4;&#x660E;</h3>
+<p>&#x4F7F;&#x7528;&#x4E86;<code>Typora</code>&#xFF0C;<code>&#x4F5C;&#x4E1A;&#x90E8;&#x843D;</code>&#xFF0C;<code>&#x5C0F;&#x4E66;&#x5320;</code>&#xFF0C;<code>&#x9A6C;&#x514B;&#x98DE;&#x8C61;</code>&#xFF0C;<code>&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5370;</code>&#xFF0C;<code>pandoc</code>&#xFF0C;<code>xelatex</code>&#xFF0C;<code>wkhtmltopdf</code>&#xFF0C;<code>vscode</code>&#xFF0C;<code>MarkText</code>&#x7B49;&#x7B49;&#x8BB8;&#x591A;&#x65B9;&#x6CD5;&#x5C06;markdown&#x5BFC;&#x51FA;pdf&#x3002;&#x6709;&#x7684;&#x6536;&#x8D39;&#xFF0C;&#x6709;&#x7684;&#x52A0;&#x6C34;&#x5370;&#xFF0C;&#x6709;&#x7684;&#x4E22;&#x6587;&#x5B57;&#xFF0C;&#x6709;&#x7684;&#x4E22;&#x56FE;&#x7247;&#xFF0C;&#x6700;&#x540E;&#x53D1;&#x73B0;&#xFF1A;</p>
+<ul>
+<li>&#x64CD;&#x4F5C;markdown&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;<code>Typora</code>&#x6700;&#x65B9;&#x4FBF;&#x3002;</li>
+<li>&#x5BFC;&#x51FA;markdown&#x4E3A;pdf&#xFF0C;<code>MarkText</code>&#x642D;&#x914D;<code>PDFPatcher</code>&#x6700;&#x4F18;&#x79C0;&#x3002;</li>
+</ul>
+<hr>
+<h3 id="13-&#x76F8;&#x5173;">1.3 &#x76F8;&#x5173;</h3>
+<p>markdown&#x76F8;&#x5173;&#x64CD;&#x4F5C;&#xFF0C;&#x683C;&#x5F0F;&#x8F6C;&#x6362;&#x4E0E;&#x9879;&#x76EE;&#x5E03;&#x7F72;&#x3002;</p>
+<blockquote>
+<p>html&#x8F6C;markdown&#x6587;&#x4EF6;</p>
+</blockquote>
+<ul>
+<li>pandoc &#x8F6C;&#x5316;  <code>pandoc -f html -t markdown -o 202010.md 202110.html</code></li>
+<li>turndown <code>Convert HTML into Markdown with JavaScript.</code>  <a href="https://mixmark-io.github.io/turndown/" target="_blank">https://mixmark-io.github.io/turndown/</a></li>
+</ul>
+<blockquote>
+<p>markdown&#x6587;&#x4EF6;&#x90E8;&#x7F72;&#x9879;&#x76EE;</p>
+</blockquote>
+<ul>
+<li>gitlab&#x3001;github&#x3001;gitee&#x5E03;&#x7F72;<code>mkdocs</code>&#x4E3B;&#x9898;&#x4ED3;&#x5E93;</li>
+<li>git&#x5E73;&#x53F0;<code>docsify</code>&#x5E03;&#x7F72;markdown&#x6587;&#x4EF6;</li>
+<li><code>vuepress</code>&#x6784;&#x5EFA;&#x9879;&#x76EE; <a href="https://blog.xushufa.cn" target="_blank">https://blog.xushufa.cn</a></li>
+<li><code>gitbook</code>&#x90E8;&#x7F72;&#x535A;&#x5BA2;  <a href="https://scott180.github.io/gitbook-blog" target="_blank">https://scott180.github.io/gitbook-blog</a></li>
+</ul>
+<h2 id="2-&#x5DE5;&#x5177;">2 &#x5DE5;&#x5177;</h2>
+<h3 id="21-typora">2.1 Typora</h3>
+<p>Typora&#x53EF;&#x4EE5;&#x8BF4;&#x662F;markdown&#x7684;&#x6700;&#x4F73;&#x62CD;&#x6863;&#xFF0C;&#x53EF;&#x662F;&#x514D;&#x8D39;beta&#x7248;&#x4E4B;&#x540E;&#xFF0C;1.0&#x7248;Typora&#x5F00;&#x59CB;&#x6536;&#x8D39;&#x3002;<br>
+&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x514D;&#x8D39;&#x7248;&#x672C;&#x662F;0.11.8&#xFF0C;&#x5B89;&#x88C5;&#x6216;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x4F1A;&#x63D0;&#x793A;&#x8F6F;&#x4EF6;&#x8FC7;&#x671F;&#xFF0C;&#x4E0D;&#x53EF;&#x4F7F;&#x7528;&#x3002;<br>
+&#x4F46;&#x4F4E;&#x7248;&#x672C;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;Typora&#xFF0C;&#x5982;0.9.86&#x7248;&#x3002;<br></p>
+<p><strong>Typora + pandoc &#x53EF;&#x4EE5;&#x5C06;markdown&#x5BFC;&#x51FA;pdf&#xFF0C;&#x53EF;&#x60DC;&#x5BFC;&#x51FA;&#x6587;&#x4EF6;&#x4F1A;&#x4E22;&#x5931;&#x56FE;&#x7247;&#x3002;</strong><br>
+<strong>Typora&#x5BFC;&#x51FA;html&#xFF0C;&#x518D;&#x901A;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x5BFC;&#x51FA;pdf&#xFF0C;&#x4E0D;&#x4E22;&#x5931;&#x56FE;&#x7247;&#xFF0C;&#x4F46;&#x662F;&#x6587;&#x6863;&#x683C;&#x5F0F;&#x7A0D;&#x6709;&#x53D8;&#x5316;&#xFF0C;&#x4E14;&#x6CA1;&#x6709;&#x4E66;&#x7B7E;&#x3002;</strong><br></p>
+<p>Typora + pandoc &#x5BFC;&#x51FA;pdf&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x56FE;&#x7247;&#x94FE;&#x63A5;&#x6362;&#x6210;base64&#x7F16;&#x7801;&#xFF0C;&#x8FD9;&#x6837;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#x56FE;&#x7247;&#x3002;<br>
+&#x4F46;&#x662F;&#x8FD9;&#x6837;&#x505A;&#x6587;&#x6863;&#x5185;&#x5BB9;&#x4F1A;&#x7279;&#x522B;&#x5927;&#xFF0C;&#x4E00;&#x5F20;&#x56FE;&#x7247;&#x7684;base64&#x7F16;&#x7801;&#x53EF;&#x80FD;&#x6709;&#x51E0;&#x4E07;&#x5B57;&#x3002;<br>
+&#x4E14;&#x6587;&#x6863;&#x7684;base64&#x56FE;&#x7247;&#x7F16;&#x7801;&#x591A;&#x4E86;&#xFF0C;&#x4F7F;&#x7528;Typora&#x62A5;&#x9519;&#xFF1A;&#x8BE5;&#x6587;&#x4EF6;&#x8FC7;&#x5927;&#xFF0C;&#x56E0;&#x6B64;&#x65E0;&#x6CD5;&#x5728;Typora&#x4E2D;&#x5448;&#x73B0;&#x3002;<br></p>
+<blockquote>
+<p>Typora&#x5BFC;&#x51FA;pdf
+<a href="https://gitcode.net/xu180/document/-/raw/master/imgs/md2pdf/1Typora.jpg" data-lightbox="1933c7c4-3c21-49e4-99f6-4728d7c33e18" data-title="1Typora" target="_blank"><img src="https://gitcode.net/xu180/document/-/raw/master/imgs/md2pdf/1Typora.jpg" alt="1Typora"></a></p>
+</blockquote>
+<hr>
+<h3 id="22-pandoc">2.2 pandoc</h3>
+<p>Pandoc &#x662F;&#x4E00;&#x4E2A;&#x7531; John MacFarlane &#x5F00;&#x53D1;&#x7684;&#x901A;&#x7528;&#x6587;&#x6863;&#x8F6C;&#x6362;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x652F;&#x6301;&#x5927;&#x91CF;&#x6807;&#x8BB0;&#x8BED;&#x8A00;&#x4E4B;&#x95F4;&#x7684;&#x683C;&#x5F0F;&#x8F6C;&#x6362;&#xFF0C;&#x4F8B;&#x5982; Markdown &#x3001;Microsoft Word&#x3001;PowerPoint&#x3001; Jupyter Notebook&#x3001;HTML&#x3001;PDF&#x3001;LaTeX&#x3001;Wiki&#x3001;EPUB &#x683C;&#x5F0F;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4E92;&#x8F6C;&#x6362;&#x3002;&#x5B98;&#x65B9;&#x79F0;&#x4E4B;&#x4E3A;&#x8BE5;&#x9886;&#x57DF;&#x4E2D;&#x7684;&#x201C;&#x745E;&#x58EB;&#x519B;&#x5200;&#x201D;&#x3002;<br>
+&#x53C2;&#x8003;&#xFF1A;<br>
+<a href="https://blog.csdn.net/horses/article/details/108536784" target="_blank">https://blog.csdn.net/horses/article/details/108536784</a> <br>
+<a href="https://github.com/jgm/pandoc/releases/tag/2.19.2" target="_blank">https://github.com/jgm/pandoc/releases/tag/2.19.2</a> <br></p>
+<hr>
+<p>md-&gt;docx-&gt;PDF </p>
+<p>pandoc -s example.md -o target.docx --reference-doc reference.docx <br>
+<a href="https://www.trickyedecay.me/2020/08/04/use-pandoc-to-convert-markdown-to-docx/" target="_blank">https://www.trickyedecay.me/2020/08/04/use-pandoc-to-convert-markdown-to-docx/</a> <br></p>
+<hr>
+<p><code>pandoc text.md -o text.docx</code> <br>
+<code>pandoc &#x65E0;&#x4E3A;&#x5F90;&#x751F;.md -o &#x65E0;&#x4E3A;&#x5F90;&#x751F;_pandoc.docx</code> <br></p>
+<p><a href="https://www.jianshu.com/p/52cbee87a45a" target="_blank">https://www.jianshu.com/p/52cbee87a45a</a> <br></p>
+<p>&#x6837;&#x5F0F;&#x76F8;&#x5F53;&#x5931;&#x771F;&#xFF0C;&#x5BFC;&#x51FA;&#x7684;pdf&#x6587;&#x4EF6;&#x4E0E;md&#x6587;&#x4EF6;&#x5DEE;&#x5F02;&#x8F83;&#x5927;&#x3002; <br></p>
+<hr>
+<p>Pandoc+TeXLive&#x5B9E;&#x73B0;Markdown&#x8F6C;PDF <br>
+<a href="https://zhuanlan.zhihu.com/p/35813989" target="_blank">https://zhuanlan.zhihu.com/p/35813989</a> <br>
+<a href="https://www.jianshu.com/p/1d02fc5121c2" target="_blank">https://www.jianshu.com/p/1d02fc5121c2</a> <br></p>
+<p><code>$ fc-list :lang=zh</code></p>
+<p><code>pandoc &#x65E0;&#x4E3A;&#x5F90;&#x751F;.md -o &#x65E0;&#x4E3A;&#x5F90;&#x751F;_xelatex.pdf --pdf-engine=xelatex -V CJKmainfont=&apos;KaiTi&apos;</code></p>
+<p>&#x300A;&#x65E0;&#x4E3A;&#x5F90;&#x751F;_xelatex.pdf&#x300B;&#x4E22;&#x5931;&#x56FE;&#x7247;&#xFF0C;&#x6CA1;&#x6709;&#x4E66;&#x7B7E;&#xFF0C;&#x683C;&#x5F0F;&#x53D8;&#x5316;&#x3002;</p>
+<hr>
+<h3 id="23-wkhtmltopdf">2.3 wkhtmltopdf</h3>
+<p><code>pandoc --pdf-engine=wkhtmltopdf --metadata pagetitle=&quot;&#x65E0;&#x4E3A;&#x5F90;&#x751F;&quot;  &#x65E0;&#x4E3A;&#x5F90;&#x751F;.md -o &#x65E0;&#x4E3A;&#x5F90;&#x751F;_wkhtmltopdf.pdf</code> <br>
+&#x300A;&#x65E0;&#x4E3A;&#x5F90;&#x751F;_wkhtmltopdf.pdf&#x300B;&#x6837;&#x5F0F;&#x6BD4;&#x8F83;&#x5931;&#x771F;&#x3002; <br></p>
+<p><a href="https://cloud.tencent.com/developer/article/1740818?from=article.detail.1854429" target="_blank">https://cloud.tencent.com/developer/article/1740818?from=article.detail.1854429</a> <br>
+<a href="https://cloud.tencent.com/developer/article/1854429" target="_blank">https://cloud.tencent.com/developer/article/1854429</a> <br></p>
+<hr>
+<h3 id="24-vscode">2.4 vscode</h3>
+<p>&#x5728;<code>Visual Studio Code</code>&#x5B89;&#x88C5;<code>Markdown Preview Enhanced</code> &#x63D2;&#x4EF6; <br></p>
+<p>vscode&#x4E2D;markdown&#x5BFC;&#x51FA;pdf <br>
+<a href="https://blog.csdn.net/weixin_43352942/article/details/89950779" target="_blank">https://blog.csdn.net/weixin_43352942/article/details/89950779</a> <br>
+<a href="https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/toc" target="_blank">https://shd101wyy.github.io/markdown-preview-enhanced/#/zh-cn/toc</a> <br></p>
+<p>C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe <br></p>
+<p>&#x300A;&#x65E0;&#x4E3A;&#x5F90;&#x751F;_vscode.pdf&#x300B;&#x4E22;&#x5931;&#x56FE;&#x7247;&#xFF0C;&#x6CA1;&#x6709;&#x4E66;&#x7B7E;&#xFF0C;&#x683C;&#x5F0F;&#x53D8;&#x5316;&#x3002; <br></p>
+<blockquote>
+<p>vscode&#x5BFC;&#x51FA;pdf
+<a href="https://gitcode.net/xu180/document/-/raw/master/imgs/md2pdf/2vscode.jpg" data-lightbox="8f519283-c3f3-4097-8ff1-127a1c7f437f" data-title="2vscode" target="_blank"><img src="https://gitcode.net/xu180/document/-/raw/master/imgs/md2pdf/2vscode.jpg" alt="2vscode"></a></p>
+</blockquote>
+<hr>
+<h3 id="25-marktext">2.5 MarkText</h3>
+<p>MarkText&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x5F00;&#x6E90;&#x7684; Markdown &#x7F16;&#x8F91;&#x5668;&#x3002; <a href="https://github.com/marktext/marktext" target="_blank">https://github.com/marktext/marktext</a> <br>
+&#x5BFC;&#x51FA;&#x7684;pdf&#x6587;&#x4EF6;&#x76F8;&#x5F53;&#x4E0D;&#x9519;&#x3002; <br></p>
+<p>&#x300A;&#x65E0;&#x4E3A;&#x5F90;&#x751F;_MarkText.pdf&#x300B;&#x6587;&#x4EF6;&#x6837;&#x5F0F;&#x5185;&#x5BB9;&#x56FE;&#x7247;&#x57FA;&#x672C;&#x6CA1;&#x6709;&#x53D8;&#x5316;&#xFF0C;&#x5F88;&#x597D;&#x3002; <br>
+&#x5C31;&#x662F;&#x6CA1;&#x6709;&#x4E66;&#x7B7E;&#xFF0C;&#x4F46;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>PDFPatcher PDF&#x8865;&#x4E01;&#x4E01;</code> &#x4E3A;pdf&#x6587;&#x4EF6;&#x52A0;&#x4E0A;&#x4E66;&#x7B7E;&#x3002; <br></p>
+<hr>
+<p>&#x5DE5;&#x5177;&#x7BB1;--&#x5904;&#x7406;PDF&#x6587;&#x4EF6;--&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E66;&#x7B7E; <br>
+&#x300A;&#x65E0;&#x4E3A;&#x5F90;&#x751F;_MarkText.xml&#x300B;&#x5373;&#x4E3A;pdf&#x4E66;&#x7B7E; <br></p>
+<p>&#x6253;&#x5F00;&#x6587;&#x4EF6;--&#x5BFC;&#x5165;&#x4E66;&#x7B7E;--&#x4FDD;&#x5B58;PDF&#x6587;&#x4EF6; <br>
+&#x300A;&#x65E0;&#x4E3A;&#x5F90;&#x751F;_MarkText_PDFPatcher.pdf&#x300B;  &#x5185;&#x5BB9;&#x4E0D;&#x4E22;&#x5931; | &#x683C;&#x5F0F;&#x4E0D;&#x53D8;&#x5F62; | &#x6709;&#x56FE;&#x7247; | &#x6709;&#x4E66;&#x7B7E; | &#x64CD;&#x4F5C;&#x7B80;&#x5355;   good <br></p>
+<hr>
+<blockquote>
+<p>MarkText&#x5BFC;&#x51FA;pdf
+<a href="https://gitcode.net/xu180/document/-/raw/master/imgs/md2pdf/3MarkText.jpg" data-lightbox="25f33d25-b1c0-4382-b9c2-638ded237988" data-title="3MarkText" target="_blank"><img src="https://gitcode.net/xu180/document/-/raw/master/imgs/md2pdf/3MarkText.jpg" alt="3MarkText"></a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p>PDFPatcher&#x751F;&#x6210;&#x4E66;&#x7B7E;
+<a href="https://gitcode.net/xu180/document/-/raw/master/imgs/md2pdf/4PDFPatcher.jpg" data-lightbox="0013e5cf-4f7b-4700-82d2-95abec01f595" data-title="4PDFPatcher" target="_blank"><img src="https://gitcode.net/xu180/document/-/raw/master/imgs/md2pdf/4PDFPatcher.jpg" alt="4PDFPatcher"></a></p>
+<p>PDFPatcher&#x5BFC;&#x5165;&#x4E66;&#x7B7E;
+<a href="https://gitcode.net/xu180/document/-/raw/master/imgs/md2pdf/5PDFPatcher.jpg" data-lightbox="0f356fd2-335c-4ded-a53a-205d751f8111" data-title="5PDFPatcher" target="_blank"><img src="https://gitcode.net/xu180/document/-/raw/master/imgs/md2pdf/5PDFPatcher.jpg" alt="5PDFPatcher"></a></p>
+<p>PDF&#x4E66;&#x7B7E;&#x6253;&#x5F00;
+<a href="https://gitcode.net/xu180/document/-/raw/master/imgs/md2pdf/6PDFPatcher.jpg" data-lightbox="4670c33f-d430-4084-87ec-167440565e0c" data-title="6PDFPatcher" target="_blank"><img src="https://gitcode.net/xu180/document/-/raw/master/imgs/md2pdf/6PDFPatcher.jpg" alt="6PDFPatcher"></a></p>
+</blockquote>
+<hr>
+<h3 id="26-&#x8BC4;&#x5206;">2.6 &#x8BC4;&#x5206;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x8BC4;&#x5206;</th>
+<th>&#x5185;&#x5BB9;&#x4E0D;&#x4E22;&#x5931;</th>
+<th>&#x683C;&#x5F0F;&#x4E0D;&#x53D8;&#x5F62;</th>
+<th>&#x6709;&#x56FE;&#x7247;</th>
+<th>&#x6709;&#x4E66;&#x7B7E;</th>
+<th>&#x64CD;&#x4F5C;&#x7B80;&#x5355;</th>
+<th>&#x5F97;&#x5206;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Typora</td>
+<td>&#x221A;</td>
+<td>&#x221A;</td>
+<td>&#xD7;</td>
+<td>&#x221A;</td>
+<td>&#x221A;</td>
+<td>&#x2605;&#x2605;&#x2605;&#x2605;</td>
+</tr>
+<tr>
+<td>pandoc</td>
+<td>&#x25CB;</td>
+<td>&#x25CB;</td>
+<td>&#x25CB;</td>
+<td>&#x221A;</td>
+<td>&#x25CB;</td>
+<td>&#x2605;&#x2605;&#x2605;</td>
+</tr>
+<tr>
+<td>wkhtmltopdf</td>
+<td>&#x25CB;</td>
+<td>&#x25CB;</td>
+<td>&#x25CB;</td>
+<td>&#x221A;</td>
+<td>&#x25CB;</td>
+<td>&#x2605;&#x2605;&#x2605;</td>
+</tr>
+<tr>
+<td>vscode</td>
+<td>&#x221A;</td>
+<td>&#x25CB;</td>
+<td>&#xD7;</td>
+<td>&#x221A;</td>
+<td>&#xD7;</td>
+<td>&#x2605;&#x2605;&#x2606;</td>
+</tr>
+<tr>
+<td>MarkText</td>
+<td>&#x221A;</td>
+<td>&#x221A;</td>
+<td>&#x221A;</td>
+<td>&#x25CB;</td>
+<td>&#x221A;</td>
+<td>&#x2605;&#x2605;&#x2605;&#x2605;&#x2606;</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>&#x7F51;&#x5740;</th>
+<th>&#x5B98;&#x7F51;</th>
+<th>&#x4E0B;&#x8F7D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Typora</td>
+<td><a href="https://typora.io/" target="_blank">https://typora.io/</a></td>
+<td><a href="https://typoraio.cn/" target="_blank">https://typoraio.cn/</a></td>
+</tr>
+<tr>
+<td>marktext</td>
+<td><a href="https://marktext.app/" target="_blank">https://marktext.app/</a></td>
+<td><a href="https://github.com/marktext/marktext" target="_blank">https://github.com/marktext/marktext</a></td>
+</tr>
+<tr>
+<td>PDFPatcher</td>
+<td><a href="https://www.cnblogs.com/pdfpatcher/" target="_blank">https://www.cnblogs.com/pdfpatcher/</a></td>
+<td><a href="https://github.com/wmjordan/PDFPatcher" target="_blank">https://github.com/wmjordan/PDFPatcher</a></td>
+</tr>
+</tbody>
+</table>
+<p>&#x7EFC;&#x4E0A;&#xFF0C;<code>MarkText</code>&#x56DB;&#x661F;&#x534A;&#x593A;&#x5F97;&#x9B41;&#x9996;&#xFF0C;<code>Typora</code>&#x5C48;&#x5C45;&#x4E9A;&#x5E2D;&#x3002;&#x603B;&#x4E4B;&#xFF1A; <br>
+&#x64CD;&#x4F5C;markdown&#x6587;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;<code>Typora</code>&#x6700;&#x65B9;&#x4FBF;&#x3002; <br>
+&#x5BFC;&#x51FA;markdown&#x4E3A;pdf&#xFF0C;<code>MarkText</code>&#x642D;&#x914D;<code>PDFPatcher</code>&#x6700;&#x4F18;&#x79C0;&#x3002; <br></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="window安装RabbitMQ.html" class="navigation navigation-prev " aria-label="Previous page: window安装RabbitMQ">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="系统磁盘c盘清理垃圾文件方法一览.html" class="navigation navigation-next " aria-label="Next page: 系统磁盘c盘清理垃圾文件方法一览">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"markdown导出pdf方法优劣分析","level":"3.4.10","depth":2,"next":{"title":"系统磁盘c盘清理垃圾文件方法一览","level":"3.4.11","depth":2,"path":"编程/资料/系统磁盘c盘清理垃圾文件方法一览.md","ref":"编程/资料/系统磁盘c盘清理垃圾文件方法一览.md","articles":[]},"previous":{"title":"window安装RabbitMQ","level":"3.4.9","depth":2,"path":"编程/资料/window安装RabbitMQ.md","ref":"编程/资料/window安装RabbitMQ.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","mermaid-gb3","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/资料/markdown导出pdf方法优劣分析.md","mtime":"2022-11-29T02:56:18.160Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-29T03:07:17.609Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

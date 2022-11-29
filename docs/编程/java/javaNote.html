@@ -12,6 +12,7 @@
         
         
     
+    
     <link rel="stylesheet" href="../../gitbook/style.css">
 
     
@@ -26,6 +27,10 @@
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
                 
             
                 
@@ -60,6 +65,9 @@
         
     
         
+    
+
+
     
 
         
@@ -211,6 +219,19 @@
             
                     
                     短期远行必备物品
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../../生活/随笔/我的原神旅行观测记录.html">
+            
+                <a href="../../生活/随笔/我的原神旅行观测记录.html">
+            
+                    
+                    我的原神旅行观测记录
             
                 </a>
             
@@ -918,7 +939,33 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.10" data-path="../资料/pagefile.sys有几十个G，太大怎么办.html">
+        <li class="chapter " data-level="3.4.10" data-path="../资料/markdown导出pdf方法优劣分析.html">
+            
+                <a href="../资料/markdown导出pdf方法优劣分析.html">
+            
+                    
+                    markdown导出pdf方法优劣分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.11" data-path="../资料/系统磁盘c盘清理垃圾文件方法一览.html">
+            
+                <a href="../资料/系统磁盘c盘清理垃圾文件方法一览.html">
+            
+                    
+                    系统磁盘c盘清理垃圾文件方法一览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.12" data-path="../资料/pagefile.sys有几十个G，太大怎么办.html">
             
                 <a href="../资料/pagefile.sys有几十个G，太大怎么办.html">
             
@@ -1385,7 +1432,7 @@ Map&lt;String, List&lt;DeliveryGoodsDO&gt;&gt; deliveryGoodsMap = deliveryGoodsD
 Map&lt;String, DeliveryDO&gt; deliveryOrderMap = deliveryDOS.stream().collect(Collectors.toMap(DeliveryDO::getDeliveryOrder, a -&gt; a));
 
 <span class="hljs-comment">// list&#x8F6C;map-&#x503C;&#x4E3A;&#x5355;&#x4E2A;&#x5BF9;&#x8C61; &#xFF08;&#x5982;&#x6709;&#x91CD;&#x590D;&#xFF0C;&#x7528;&#x7B2C;&#x4E00;&#x4E2A;&#xFF09;</span>
-Map&lt;String, DeliveryDO&gt; deliveryOrderMap = deliveryDOS.stream().collect(Collectors.toMap(DeliveryDO::getDeliveryOrder, a-&gt; a,(k1,k2)-&gt;k2));
+Map&lt;String, DeliveryDO&gt; deliveryOrderMap = deliveryDOS.stream().collect(Collectors.toMap(DeliveryDO::getDeliveryOrder, a-&gt; a,(k1,k2)-&gt;k1));
 
 
 <span class="hljs-comment">// list&#x8F6C;map-&#x503C;&#x4E3A;&#x5BF9;&#x8C61;&#x7684;&#x5B57;&#x6BB5;</span>
@@ -1777,7 +1824,7 @@ syso+Alt+/      &#x8F93;&#x51FA;
 </tr>
 <tr>
 <td>eclipse</td>
-<td><a href="http://www.eclipse.org/downloads/packages" target="_blank">eclipse&#x5B98;&#x65B9;&#x4E0B;&#x8F7D;</a>    <a href="eclipse.md">&#x7248;&#x672C;&#x8BF4;&#x660E;</a></td>
+<td><a href="http://www.eclipse.org/downloads/packages" target="_blank">eclipse&#x5B98;&#x65B9;&#x4E0B;&#x8F7D;</a></td>
 </tr>
 </tbody>
 </table>
@@ -1968,9 +2015,9 @@ maven&#x5E38;&#x7528;&#x6253;&#x5305;&#x547D;&#x4EE4;
 <tbody>
 <tr>
 <td>&#x4E8C;&#x7EF4;&#x7801;</td>
-<td><a href="https://md.xushufa.cn/gitimg/imgs/other/wuweixusheng_weixin.png" data-lightbox="0b7220d6-48da-4de9-9c00-8428f84e76a4" data-title="w" target="_blank"><img src="https://md.xushufa.cn/gitimg/imgs/other/wuweixusheng_weixin.png" alt="w"></a></td>
+<td><a href="https://md.xushufa.cn/gitimg/imgs/other/wuweixusheng_weixin.png" data-lightbox="0f8ed407-0311-4a25-ac63-3b801e1beee6" data-title="w" target="_blank"><img src="https://md.xushufa.cn/gitimg/imgs/other/wuweixusheng_weixin.png" alt="w"></a></td>
 <td><br></td>
-<td><a href="https://md.xushufa.cn/gitimg/imgs/other/wuweixusheng_toutiao.png" data-lightbox="271744d5-56d9-49e7-85c6-c17760580a26" data-title="t" target="_blank"><img src="https://md.xushufa.cn/gitimg/imgs/other/wuweixusheng_toutiao.png" alt="t"></a></td>
+<td><a href="https://md.xushufa.cn/gitimg/imgs/other/wuweixusheng_toutiao.png" data-lightbox="9ba2ee75-f189-4148-b991-6c812072cae7" data-title="t" target="_blank"><img src="https://md.xushufa.cn/gitimg/imgs/other/wuweixusheng_toutiao.png" alt="t"></a></td>
 </tr>
 </tbody>
 </table>
@@ -2051,12 +2098,13 @@ maven&#x5E38;&#x7528;&#x6253;&#x5305;&#x547D;&#x4EE4;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"javaNote","level":"3.1.2","depth":2,"next":{"title":"排序算法","level":"3.1.3","depth":2,"path":"编程/java/排序算法.md","ref":"编程/java/排序算法.md","articles":[]},"previous":{"title":"java介绍","level":"3.1.1","depth":2,"path":"编程/java/java介绍.md","ref":"编程/java/java介绍.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/java/javaNote.md","mtime":"2022-08-19T09:06:07.518Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-08-26T10:00:24.083Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"javaNote","level":"3.1.2","depth":2,"next":{"title":"排序算法","level":"3.1.3","depth":2,"path":"编程/java/排序算法.md","ref":"编程/java/排序算法.md","articles":[]},"previous":{"title":"java介绍","level":"3.1.1","depth":2,"path":"编程/java/java介绍.md","ref":"编程/java/java介绍.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","mermaid-gb3","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/java/javaNote.md","mtime":"2022-09-26T02:02:40.598Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-29T03:07:17.609Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    
     <script src="../../gitbook/gitbook.js"></script>
     <script src="../../gitbook/theme.js"></script>
     
@@ -2074,6 +2122,10 @@ maven&#x5E38;&#x7528;&#x6253;&#x5305;&#x547D;&#x4EE4;
     
         
         <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
         
     
         
@@ -2104,6 +2156,8 @@ maven&#x5E38;&#x7528;&#x6253;&#x5305;&#x547D;&#x4EE4;
         <script src="../../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
         
     
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>
