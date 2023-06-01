@@ -200,7 +200,20 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.4" data-path="../../生活/随笔/二十四式太极拳.html">
+        <li class="chapter " data-level="2.1.4" data-path="../../生活/随笔/吉他练习笔记.html">
+            
+                <a href="../../生活/随笔/吉他练习笔记.html">
+            
+                    
+                    吉他练习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../../生活/随笔/二十四式太极拳.html">
             
                 <a href="../../生活/随笔/二十四式太极拳.html">
             
@@ -213,7 +226,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.5" data-path="../../生活/随笔/短期远行必备物品.html">
+        <li class="chapter " data-level="2.1.6" data-path="../../生活/随笔/短期远行必备物品.html">
             
                 <a href="../../生活/随笔/短期远行必备物品.html">
             
@@ -226,7 +239,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.1.6" data-path="../../生活/随笔/我的原神旅行观测记录.html">
+        <li class="chapter " data-level="2.1.7" data-path="../../生活/随笔/我的原神旅行观测记录.html">
             
                 <a href="../../生活/随笔/我的原神旅行观测记录.html">
             
@@ -1368,7 +1381,7 @@
                                 <h1 id="git&#x7B14;&#x8BB0;">git&#x7B14;&#x8BB0;</h1>
 <p><br></p>
 <blockquote>
-<p><a href="https://blog.xushufa.cn" target="_blank">blog</a> &#x2002; <a href="https://gitlab.com/xuyq123/mynotes" target="_blank">gitlab</a> &#x2002; <a href="https://gitee.com/xy180/MyNotes" target="_blank">gitee</a> &#x2002; <a href="https://github.com/scott180" target="_blank">github</a>   </p>
+<p><a href="https://xushufa.cn" target="_blank">blog</a> &#x2002; <a href="https://gitlab.com/xuyq123/mynotes" target="_blank">gitlab</a> &#x2002; <a href="https://gitee.com/xy180/MyNotes" target="_blank">gitee</a> &#x2002; <a href="https://github.com/scott180" target="_blank">github</a>   </p>
 </blockquote>
 <hr>
 <h2 id="1&#x3001;&#x57FA;&#x7840;&#x64CD;&#x4F5C;">1&#x3001;&#x57FA;&#x7840;&#x64CD;&#x4F5C;</h2>
@@ -1727,12 +1740,12 @@ ssh-keygen -t rsa
 
 cat ~/.ssh/id_rsa.pub
 
-&#x6DFB;&#x52A0;&#x5230; https://github.com/settings/keys   &#x4F9D;&#x6B21;&#x70B9;&#x51FB;&quot;Setting -&gt; SSH Keys&quot;-&gt;&quot;New SSH key&quot;
+&#x6DFB;&#x52A0;&#x5230; https://github.com/settings/keys   &#x4F9D;&#x6B21;&#x70B9;&#x51FB; Setting -&gt; SSH Keys -&gt; New SSH key
 
 ssh -T git@github.com
 
 git clone git@github.com:scott180/MyNotes.git
-</code></pre><h3 id="32&#x3001;&#x63D0;&#x4EA4;&#x53CA;&#x66F4;&#x65B0;&#x5931;&#x8D25;">3.2&#x3001;&#x63D0;&#x4EA4;&#x53CA;&#x66F4;&#x65B0;&#x5931;&#x8D25;</h3>
+</code></pre><h3 id="32&#x3001;git-pull&#x51B2;&#x7A81;">3.2&#x3001;git pull&#x51B2;&#x7A81;</h3>
 <pre><code class="lang-java">&#x7528;git pull&#x6765;&#x66F4;&#x65B0;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9047;&#x5230;&#x4E86;&#x4E0B;&#x9762;&#x7684;&#x95EE;&#x9898;&#xFF1A;
 
 error: Your local changes to the following files would be overwritten by merge:  
@@ -1760,8 +1773,7 @@ git push                        <span class="hljs-comment">//&#x63D0;&#x4EA4;&#x
 git reset --hard
 git pull
 </code></pre>
-<pre><code class="lang-vb">
-GIT&#x62C9;&#x53D6;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x5019;&#x63D0;&#x793A;AUTHENTICATION FAILED <span class="hljs-keyword">FOR</span> []
+<pre><code class="lang-vb">GIT&#x62C9;&#x53D6;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x5019;&#x63D0;&#x793A;AUTHENTICATION FAILED <span class="hljs-keyword">FOR</span> []
 
 &#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;
 &#x8F93;&#x5165; git config --<span class="hljs-keyword">global</span> credential.helper store  
@@ -1770,8 +1782,8 @@ GIT&#x62C9;&#x53D6;&#x4EE3;&#x7801;&#x7684;&#x65F6;&#x5019;&#x63D0;&#x793A;AUTHE
 &#x6216;&#x8005;&#x6E05;&#x9664;&#x5BC6;&#x7801;
 git config --system --unset credential.helper
 </code></pre>
-<pre><code class="lang-sql">
-&#x5728;git&#xFF08;&#x5C0F;&#x4E4C;&#x9F9F;&#xFF09;&#x5411;github&#x8FDC;&#x7A0B;&#x63A8;&#x9001;&#xFF08;push&#xFF09;&#x6587;&#x4EF6;&#x662F;&#x4F1A;&#x62A5;&#x4E00;&#x4E2A;&#x5F02;&#x5E38; no supported authentication methods avaiable         
+<h3 id="33&#x3001;git-push&#x5931;&#x8D25;">3.3&#x3001;git push&#x5931;&#x8D25;</h3>
+<pre><code class="lang-sql">&#x5728;git&#xFF08;&#x5C0F;&#x4E4C;&#x9F9F;&#xFF09;&#x5411;github&#x8FDC;&#x7A0B;&#x63A8;&#x9001;&#xFF08;push&#xFF09;&#x6587;&#x4EF6;&#x662F;&#x4F1A;&#x62A5;&#x4E00;&#x4E2A;&#x5F02;&#x5E38; no supported authentication methods avaiable         
 https://blog.csdn.net/Maxiao1204/article/details/81476618
 
 &#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;
@@ -1783,6 +1795,36 @@ https://blog.csdn.net/Maxiao1204/article/details/81476618
 
 &#x8FD9;&#x91CC;&#x66F4;&#x6539;ssh &#x8DEF;&#x5F84;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8981;&#x628A;&#x4E0A;&#x9762;&#x7684;&#x201C;&#x4F7F;&#x7528;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#x201D; &#x52FE;&#x6253;&#x4E0A;&#xFF0C;&#x70B9;&#x51FB;&#x5E94;&#x7528;&#xFF0C;&#x518D;&#x786E;&#x5B9A;
 </code></pre>
+<pre><code class="lang-java">&#x63A8;&#x9001;&#x4EE3;&#x7801;&#x65F6;&#x62A5;&#x9519;&#x5982;&#x4E0B;&#xFF1A;
+$ git push
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+<span class="hljs-function">Someone could be eavesdropping on you right <span class="hljs-title">now</span> <span class="hljs-params">(man-in-the-middle attack)</span>!
+It is also possible that a host key has just been changed.
+The fingerprint <span class="hljs-keyword">for</span> the RSA key sent by the remote host is
+SHA256:uNiVztksCsDhcc0u9e8BujQXVUpKZIDTMczCvj3tD2s.
+Please contact your system administrator.
+Add correct host key in /c/Users/Administrator/.ssh/known_hosts to get rid of <span class="hljs-keyword">this</span> message.
+Offending RSA key in /c/Users/Administrator/.ssh/known_hosts:2
+RSA host key <span class="hljs-keyword">for</span> github.com has changed and you have requested strict checking.
+Host key verification failed.
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+
+&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;
+1&#x3001;&#x68C0;&#x67E5;github&#x7684;&#x79D8;&#x94A5;&#x662F;&#x5426;&#x4E0E;&#x672C;&#x5730;&#x4E00;&#x81F4;&#x3002;
+&#x672C;&#x5730;    cat ~/.ssh/id_rsa.pub   &#x67E5;&#x79D8;&#x94A5;&#x3002;
+GitHub  Setting -&gt; SSH Keys-&gt; New SSH key  &#x6DFB;&#x52A0;&#x79D8;&#x94A5;&#x3002;
+
+
+2&#x3001;&#x78C1;&#x76D8; C:\Users\Administrator\.ssh &#x7684; known_hosts &#x6587;&#x4EF6;&#xFF0C;&#x5220;&#x9664; github.com xxx 
+&#x91CD;&#x65B0;&#x63A8;&#x9001;&#x6587;&#x4EF6;&#xFF0C;&#x8F93;&#x5165;yes&#x5373;&#x53EF;&#x3002;
+</span></code></pre>
 
                                 
                                 </section>
@@ -1826,7 +1868,7 @@ https://blog.csdn.net/Maxiao1204/article/details/81476618
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"gitNote","level":"3.2.2","depth":2,"next":{"title":"shell语法","level":"3.2.3","depth":2,"path":"编程/运维/shell语法.md","ref":"编程/运维/shell语法.md","articles":[]},"previous":{"title":"docker","level":"3.2.1","depth":2,"path":"编程/运维/docker.md","ref":"编程/运维/docker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","mermaid-gb3","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/运维/gitNote.md","mtime":"2022-08-19T09:06:07.577Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-30T03:22:49.431Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"gitNote","level":"3.2.2","depth":2,"next":{"title":"shell语法","level":"3.2.3","depth":2,"path":"编程/运维/shell语法.md","ref":"编程/运维/shell语法.md","articles":[]},"previous":{"title":"docker","level":"3.2.1","depth":2,"path":"编程/运维/docker.md","ref":"编程/运维/docker.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/运维/gitNote.md","mtime":"2023-06-01T02:15:18.475Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-01T03:10:46.969Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1854,10 +1896,6 @@ https://blog.csdn.net/Maxiao1204/article/details/81476618
     
         
         <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
-        
-    
-        
-        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

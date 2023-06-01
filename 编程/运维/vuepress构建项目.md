@@ -3,7 +3,7 @@
 ## 一、vuepress
 
 使用vuepress构建的博客。
-[github]( https://github.com/scott180/vuepress-blog ) &ensp; [vuepress-blog]( https://scott180.github.io/vuepress-blog )  &ensp; [vuepress-calligraphy]( https://scott180.github.io/vuepress-calligraphy )
+[github]( https://github.com/scott180/vuepress-blog ) &ensp; [gitlab]( https://gitlab.com/xuyq123/mynotes ) &ensp; [vuepress-blog]( https://scott180.github.io/vuepress-blog )  
 
 
 ### 1.1 安装
@@ -124,12 +124,12 @@ cd -
 - 2、如果要绑定域名
 
 ```js
-如访问地址为 `http://reco-blog.xushufa.cn/` 则
+如访问地址为 `http://xushufa.cn` 则
 
 `docs\.vuepress\config.js` 配置 `base` 字段需注释掉
 
 `deploy.sh` 配置 
-echo 'reco-blog.xushufa.cn' > CNAME
+echo 'xushufa.cn' > CNAME
 `git push -f git@github.com:scott180/reco-calligraphy.git master:gh-pages`
 
 
@@ -206,10 +206,23 @@ npm run deploy
 
 ---
 
+> 参考项目
+
 ```sh
 git clone git@github.com:scott180/vuepress-blog.git
 
 npm install
+
+```
+
+---
+
+> 后续更新
+
+```java
+首次部署需要按照以上步骤发布项目，后续增加或更新文件只需：
+在本地验证	npm run docs:dev
+发布到线上	npm run deploy
 
 ```
 
