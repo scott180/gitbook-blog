@@ -252,6 +252,19 @@
             
         </li>
     
+        <li class="chapter " data-level="2.1.8" data-path="../../生活/随笔/纪念一下，三百天打满深渊.html">
+            
+                <a href="../../生活/随笔/纪念一下，三百天打满深渊.html">
+            
+                    
+                    纪念一下，三百天打满深渊
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1379,7 +1392,8 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="javanote">javaNote</h1>
-<h2 id="1&#x3001;java&#x5E38;&#x7528;&#x65B9;&#x6CD5;">1&#x3001;java&#x5E38;&#x7528;&#x65B9;&#x6CD5;</h2>
+<h2 id="1&#x3001;java&#x7F16;&#x7A0B;">1&#x3001;java&#x7F16;&#x7A0B;</h2>
+<h3 id="11&#x3001;&#x5E38;&#x7528;&#x65B9;&#x6CD5;">1.1&#x3001;&#x5E38;&#x7528;&#x65B9;&#x6CD5;</h3>
 <pre><code class="lang-java">@Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -1403,16 +1417,33 @@ private Date createTime;
 
 Assert.isTrue(!StringUtils.isEmpty(param.getPhone()), &quot;&#x8054;&#x7CFB;&#x65B9;&#x5F0F;&#x4E0D;&#x80FD;&#x4E3A;&#x7A7A;&quot;);
 
-
-@MapKey(&quot;operatorId&quot;)
+ExecutorService ex = Executors.newCachedThreadPool();
+Runtime.getRuntime().availableProcessors();
+ThreadPoolTaskExecutor
+CountDownLatch
+CyclicBarrier
+</code></pre>
+<pre><code class="lang-java">@MapKey(&quot;operatorId&quot;)
 List&lt;Map&lt;Integer, String&gt;&gt; queryOperatorList();
 
 &lt;select id=&quot;queryOperatorList&quot; resultType=&quot;java.util.Map&quot;&gt;
     select operator_id operatorId,operator_name operatorName from ins_region_log
     GROUP BY operator_id
 &lt;/select&gt;
+
+
+@Select(&quot;&lt;script&gt;&quot; +
+        &quot;select process_instance_id processInstanceId, business_id businessId, &quot; +
+        &quot;settlement_no settlementNo, price, status, create_time createTime &quot; +
+        &quot;from ins_settlement_process &quot; +
+        &quot;WHERE settlement_no in &quot; +
+        &quot;&lt;foreach collection= &apos;billOrderList&apos; item= &apos;billOrder&apos; open=&apos;(&apos; separator= &apos;,&apos; close=&apos;)&apos;&gt;&quot; +
+        &quot;#{billOrder} &quot; +
+        &quot;&lt;/foreach&gt; order by create_time desc &quot; +
+        &quot;&lt;/script&gt;&quot;)
+List&lt;SettlementProcessInstanceDO&gt; querySettlementProcessInstanceList(@Param(&quot;billOrderList&quot;) List&lt;String&gt; billOrderList);
 </code></pre>
-<h3 id="11&#x3001;lambda&#x8868;&#x8FBE;&#x5F0F;">1.1&#x3001;lambda&#x8868;&#x8FBE;&#x5F0F;</h3>
+<h3 id="12&#x3001;lambda&#x8868;&#x8FBE;&#x5F0F;">1.2&#x3001;lambda&#x8868;&#x8FBE;&#x5F0F;</h3>
 <pre><code class="lang-java">
 <span class="hljs-comment">/*** lambda&#x8868;&#x8FBE;&#x5F0F; */</span>
 
@@ -1490,7 +1521,7 @@ basketList.parallelStream().collect(Collectors.groupingBy(item -&gt; item.getAdd
                 }
         );
 </code></pre>
-<h3 id="12&#x3001;map&#x904D;&#x5386;">1.2&#x3001;Map&#x904D;&#x5386;</h3>
+<h3 id="13&#x3001;map&#x904D;&#x5386;">1.3&#x3001;Map&#x904D;&#x5386;</h3>
 <pre><code class="lang-java">
 java&#x4E2D;Map&#x904D;&#x5386;&#x7684;&#x56DB;&#x79CD;&#x65B9;&#x5F0F;
 https:<span class="hljs-comment">//www.cnblogs.com/damoblog/p/9124937.html</span>
@@ -1535,7 +1566,7 @@ Iterator&lt;Entry&lt;String, String&gt;&gt; entries = map.entrySet().iterator();
     System.out.println(key+<span class="hljs-string">&quot;:&quot;</span>+value);
 }
 </code></pre>
-<h3 id="13&#x3001;java&#x6392;&#x5E8F;">1.3&#x3001;java&#x6392;&#x5E8F;</h3>
+<h3 id="14&#x3001;java&#x6392;&#x5E8F;">1.4&#x3001;java&#x6392;&#x5E8F;</h3>
 <pre><code class="lang-java">java&#x6392;&#x5E8F;
 
 <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
@@ -1645,7 +1676,7 @@ public static TreeMap&lt;String, List&lt;LogisticsStatisticsDAO&gt;&gt; getCusto
     return map;
 }
 </code></pre>
-<h3 id="14&#x3001;flatmappeeknewarraylist">1.4&#x3001;flatmap,peek,newArrayList</h3>
+<h3 id="15&#x3001;flatmappeeknewarraylist">1.5&#x3001;flatmap,peek,newArrayList</h3>
 <pre><code class="lang-java">JAVA8 &#x4E2D;&#x7684;flatmap
 
 &#x4F7F;&#x7528;flatMap&#x65B9;&#x6CD5;&#x7684;&#x6548;&#x679C;&#x662F;&#xFF0C;&#x5404;&#x4E2A;&#x6570;&#x7EC4;&#x5E76;&#x4E0D;&#x662F;&#x5206;&#x522B;&#x6620;&#x5C04;&#x4E00;&#x4E2A;&#x6D41;&#xFF0C;&#x800C;&#x662F;&#x6620;&#x5C04;&#x6210;&#x6D41;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6240;&#x6709;&#x4F7F;&#x7528;map(Array::stream)&#x65F6;&#x751F;&#x6210;&#x7684;&#x5355;&#x4E2A;&#x6D41;&#x88AB;&#x5408;&#x5E76;&#x8D77;&#x6765;&#xFF0C;&#x5373;&#x6241;&#x5E73;&#x5316;&#x4E3A;&#x4E00;&#x4E2A;&#x6D41;&#x3002;
@@ -2028,9 +2059,9 @@ maven&#x5E38;&#x7528;&#x6253;&#x5305;&#x547D;&#x4EE4;
 <tbody>
 <tr>
 <td>&#x4E8C;&#x7EF4;&#x7801;</td>
-<td><a href="https://md.xushufa.cn/gitimg/imgs/other/wuweixusheng_weixin.png" data-lightbox="2f7f22df-c38b-4569-83be-246fd1e5e65f" data-title="w" target="_blank"><img src="https://md.xushufa.cn/gitimg/imgs/other/wuweixusheng_weixin.png" alt="w"></a></td>
+<td><a href="https://bitbucket.org/xu12345/document/raw/114a5f5c292cc412cd46304dc1d20cfda7c7a7f8/imgs/weixin/wuweixusheng_weixin.png" data-lightbox="432d74f4-a7ac-4afa-b1ee-47795c6ca53d" data-title="w" target="_blank"><img src="https://bitbucket.org/xu12345/document/raw/114a5f5c292cc412cd46304dc1d20cfda7c7a7f8/imgs/weixin/wuweixusheng_weixin.png" alt="w"></a></td>
 <td><br></td>
-<td><a href="https://md.xushufa.cn/gitimg/imgs/other/wuweixusheng_toutiao.png" data-lightbox="73cb09b9-e3c5-4432-8b62-2ecc9f5a3fdc" data-title="t" target="_blank"><img src="https://md.xushufa.cn/gitimg/imgs/other/wuweixusheng_toutiao.png" alt="t"></a></td>
+<td><a href="https://bitbucket.org/xu12345/document/raw/114a5f5c292cc412cd46304dc1d20cfda7c7a7f8/imgs/toutiao/wuweixusheng_toutiao.png" data-lightbox="dfe162e6-0e6b-4a3f-82bd-b5c8ce4b6243" data-title="t" target="_blank"><img src="https://bitbucket.org/xu12345/document/raw/114a5f5c292cc412cd46304dc1d20cfda7c7a7f8/imgs/toutiao/wuweixusheng_toutiao.png" alt="t"></a></td>
 </tr>
 </tbody>
 </table>
@@ -2111,7 +2142,7 @@ maven&#x5E38;&#x7528;&#x6253;&#x5305;&#x547D;&#x4EE4;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"javaNote","level":"3.1.2","depth":2,"next":{"title":"排序算法","level":"3.1.3","depth":2,"path":"编程/java/排序算法.md","ref":"编程/java/排序算法.md","articles":[]},"previous":{"title":"java介绍","level":"3.1.1","depth":2,"path":"编程/java/java介绍.md","ref":"编程/java/java介绍.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","mermaid-gb3"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/java/javaNote.md","mtime":"2023-06-30T03:32:59.508Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-30T09:01:23.197Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"javaNote","level":"3.1.2","depth":2,"next":{"title":"排序算法","level":"3.1.3","depth":2,"path":"编程/java/排序算法.md","ref":"编程/java/排序算法.md","articles":[]},"previous":{"title":"java介绍","level":"3.1.1","depth":2,"path":"编程/java/java介绍.md","ref":"编程/java/java介绍.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","mermaid-gb3","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/java/javaNote.md","mtime":"2023-08-08T03:09:53.780Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-09T02:29:44.903Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
@@ -2139,6 +2170,10 @@ maven&#x5E38;&#x7528;&#x6253;&#x5305;&#x547D;&#x4EE4;
     
         
         <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

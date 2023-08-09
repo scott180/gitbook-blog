@@ -90,6 +90,15 @@ cd -
 
 ```
 
+
+```c
+如果要在github绑定域名，如 https://blog.xushufa.cn/ ，必须在github建立同名项目，如 https://github.com/scott180/blog 。如果子域名和项目不同名，布署时css样式会混乱，网页不能正常访问。 
+而且 `.vuepress\config.js` 的 `base` 也要注释掉。
+
+绑定教程可参看： gitlab、github绑定自定义域名  https://xushufa.cn/docs/bian-cheng/yun-wei/gitlab-githubbang-ding-zi-ding-yi-yu-ming.html  
+
+```
+
 ---
 
 设置 `package.json`
@@ -117,7 +126,7 @@ cd -
 
 `docs\.vuepress\config.js` 配置 `base` 字段为项目名 `reco-blog`
 
-`deploy.sh` 配置 `git push -f git@github.com:scott180/reco-calligraphy.git master:gh-pages`
+`deploy.sh` 配置 `git push -f git@github.com:scott180/reco-blog.git master:gh-pages`
 
 ```
 

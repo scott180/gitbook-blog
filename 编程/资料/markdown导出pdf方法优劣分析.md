@@ -43,7 +43,7 @@ markdown相关操作，格式转换与项目布署。
 
 - gitlab、github、gitee布署`mkdocs`主题仓库
 - git平台`docsify`布署markdown文件
-- `vuepress`构建项目 https://blog.xushufa.cn
+- `vuepress`构建项目 https://xushufa.cn
 - `gitbook`部署博客  https://scott180.github.io/gitbook-blog
 
 
@@ -167,7 +167,7 @@ MarkText是一个简单开源的 Markdown 编辑器。 https://github.com/markte
 
 ---
 
-### 2.6 评分
+## 3 评分
 
 | 评分        | 内容不丢失 | 格式不变形 | 有图片 | 有书签 | 操作简单 | 得分        |
 | ----------  | ---------- | ---------- | ------ | ------ | -------- | ----------- |
@@ -187,9 +187,4 @@ MarkText是一个简单开源的 Markdown 编辑器。 https://github.com/markte
 综上，`MarkText`四星半夺得魁首，`Typora`屈居亚席。总之： <br/>
 操作markdown文件，使用`Typora`最方便。 <br/>
 导出markdown为pdf，`MarkText`搭配`PDFPatcher`最优秀。 <br/>
-
-
-
-
-
 
