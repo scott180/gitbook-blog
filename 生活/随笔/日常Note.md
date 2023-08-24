@@ -11,8 +11,8 @@
 ```java
 windows常用快捷键
 
-Ctrl+C  复制选中内容
-Ctrl+V  粘贴复制内容
+Ctrl+C  复制
+Ctrl+V  粘贴
 Ctrl+S  保存
 Ctrl+A  选中全部内容
 Ctrl+X  剪切
@@ -25,10 +25,16 @@ Ctrl+N  新建一个空白文档
 Ctrl+P  打开"打印"对话框
 Ctrl+O  打开文档
 
-Ctrl+Shift  输入法切换
-Ctrl+Home   光标快速移到文件头
-Ctrl+End    光标快速移到文件尾
-Alt+Tab     程序切换
+Ctrl+Shift	输入法切换
+Ctrl+Home	光标快速移到文件头
+Ctrl+End	光标快速移到文件尾
+
+Ctrl+Shift+End	选中当前到末尾所有内容
+Ctrl+Shift+Esc	打开任务管理器
+Ctrl+Shift+Del	浏览器打开清除缓存对话框
+
+Alt+Tab     程序切换（小图标）
+Win+Tab     程序切换（大图标）
 
 Win     显示开始菜单
 Win+L   锁定计算机
@@ -36,18 +42,22 @@ Win+E   启动"我的电脑"
 Win+D   快速显示桌面
 Win+R   打开电脑"运行"对话框
 
-F2   文件夹改名
+F2   文件改名
 F5   浏览器页面刷新
 F11  浏览器进入全屏状态
 F12  浏览器打开调试
 
+Shift+PgUp	向上选中内容
+Shift+PgDn	向下选中内容
+
+Shift+光标+右键	 选中内容
 
 ```
 
 
 ### 1.2、修改文件的默认打开方式
 
-```sql
+```
 修改文件的默认打开方式：
 
 1.修改属性
@@ -87,7 +97,7 @@ D:\ProgramFiles\Notepadd++\Notepad++\plugins
 
 ```
 
-```c
+```
 notepadd++  txt,md格式 文字高亮
 设置 - 语言格式设置 - 自定义扩展名
 
@@ -101,7 +111,7 @@ notepad竖向选择
 
 ### 1.4、markdown
 
-```java
+```
 markdown在线编辑
 作业部落  https://www.zybuluo.com/mdeditor
 马克飞象  https://maxiang.io/
@@ -134,16 +144,16 @@ markdown空格符号
 
 ```
 
-```
+```java
 markdown表格宽度设置
 
 | git仓库 | 布署方法 | <span style="white-space:nowrap;">备注&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span> |
 
 ```
 
-```c
+```
 gitlab、github、gitee布署mkdocs主题仓库
-https://gitlab.com/xuyq123/mynotes/-/blob/master/gitlab%E3%80%81github%E3%80%81gitee%E5%B8%83%E7%BD%B2mkdocs%E4%B8%BB%E9%A2%98%E4%BB%93%E5%BA%93.md
+https://gitlab.com/xuyq123/mynotes
 
 gitlab mkdocs主题仓库   
 	https://gitlab.com/xuyq123/plain-mkdocs   
@@ -155,7 +165,7 @@ gitlab mkdocs主题仓库
 ---	
 	
 git平台docsify布署markdown文件
-https://gitlab.com/xuyq123/mynotes/-/blob/master/git%E5%B9%B3%E5%8F%B0docsify%E5%B8%83%E7%BD%B2markdown%E6%96%87%E4%BB%B6.md 
+https://github.com/scott180/MyNotes
 
 gitlab docsify主题仓库 	
 	https://gitlab.com/xuyq123/plain-docsify 
@@ -184,7 +194,7 @@ Administrator/123456
 
 ### 2.2、红米笔记本问题
 
-```c
+```
 红米笔记本触摸板失灵
 - 按F12 
 
@@ -197,15 +207,14 @@ redmibook的FN键没有作用,F1～F12功能键直接按就是调节音.
 
 ### 2.3、无线网连不上 & 代理连接失败
 
-```
-
+```js
 win7无线网络连接不上（未连接-连接可用）常用解决方法。
   开始 --控制面板（查看方式-小图标）--管理工具 --服务
   WLAN AutoConfig 启动此服务且启动类型改为自动
 
 ```
 
-```c
+```
 代理连接失败 （-130 ERR_PROXY_CONNECTION_FAILED ）
 
 治本方法：
@@ -239,6 +248,7 @@ Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WinHttpAutoProxySv
 进入注册表： WIN+R - regedit
 
 ```
+
 
 ### 2.4、关闭Chrome浏览器更新通知
 
@@ -285,7 +295,6 @@ Windows Registry Editor Version 5.00
 6. 重新启动浏览器。
 
 ```
-
 
 
 ### 2.5、shell批量推送git
@@ -346,8 +355,7 @@ copyPush
 
 ### 3.1、身高体重比例
 
-```js
-
+```
 标准体重是反映和衡量一个人健康状况的重要标志之一。过胖和过瘦都不利于健康，也不会给人以健美感。不同体型的大量统计材料表明，反映正常体重较理想和简单的指标，可用身高体重的关系来表示。
 
 一、世卫计算方法
@@ -412,7 +420,7 @@ copyPush
 
 ### 3.3、春联上联和下联怎么区分
 
-```js
+```
 在以往，我国春节贴的春联，大多是请村子里学问高的先生到家里来写，然后在先生的指导下贴上的。那过年春联上联和下联怎么区分如何贴？上联贴在左边还是右边？
 
 上联下联的区分：
@@ -440,7 +448,7 @@ copyPush
 
 ```
 
-### 3.4、视频会员和电信流量兑换渠道
+### 3.4、视频会员和电信流量兑换
 
 ```js
 视频会员：腾讯视频、优酷、爱奇艺、芒果TV等视频网站会员积分兑换
@@ -481,6 +489,47 @@ copyPush
 ```
 
 
+### 3.5、天干地支
+
+十天干指的是：甲、乙、丙、丁、戊、己、庚、辛、壬、癸。                                                 <br/>
+十二地支指的是：子、丑、寅、卯、辰、巳、午、未、申、酉、戌、亥。                                       <br/>
+十二地支与十二生肖对应:子鼠、丑牛、寅虎、卯兔、辰龙、巳蛇、午马、未羊、申猴、酉鸡、戌狗、亥猪。        <br/>
+
+
+天干地支时间对照表
+
+1、子时：夜半，又名子夜、中夜，十二时辰的第一个时辰。对应23时至01时。												 <br/>
+2、丑时：鸡鸣，又名荒鸡，十二时辰的第二个时辰。对应01时至03时。                                                      <br/>
+3、寅时：平旦，又称黎明、早晨、日旦等，是夜与日的交替之际。对应03时至05时。                                          <br/>
+4、卯时：日出，又名日始、破晓、旭日等，指太阳刚刚露脸，冉冉初升的那段时间。对应05时至07时。                          <br/>
+5、辰时：食时，又名早食等，古人“朝食”之时也就是吃早饭时间，对应07时至09时。                                          <br/>
+6、巳时：隅中，又名日禺等，临近中午的时候称为隅中。对应09 时至11时。                                                 <br/>
+7、午时：日中，又名日正、中午等，对应11时至13时。                                                                    <br/>
+8、未时：日昳，又名日跌、日央等，太阳偏西为日跌。对应13时至15时。                                                    <br/>
+9、申时：哺时，又名日铺、夕食等，对应15时至17时。                                                                    <br/>
+10、酉时：日入，又名日落、日沉、傍晚，意为太阳落山的时候。对应17时至19时。                                           <br/>
+11、戌时：黄昏，又名日夕、日暮、日晚等，此时太阳已经落山，天将黑未黑。天地昏黄，万物朦胧，故称黄昏。对应19时至21时。 <br/>
+12、亥时：人定，又名定昏等，代表此时夜色已深，人们也已经停止活动，安歇睡眠了。人定也就是人静。对应21时至23时。       <br/>
+
+
+
+### 3.6、二十四节气
+
+节气歌  <br/>
+春雨惊春清谷天，夏满芒夏暑相连。 <br/>
+秋处露秋寒霜降，冬雪雪冬小大寒。 <br/>
+
+
+| 春季  | 日 期	     |  夏季  | 日　期	     |  秋季 | 日　期	    | 冬季	| 日　期      | 
+| ----- | ---------- |  ------| -----------  | ----- | ------------ | ----- | ----------- |
+| 立春	| 2月3-5日	 |  立夏  | 5月5-7日	 |  立秋 | 8月7-9日	    | 立冬	| 11月7-8日   | 
+| 雨水	| 2月18-20日 | 	小满  | 5月20-22日	 |  处暑 | 8月22-24日   | 小雪	| 11月22-23日 | 
+| 惊蛰	| 3月5-7日	 |  芒种  | 6月5-7日	 |  白露 | 9月7-9日	    | 大雪	| 12月6-8日   | 
+| 春分	| 3月20-22日 | 	夏至  | 6月21-22日	 |  秋分 | 9月22-24日	| 冬至	| 12月21-23日 | 
+| 清明	| 4月4-6日	 |  小暑  | 7月6-8日	 |  寒露 | 10月8-9日	| 小寒	| 1月5-7日    | 
+| 谷雨	| 4月19-21日 | 	大暑  | 7月22日-24日 | 	霜降 | 10月23-24日	| 大寒	| 1月20-21日  | 
+
+
 
 ## 4、工作
 
@@ -497,14 +546,14 @@ git ：gitlab、github、gitee、gitcode、coding、bitbucket
 搜索：谷歌、百度、头条、必应
 工具：idea、notepadd++、navicat、postman、fiddler、typora、eclipse、vscode
 
-``` 
+```
 
 *************************
 
 ### 4.2、mysql logbin日志 
 
-```sql
-mysql开启log-bin日志.md  https://gitlab.com/xuyq123/mynotes/-/blob/master/mysql%E5%BC%80%E5%90%AFlog-bin%E6%97%A5%E5%BF%97.md
+```
+mysql开启log-bin日志.md  https://gitlab.com/xuyq123/mynotes
 
 一 、logbin日志 记录新增、更新、删除的sql 
 show binary logs;
@@ -523,7 +572,7 @@ TRUNCATE table mysql.general_log
 
 ### 4.3、端点已使用
 
-```sql
+```sh
 C:\Users\Administrator>netstat -ano|findstr "8080"
   TCP    0.0.0.0:8080           0.0.0.0:0              LISTENING       11492
   TCP    [::]:8080              [::]:0                 LISTENING       11492
@@ -540,8 +589,7 @@ C:\Users\Administrator>taskkill /f /t /im 11492
 
 ### 4.4、druid 安全配置
 
-```vb
-
+```
 为Druid增加权限验证措施，建议参考 https://github.com/alibaba/druid/wiki/%E9%85%8D%E7%BD%AE_StatViewServlet%E9%85%8D%E7%BD%AE
 https://blog.csdn.net/my_ha_ha/article/details/86212492
 
@@ -588,3 +636,25 @@ http://localhost:8080/druid/sql.html
 
 *************************
 
+### 4.6、小工具
+
+| 序号   | 地址        |  备注          |
+| -----  | ----------- |  ------------- |
+| 1      | [json]( https://tool.xushufa.cn/json )                       | json 格式化工具             |
+| 2      | [yaml解析]( https://tool.xushufa.cn/yaml-parse )             | yaml解析为json              |
+| 3      | [时间毫秒值转换]( https://tool.xushufa.cn/time-format )      | 时间毫秒值转换              |
+|        | 解码编码     |               |                              
+| 4      | [url解码]( https://tool.xushufa.cn/url-encode )              | url解码编码                 |
+| 5      | [unicode解码]( https://tool.xushufa.cn/unicode-encode )      | unicode解码编码             |
+| 6      | [文字转二维码]( https://tool.xushufa.cn/words-QRcode )       | 文字转二维码                |
+| 7      | [二维码生成扫描识别]( https://tool.xushufa.cn/HtmlQRCode )   | 二维码生成扫描识别          |
+|        | markdown                     |                 |             
+| 8      | [md2wx]( https://tool.xushufa.cn/md2wx/docs )                | 在线Markdown微信格式化工具            |
+| 9      | [editormd]( https://tool.xushufa.cn/markdown-editormd )      | 开源的、可嵌入的 Markdown 在线编辑器  |
+| 10     | [markthing]( https://tool.xushufa.cn/markdown-markthing )    | 一个MarkDown编辑器                    |
+| 11     | [mpeditor]( https://tool.xushufa.cn/markdown-mpeditor )      | 专注于微信公众号的编辑阅读器          |
+|        | 项目布署                     |                 |
+| 12     | [tool]( https://github.com/scott180/tool )     | github仓库  |
+| 13     | [xushufa]( https://xushufa.cn )                | 个人网站    |
+
+*************************

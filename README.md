@@ -4,7 +4,7 @@
 
 徐永钦<br/>
 生于无为，学于合肥，居于杭州。<br/>
-程序开发，书法吉他，上下求索。<br/>
+程序开发，书法游戏，上下求索。<br/>
 君子不器，学且与思，知行合一。<br/>
 温故知新，记而不作，未来已来。<br/>
 
@@ -18,20 +18,20 @@
 
 > 编程
 
-**技术还可以的程序猿。 （2016--至今）**
+2016--至今，一个java开发程序员。
 
 会 `java`  `linux`  `mysql` `redis` ...  <br/>
 用 `git` `idea` `postman` `markdown` ...  <br/>
 
-笔记仓库 [**gitlab**]( https://gitlab.com/xuyq123/mynotes ) &ensp; [github]( https://github.com/scott180/calligraphy ) &ensp;  [coding]( https://xyqin.coding.net/public/my/calligraphy/git ) 
-
----
+笔记仓库 [gitlab]( https://gitlab.com/xuyq123/mynotes ) &ensp; [github]( https://github.com/scott180/vuepress-blog ) &ensp;  [gitee]( https://gitee.com/xy180/calligraphy ) 
 
 <br/>
 
+---
+
 > 书法
 
-**书法爱好者，练字。（2020.9--2022.10）**
+2020.9--2022.10 书法爱好者，练字。<br/>
 
 起初&ensp;对书法有兴趣 <br/>
 开始练字&ensp;找个地方记录练习历程 <br/>
@@ -45,15 +45,19 @@
 于是注册域名&ensp;自建`网站`  <br/>
 两者集合&ensp;创造了《[徐书法]( https://xushufa.cn/docs/shu-fa/lian-xi/xu-shu-fa.html )》 <br/>
 
----
-
 <br/>
 
-> 吉他
+---
 
-**变是唯一的不变，现在对吉他有兴趣。（2023.5--）**
+> 游戏
 
-二零二三年五月下旬突然心血来潮的对吉他有了兴趣，于是开始了音乐之旅。
+年少时爱看网络小说，前些年跑步健身。<br/>
+
+现在经常散步，有时看综艺看电影，偶尔乱弹吉他。<br/>
+
+当前入坑原神，漫游提瓦特，不可自拔。随笔 [我的原神旅行观测记录]( https://gitcode.net/xu180/document/-/blob/master/article/%E9%9A%8F%E7%AC%94/%E6%88%91%E7%9A%84%E5%8E%9F%E7%A5%9E%E6%97%85%E8%A1%8C%E8%A7%82%E6%B5%8B%E8%AE%B0%E5%BD%95.md ) 记之。<br/>
+
+
 
 ---
 
