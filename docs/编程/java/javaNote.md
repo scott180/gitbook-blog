@@ -78,9 +78,13 @@ List<Integer> interceptProductIdList = interceptGoodsNumDAOS.stream().map(dao ->
 List<DeliveryPackageDO> mainPackageDOList = packageDOS.stream().filter(dao -> dao.getTitle().equals(DriverPackageUtil.MAIN_PACKAGE_TEXT)).collect(Collectors.toList());
 
 
-// 求和
-Integer sum = detailDAOS.stream().mapToInt(DeliveryPackageGoodsDetailDAO::getNum).sum()
+// 求和  值为null时会报错 No value present
+Integer sum = detailDAOS.stream().mapToInt(DeliveryPackageGoodsDetailDAO::getNum).sum();
+BigDecimal paymentAmount = purchaserAmountMap.values().stream().map(SupplierBillDetailVO::getAmount).reduce(BigDecimal.ZERO, BigDecimal::add);
 BigDecimal paymentAmount = purchaserAmountMap.values().stream().map(SupplierBillDetailVO::getAmount).reduce(BigDecimal::add).get();
+
+// filter过滤空值且使用BigDecimal.ZERO 则不报错
+list.stream().filter(val->val.getSalesAmount()!=null).map(SupplierJointSalesDO::getSalesAmount).reduce(BigDecimal.ZERO,BigDecimal::add);
 
 
 /*** list转map */
@@ -553,12 +557,12 @@ syso+Alt+/      输出
 ---
 
 ```
-java  mysql  maven  
-idea  git  navicat notepad++  
+java mysql maven  
+idea git navicat notepad++  
 postman xshell fillder typora VMware
 redis mongo kafka zookeeper tomcat eclipse
-python  nodejs vue 
-火绒安全软件 向日葵 Everything
+python nodejs npm vue github gitlab gitee gitcode
+Google Chrome 火绒安全软件 向日葵 Everything
 ```
 
 ---
@@ -606,10 +610,10 @@ https://www.jianshu.com/p/391e995881c0
 
 --Tests
 var jsonData = JSON.parse(responseBody);
-postman.setGlobalVariable("webToken", jsonData.data.token);
+tests["success"] = jsonData.code === 200;
+postman.setGlobalVariable("authorityToken", jsonData.data.token);
  
 
- 
 postman 出现Error: connect ECONNREFUSED 127.0.0.1:端口
 https://blog.csdn.net/weixin_45993202/article/details/109072188
 
@@ -695,5 +699,4 @@ maven常用打包命令
 | 3      | [mkdocs-blog]( https://xuyq123.gitlab.io/mkdocs-blog )   | `mkdocs`构建的博客网站。             |
 
 ***
-
 

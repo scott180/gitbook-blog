@@ -706,7 +706,20 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.10" data-path="gitlab、github绑定自定义域名.html">
+        <li class="chapter " data-level="3.2.10" data-path="markdown静态博客搭建综述.html">
+            
+                <a href="markdown静态博客搭建综述.html">
+            
+                    
+                    markdown静态博客搭建综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.11" data-path="gitlab、github绑定自定义域名.html">
             
                 <a href="gitlab、github绑定自定义域名.html">
             
@@ -719,7 +732,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.11" data-path="git平台docsify布署markdown文件.html">
+        <li class="chapter " data-level="3.2.12" data-path="git平台docsify布署markdown文件.html">
             
                 <a href="git平台docsify布署markdown文件.html">
             
@@ -732,7 +745,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.12" data-path="gitlab、github、gitee布署mkdocs主题仓库.html">
+        <li class="chapter " data-level="3.2.13" data-path="gitlab、github、gitee布署mkdocs主题仓库.html">
             
                 <a href="gitlab、github、gitee布署mkdocs主题仓库.html">
             
@@ -1492,71 +1505,6 @@ cd -
 </code></pre><p>&#x8FD0;&#x884C; <code>npm run deploy</code> &#x5373;&#x53EF;&#x90E8;&#x7F72;&#x5230;github&#x9759;&#x6001;&#x9875;&#x9762;</p>
 <hr>
 <blockquote>
-<p>&#x6CE8;&#x610F;&#x8DEF;&#x5F84;&#x914D;&#x7F6E;&#x95EE;&#x9898;&#xFF1A;</p>
-</blockquote>
-<ul>
-<li>1&#x3001;&#x5982;&#x679C;&#x8981;&#x53D1;&#x5E03;&#x8DEF;&#x5F84;&#x4E3A;&#x7528;&#x6237;&#x540D;+&#x9879;&#x76EE;&#x540D;</li>
-</ul>
-<pre><code class="lang-js">&#x5982;&#x8BBF;&#x95EE;&#x5730;&#x5740;&#x4E3A; <span class="hljs-string">`https://scott180.github.io/reco-blog`</span> &#x5219;
-
-<span class="hljs-string">`docs\.vuepress\config.js`</span> &#x914D;&#x7F6E; <span class="hljs-string">`base`</span> &#x5B57;&#x6BB5;&#x4E3A;&#x9879;&#x76EE;&#x540D; <span class="hljs-string">`reco-blog`</span>
-
-<span class="hljs-string">`deploy.sh`</span> &#x914D;&#x7F6E; <span class="hljs-string">`git push -f git@github.com:scott180/reco-blog.git master:gh-pages`</span>
-</code></pre>
-<ul>
-<li>2&#x3001;&#x5982;&#x679C;&#x8981;&#x7ED1;&#x5B9A;&#x57DF;&#x540D;</li>
-</ul>
-<pre><code class="lang-js">&#x5982;&#x8BBF;&#x95EE;&#x5730;&#x5740;&#x4E3A; <span class="hljs-string">`http://xushufa.cn`</span> &#x5219;
-
-<span class="hljs-string">`docs\.vuepress\config.js`</span> &#x914D;&#x7F6E; <span class="hljs-string">`base`</span> &#x5B57;&#x6BB5;&#x9700;&#x6CE8;&#x91CA;&#x6389;
-
-<span class="hljs-string">`deploy.sh`</span> &#x914D;&#x7F6E; 
-echo <span class="hljs-string">&apos;xushufa.cn&apos;</span> &gt; CNAME
-<span class="hljs-string">`git push -f git@github.com:scott180/reco-calligraphy.git master:gh-pages`</span>
-</code></pre>
-<hr>
-<blockquote>
-<p>github Actions pages build and deployment &#x62A5;&#x9519;</p>
-</blockquote>
-<pre><code>&#x672C;&#x5730;&#x6267;&#x884C;deploy&#x6B63;&#x5E38;&#xFF0C;&#x4F46;&#x662F;github&#x7684;Actions&#x62A5;&#x9519;&#x4E86;&#x3002;
-
-&#x9519;&#x8BEF;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;
-Deployment request failed for 5a3201f6016e6e078f0f3c46eb4132a3d9014bdd due to in progress deployment. Please cancel 7e10a83b419c464b908a13787a0b0bfe39cc1ca7 first or wait for it to
-
-{
-    &quot;$id&quot;: &quot;1&quot;,
-    &quot;innerException&quot;: null,
-    &quot;message&quot;: &quot;The user &apos;System:PublicAccess;aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa&apos; is not authorized to access this resource.&quot;,
-    &quot;typeName&quot;: &quot;Microsoft.TeamFoundation.Framework.Server.UnauthorizedRequestException, Microsoft.TeamFoundation.Framework.Server&quot;,
-    &quot;typeKey&quot;: &quot;UnauthorizedRequestException&quot;,
-    &quot;errorCode&quot;: 0,
-    &quot;eventId&quot;: 3000
-}
-</code></pre><pre><code>
-&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;
-1&#x3001;&#x70B9;&#x51FB; Re-run all jobs &#x518D;&#x8BD5;&#x4E00;&#x6B21;&#x3002;
-2&#x3001;&#x672C;&#x5730;vuepress&#x7F13;&#x5B58;&#x5F71;&#x54CD;&#xFF0C;&#x5C06;dist&#x76EE;&#x5F55;&#x5220;&#x9664;&#xFF0C;&#x91CD;&#x65B0;deploy&#x3002;
-3&#x3001;&#x53EF;&#x80FD;&#x662F;SSH key&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x6362;&#x4E00;&#x4E0B;&#xFF0C;&#x91CD;&#x65B0;deploy&#x3002;
-</code></pre><hr>
-<blockquote>
-<p> npm run docs:build &#x672C;&#x5730;&#x6253;&#x5305;&#x9879;&#x76EE;&#xFF0C;&#x4E22;&#x5931;css&#x6837;&#x5F0F;</p>
-</blockquote>
-<ul>
-<li>1&#x3001;&#x4FEE;&#x6539;<code>base</code>&#x5B57;&#x6BB5;&#x4E3A; <code>./</code>   &#x53C2;&#x8003; <a href="https://blog.csdn.net/JZevin/article/details/109195652" target="_blank">https://blog.csdn.net/JZevin/article/details/109195652</a> <br>
-&#x4FEE;&#x6539; <code>/docs/.vuepress/config.js</code> &#x4E2D;&#x914D;&#x7F6E;&#x7684;<code>base</code>&#x5B57;&#x6BB5;  <br>
-&#x8FD9;&#x91CC;&#x7684;&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#x4E0D;&#x5E94;&#x8BE5;&#x662F;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x6839;&#x76EE;&#x5F55; <code>/</code> &#xFF0C;&#x800C;&#x5E94;&#x8BE5;&#x662F;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84; <code>./</code> <br></li>
-</ul>
-<ul>
-<li>2&#x3001;&#x6CE8;&#x91CA;&#x6389; <code>mode</code>  &#x53C2;&#x8003;  <a href="https://www.jianshu.com/p/f9b9edd210f8" target="_blank">https://www.jianshu.com/p/f9b9edd210f8</a></li>
-</ul>
-<pre><code class="lang-c">&#x627E;&#x5230; node_modules\@vuepress\core\lib\client\app.js&#x6587;&#x4EF6;&#xFF0C; &#x6CE8;&#x91CA;&#x6389; &apos;mode&apos;&#xFF0C;&#x8BA9;&#x5B83;&#x9ED8;&#x8BA4;&#x54C8;&#x5E0C;&#x6A21;&#x5F0F;&#x3002;
-
- const router = new Router({
-    base: routerBase,
-    // mode: &apos;history&apos;,
-</code></pre>
-<hr>
-<blockquote>
 <p>&#x4E3B;&#x8981;&#x547D;&#x4EE4;</p>
 </blockquote>
 <pre><code class="lang-sh"><span class="hljs-comment"># &#x542F;&#x52A8; </span>
@@ -1587,11 +1535,118 @@ npm run deploy
 &#x5728;&#x672C;&#x5730;&#x9A8C;&#x8BC1;    npm run docs:dev
 &#x53D1;&#x5E03;&#x5230;&#x7EBF;&#x4E0A;    npm run deploy
 </code></pre>
-<h3 id="13-&#x5907;&#x6848;&#x53F7;">1.3 &#x5907;&#x6848;&#x53F7;</h3>
+<h3 id="13-&#x95EE;&#x9898;">1.3 &#x95EE;&#x9898;</h3>
+<p>&#x5E03;&#x7F72;vuepress&#x9879;&#x76EE;&#x5230;git&#x65F6;&#x53EF;&#x80FD;&#x4F1A;&#x9047;&#x5230;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#xFF0C;&#x5BFC;&#x81F4;&#x5E03;&#x7F72;&#x5931;&#x8D25;&#x3002;&#x73B0;&#x5728;&#x4E0B;&#x65B9;&#x5217;&#x51FA;&#x5177;&#x4F53;&#x95EE;&#x9898;&#x53CA;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x3002;</p>
+<p><br></p>
+<p><strong>&#x4E00;&#x3001;&#x6CE8;&#x610F;&#x8DEF;&#x5F84;&#x914D;&#x7F6E;&#x95EE;&#x9898;</strong></p>
+<ul>
+<li>1&#x3001;&#x5982;&#x679C;&#x8981;&#x53D1;&#x5E03;&#x8DEF;&#x5F84;&#x4E3A;&#x7528;&#x6237;&#x540D;+&#x9879;&#x76EE;&#x540D;</li>
+</ul>
+<pre><code class="lang-js">&#x5982;&#x8BBF;&#x95EE;&#x5730;&#x5740;&#x4E3A; <span class="hljs-string">`https://scott180.github.io/reco-blog`</span> &#x5219;
+
+<span class="hljs-string">`docs\.vuepress\config.js`</span> &#x914D;&#x7F6E; <span class="hljs-string">`base`</span> &#x5B57;&#x6BB5;&#x4E3A;&#x9879;&#x76EE;&#x540D; <span class="hljs-string">`reco-blog`</span>
+
+<span class="hljs-string">`deploy.sh`</span> &#x914D;&#x7F6E; <span class="hljs-string">`git push -f git@github.com:scott180/reco-blog.git master:gh-pages`</span>
+</code></pre>
+<ul>
+<li>2&#x3001;&#x5982;&#x679C;&#x8981;&#x7ED1;&#x5B9A;&#x57DF;&#x540D;</li>
+</ul>
+<pre><code class="lang-js">&#x5982;&#x8BBF;&#x95EE;&#x5730;&#x5740;&#x4E3A; <span class="hljs-string">`http://xushufa.cn`</span> &#x5219;
+
+<span class="hljs-string">`docs\.vuepress\config.js`</span> &#x914D;&#x7F6E; <span class="hljs-string">`base`</span> &#x5B57;&#x6BB5;&#x9700;&#x6CE8;&#x91CA;&#x6389;
+
+<span class="hljs-string">`deploy.sh`</span> &#x914D;&#x7F6E; 
+echo <span class="hljs-string">&apos;xushufa.cn&apos;</span> &gt; CNAME
+<span class="hljs-string">`git push -f git@github.com:scott180/reco-calligraphy.git master:gh-pages`</span>
+</code></pre>
+<hr>
+<p><strong>&#x4E8C;&#x3001; github Actions pages build and deployment &#x62A5;&#x9519;</strong></p>
+<pre><code>&#x672C;&#x5730;&#x6267;&#x884C;deploy&#x6B63;&#x5E38;&#xFF0C;&#x4F46;&#x662F;github&#x7684;Actions&#x62A5;&#x9519;&#x4E86;&#x3002;
+
+&#x9519;&#x8BEF;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;
+Deployment request failed for 5a3201f6016e6e078f0f3c46eb4132a3d9014bdd due to in progress deployment. Please cancel 7e10a83b419c464b908a13787a0b0bfe39cc1ca7 first or wait for it to
+
+{
+    &quot;$id&quot;: &quot;1&quot;,
+    &quot;innerException&quot;: null,
+    &quot;message&quot;: &quot;The user &apos;System:PublicAccess;aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa&apos; is not authorized to access this resource.&quot;,
+    &quot;typeName&quot;: &quot;Microsoft.TeamFoundation.Framework.Server.UnauthorizedRequestException, Microsoft.TeamFoundation.Framework.Server&quot;,
+    &quot;typeKey&quot;: &quot;UnauthorizedRequestException&quot;,
+    &quot;errorCode&quot;: 0,
+    &quot;eventId&quot;: 3000
+}
+</code></pre><pre><code>
+&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#xFF1A;
+1&#x3001;&#x70B9;&#x51FB; Re-run all jobs &#x518D;&#x8BD5;&#x4E00;&#x6B21;&#x3002;
+2&#x3001;&#x672C;&#x5730;vuepress&#x7F13;&#x5B58;&#x5F71;&#x54CD;&#xFF0C;&#x5C06;dist&#x76EE;&#x5F55;&#x5220;&#x9664;&#xFF0C;&#x91CD;&#x65B0;deploy&#x3002;
+3&#x3001;&#x53EF;&#x80FD;&#x662F;SSH key&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x6362;&#x4E00;&#x4E0B;&#xFF0C;&#x91CD;&#x65B0;deploy&#x3002;
+</code></pre><hr>
+<p><strong>&#x4E09;&#x3001;npm run docs:build &#x672C;&#x5730;&#x6253;&#x5305;&#x9879;&#x76EE;&#xFF0C;&#x4E22;&#x5931;css&#x6837;&#x5F0F;</strong></p>
+<ul>
+<li>1&#x3001;&#x4FEE;&#x6539;<code>base</code>&#x5B57;&#x6BB5;&#x4E3A; <code>./</code>   &#xFF08; &#x53C2;&#x8003; <a href="https://blog.csdn.net/JZevin/article/details/109195652" target="_blank">https://blog.csdn.net/JZevin/article/details/109195652</a> &#xFF09;<br>
+&#x4FEE;&#x6539; <code>/docs/.vuepress/config.js</code> &#x4E2D;&#x914D;&#x7F6E;&#x7684;<code>base</code>&#x5B57;&#x6BB5;  <br>
+&#x8FD9;&#x91CC;&#x7684;&#x8D44;&#x6E90;&#x8DEF;&#x5F84;&#x4E0D;&#x5E94;&#x8BE5;&#x662F;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x6839;&#x76EE;&#x5F55; <code>/</code> &#xFF0C;&#x800C;&#x5E94;&#x8BE5;&#x662F;&#x76F8;&#x5BF9;&#x8DEF;&#x5F84; <code>./</code> <br></li>
+</ul>
+<ul>
+<li>2&#x3001;&#x6CE8;&#x91CA;&#x6389; <code>mode</code>  &#x53C2;&#x8003;  <a href="https://www.jianshu.com/p/f9b9edd210f8" target="_blank">https://www.jianshu.com/p/f9b9edd210f8</a></li>
+</ul>
+<pre><code class="lang-c">&#x627E;&#x5230; node_modules\@vuepress\core\lib\client\app.js&#x6587;&#x4EF6;&#xFF0C; &#x6CE8;&#x91CA;&#x6389; &apos;mode&apos;&#xFF0C;&#x8BA9;&#x5B83;&#x9ED8;&#x8BA4;&#x54C8;&#x5E0C;&#x6A21;&#x5F0F;&#x3002;
+
+ const router = new Router({
+    base: routerBase,
+    // mode: &apos;history&apos;,
+</code></pre>
+<hr>
+<p><strong>&#x56DB;&#x3001;&#x672C;&#x5730;npm run docs:dev&#x6CA1;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;npm run deploy&#x62A5;&#x9519;</strong></p>
+<pre><code class="lang-sh"> create mode 100644 <span class="hljs-string">&quot;\347\274\226\347\250\213/\350\277\220\347\273\264/\346\211\271\351\207\217\346\216\250\351\200\201\345\270\203\347\275\262\345\276\220\344\271\246\346\263\225\351\241\271\347\233\256.html&quot;</span>
+ssh: connect to host github.com port 22: Connection timed out
+fatal: Could not <span class="hljs-built_in">read</span> from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 128
+npm ERR! vuepress-blog@1.0.0 deploy: `bash deploy.sh`
+npm ERR! Exit status 128
+npm ERR!
+npm ERR! Failed at the vuepress-blog@1.0.0 deploy script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete <span class="hljs-built_in">log</span> of this run can be found <span class="hljs-keyword">in</span>:
+npm ERR!     E:\ProgramFiles\node-v12.22.9-win-x64\node_cache\_logs\2023-09-13T06_38_13_092Z-debug.log
+</code></pre>
+<pre><code>exit status 128, stderr: &quot;fatal: protocol error: bad line
+exit status 128 &#x8868;&#x793A;&#x5728;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x65F6;&#x51FA;&#x73B0;&#x4E86;&#x9519;&#x8BEF;&#x3002;
+stderr: &quot;fatal: protocol error: bad line length character: ???\n&amp;...
+&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#x7684;&#x610F;&#x601D;&#x662F;&#x5728;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x65F6;&#x9047;&#x5230;&#x4E86;&#x65E0;&#x6548;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x56E0;&#x4E3A;&#x8F93;&#x5165;&#x7684;&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#x4E0D;&#x6B63;&#x786E;&#x6216;&#x8005;&#x7F51;&#x7EDC;&#x4F20;&#x8F93;&#x8FC7;&#x7A0B;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x95EE;&#x9898;&#x5BFC;&#x81F4;&#x7684;&#x3002;&#x5EFA;&#x8BAE;&#x68C0;&#x67E5;&#x547D;&#x4EE4;&#x7684;&#x683C;&#x5F0F;&#x662F;&#x5426;&#x6B63;&#x786E;&#xFF0C;
+
+
+markdown&#x6587;&#x4EF6;&#x6807;&#x9898;&#x4E0B;&#x4E00;&#x884C;&#x7684;&#x6362;&#x884C;&#x683C;&#x5F0F;&#x4E0D;&#x7B26;&#x5408;&#x8981;&#x6C42;&#x3002;
+&#x539F;&#x6587;&#xFF1A;
+# &#x65C5;&#x884C;&#x89C2;&#x6D4B;&#x8BB0;&#x5F55;
+
+&lt;br/&gt;
+
+&gt; &#x63D0;&#x74E6;&#x7279;&#x65C5;&#x884C;&#x7B14;&#x8BB0;
+
+
+&#x4FEE;&#x6539;&#xFF1A;&#x5C06;&lt;br/&gt;&#x6539;&#x6210;&lt;br /&gt;&#xFF0C;&#x4E2D;&#x95F4;&#x52A0;&#x4E00;&#x4E2A;&#x7A7A;&#x683C;&#x3002;&#x6216;&#x8005;&#x5C06;&lt;br/&gt;&#x53BB;&#x6389;&#xFF0C;&#x52A0;&#x4E00;&#x4E2A;&#x7A7A;&#x884C;&#x3002;
+
+
+&#x5EF6;&#x4F38;&#x9605;&#x8BFB;&#xFF1A;
+&lt;br&gt;&#x662F;HTML&#x5199;&#x6CD5;&#x3002; 
+&lt;br/&gt;&#x662F;XHTML1.1&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x4E5F;&#x662F;XML&#x5199;&#x6CD5;&#x3002;
+&lt;br /&gt;&#x662F;XHTML&#x4E3A;&#x517C;&#x5BB9;HTML&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x4E5F;&#x662F;XML&#x5199;&#x6CD5;&#x3002;
+
+&#x50CF;&lt;br /&gt;&#x8FD9;&#x79CD;&#x5199;&#x6CD5;&#x662F;&#x6BD4;&#x8F83;&#x89C4;&#x8303;&#x7684;&#xFF01;
+&#x8F6C;&#x81EA;&#xFF1A;https://blog.csdn.net/czh500/article/details/107011801
+</code></pre><hr>
+<h3 id="14-&#x5907;&#x6848;&#x53F7;">1.4 &#x5907;&#x6848;&#x53F7;</h3>
 <blockquote>
 <p>vuepress &#x5E95;&#x90E8;&#x6DFB;&#x52A0;&#x7F51;&#x7AD9;&#x5907;&#x6848;&#x53F7;&#xFF1A;ICP&#x5907;&#x6848;&#x53F7;&#x4E0E;&#x516C;&#x5B89;&#x5907;&#x6848;&#x53F7;  <a href="https://vuepress.vuejs.org/zh/theme/default-theme-config.html#%E5%AF%8C%E6%96%87%E6%9C%AC-footer" target="_blank">&#x5BCC;&#x6587;&#x672C; footer</a></p>
 </blockquote>
-<pre><code>---
+<pre><code>&#x5728; docs/README.md &#x6DFB;&#x52A0;&#x5907;&#x6848;
+</code></pre><pre><code>---
 home: true
 ---
 
@@ -1677,16 +1732,18 @@ cd -
       }
 }
 </code></pre><p>&#x8FD0;&#x884C; <code>npm run deploy</code> &#x5373;&#x53EF;&#x90E8;&#x7F72;&#x5230;github&#x9759;&#x6001;&#x9875;&#x9762;</p>
-<hr>
+<h3 id="23-&#x5907;&#x6848;&#x53F7;">2.3 &#x5907;&#x6848;&#x53F7;</h3>
 <blockquote>
 <p>vuepress &#x5E95;&#x90E8;&#x6DFB;&#x52A0;&#x7F51;&#x7AD9;&#x5907;&#x6848;&#x53F7;&#xFF1A;ICP&#x5907;&#x6848;&#x53F7;&#x4E0E;&#x516C;&#x5B89;&#x5907;&#x6848;&#x53F7;  <a href="https://vuepress-theme-reco.recoluan.com/views/1.x/configJs.html#%E5%A4%87%E6%A1%88%E4%BF%A1%E6%81%AF%E5%92%8C%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%A7%8B%E6%97%B6%E9%97%B4" target="_blank">&#x5907;&#x6848;&#x4FE1;&#x606F;</a></p>
 </blockquote>
-<pre><code>module.exports = {
+<pre><code>&#x5728; .vuepress/config.js &#x6DFB;&#x52A0;&#x5907;&#x6848;
+</code></pre><pre><code>module.exports = {
   themeConfig: {
     record: &apos;&#x6D59;ICP&#x5907;2022008289&#x53F7;-1&apos;,
     recordLink: &apos;http://beian.miit.gov.cn&apos;,
     cyberSecurityRecord: &apos;&#x6D59;&#x516C;&#x7F51;&#x5B89;&#x5907; 33011002016354&#x53F7;&apos;,
     cyberSecurityLink: &apos;http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33011002016354&apos;,
+    startYear: &apos;2022&apos;
   }
 }
 </code></pre><h2 id="&#x4E09;&#x3001;&#x63D2;&#x4EF6;">&#x4E09;&#x3001;&#x63D2;&#x4EF6;</h2>
@@ -1914,7 +1971,7 @@ module.exports = {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"vuepress构建项目","level":"3.2.8","depth":2,"next":{"title":"批量推送布署徐书法项目","level":"3.2.9","depth":2,"path":"编程/运维/批量推送布署徐书法项目.md","ref":"编程/运维/批量推送布署徐书法项目.md","articles":[]},"previous":{"title":"gitbook部署博客","level":"3.2.7","depth":2,"path":"编程/运维/gitbook部署博客.md","ref":"编程/运维/gitbook部署博客.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","mermaid-gb3","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/运维/vuepress构建项目.md","mtime":"2023-08-12T09:13:00.593Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-30T07:44:23.812Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"vuepress构建项目","level":"3.2.8","depth":2,"next":{"title":"批量推送布署徐书法项目","level":"3.2.9","depth":2,"path":"编程/运维/批量推送布署徐书法项目.md","ref":"编程/运维/批量推送布署徐书法项目.md","articles":[]},"previous":{"title":"gitbook部署博客","level":"3.2.7","depth":2,"path":"编程/运维/gitbook部署博客.md","ref":"编程/运维/gitbook部署博客.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","mermaid-gb3","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/运维/vuepress构建项目.md","mtime":"2023-09-14T02:46:08.107Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-14T03:16:37.387Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
