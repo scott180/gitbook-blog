@@ -23,7 +23,7 @@
 会 `java`  `linux`  `mysql` `redis` ...  <br/>
 用 `git` `idea` `postman` `markdown` ...  <br/>
 
-笔记仓库 [gitlab]( https://gitlab.com/xuyq123/mynotes ) &ensp; [github]( https://github.com/scott180/vuepress-blog ) &ensp;  [gitee]( https://gitee.com/xy180/calligraphy ) 
+笔记仓库 [gitlab]( https://gitlab.com/xuyq123/mynotes ) &ensp; [github]( https://github.com/scott180/vuepress-blog ) &ensp;  [gitcode]( https://gitcode.net/xu180/document )
 
 <br/>
 

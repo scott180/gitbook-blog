@@ -887,7 +887,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.4.1" data-path="../资料/nodejs与npm笔记.html">
+        <li class="chapter " data-level="3.4.1" data-path="../资料/工具网站readMe.html">
+            
+                <a href="../资料/工具网站readMe.html">
+            
+                    
+                    工具网站readMe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4.2" data-path="../资料/nodejs与npm笔记.html">
             
                 <a href="../资料/nodejs与npm笔记.html">
             
@@ -900,7 +913,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.2" data-path="../资料/jquery笔记.html">
+        <li class="chapter " data-level="3.4.3" data-path="../资料/jquery笔记.html">
             
                 <a href="../资料/jquery笔记.html">
             
@@ -913,7 +926,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.3" data-path="../资料/二进制数负数.html">
+        <li class="chapter " data-level="3.4.4" data-path="../资料/二进制数负数.html">
             
                 <a href="../资料/二进制数负数.html">
             
@@ -926,7 +939,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.4" data-path="../资料/javaScript笔记.html">
+        <li class="chapter " data-level="3.4.5" data-path="../资料/javaScript笔记.html">
             
                 <a href="../资料/javaScript笔记.html">
             
@@ -939,7 +952,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.5" data-path="../资料/本地安装kafka.html">
+        <li class="chapter " data-level="3.4.6" data-path="../资料/本地安装kafka.html">
             
                 <a href="../资料/本地安装kafka.html">
             
@@ -952,7 +965,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.6" data-path="../资料/本地安装consul.html">
+        <li class="chapter " data-level="3.4.7" data-path="../资料/本地安装consul.html">
             
                 <a href="../资料/本地安装consul.html">
             
@@ -965,7 +978,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.7" data-path="../资料/本地安装zookeeper.html">
+        <li class="chapter " data-level="3.4.8" data-path="../资料/本地安装zookeeper.html">
             
                 <a href="../资料/本地安装zookeeper.html">
             
@@ -978,7 +991,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.8" data-path="../资料/markdown常用语法.html">
+        <li class="chapter " data-level="3.4.9" data-path="../资料/markdown常用语法.html">
             
                 <a href="../资料/markdown常用语法.html">
             
@@ -991,7 +1004,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.9" data-path="../资料/window安装RabbitMQ.html">
+        <li class="chapter " data-level="3.4.10" data-path="../资料/window安装RabbitMQ.html">
             
                 <a href="../资料/window安装RabbitMQ.html">
             
@@ -1004,7 +1017,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.10" data-path="../资料/markdown导出pdf方法优劣分析.html">
+        <li class="chapter " data-level="3.4.11" data-path="../资料/markdown导出pdf方法优劣分析.html">
             
                 <a href="../资料/markdown导出pdf方法优劣分析.html">
             
@@ -1017,7 +1030,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.11" data-path="../资料/系统磁盘c盘清理垃圾文件方法一览.html">
+        <li class="chapter " data-level="3.4.12" data-path="../资料/系统磁盘c盘清理垃圾文件方法一览.html">
             
                 <a href="../资料/系统磁盘c盘清理垃圾文件方法一览.html">
             
@@ -1030,7 +1043,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4.12" data-path="../资料/pagefile.sys有几十个G，太大怎么办.html">
+        <li class="chapter " data-level="3.4.13" data-path="../资料/pagefile.sys有几十个G，太大怎么办.html">
             
                 <a href="../资料/pagefile.sys有几十个G，太大怎么办.html">
             
@@ -1481,6 +1494,44 @@ List&lt;Map&lt;Integer, String&gt;&gt; queryOperatorList();
         &quot;&lt;/foreach&gt; order by create_time desc &quot; +
         &quot;&lt;/script&gt;&quot;)
 List&lt;SettlementProcessInstanceDO&gt; querySettlementProcessInstanceList(@Param(&quot;billOrderList&quot;) List&lt;String&gt; billOrderList);
+</code></pre>
+<pre><code class="lang-java">&lt;dependency&gt;
+    &lt;groupId&gt;net.sf.dozer&lt;/groupId&gt;
+    &lt;artifactId&gt;dozer&lt;/artifactId&gt;
+    &lt;version&gt;5.5.1&lt;/version&gt;
+&lt;/dependency&gt;
+
+
+    /**
+     * &#x6DF1;&#x5EA6;&#x590D;&#x5236;
+     * @param args
+     */
+    public static void main(String[] args) {
+        Object sourceObject = new Object();
+        Object targetObject = new Object();
+        DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
+        dozerBeanMapper.map(sourceObject, targetObject);
+    }
+
+
+
+
+    /**
+     * &#x6B63;&#x5219;&#x5206;&#x5272;&#x4E2D;&#x6587;&#x548C;&#x6570;&#x5B57;
+     *
+     * @param region
+     * @return
+     */
+    public static List spitRegion(String region) {
+        Pattern REGION_PATTERN = Pattern.compile(&quot;[\\u4e00-\\u9fa5]+|\\d+&quot;);
+
+        List&lt;String&gt; list = new ArrayList&lt;&gt;();
+        Matcher m = REGION_PATTERN.matcher(region);
+        while (m.find()) {
+            list.add(m.group());
+        }
+        return list;
+    }
 </code></pre>
 <h3 id="12&#x3001;lambda&#x8868;&#x8FBE;&#x5F0F;">1.2&#x3001;lambda&#x8868;&#x8FBE;&#x5F0F;</h3>
 <pre><code class="lang-java">
@@ -2102,9 +2153,9 @@ maven&#x5E38;&#x7528;&#x6253;&#x5305;&#x547D;&#x4EE4;
 <tbody>
 <tr>
 <td>&#x4E8C;&#x7EF4;&#x7801;</td>
-<td><a href="https://bitbucket.org/xu12345/document/raw/114a5f5c292cc412cd46304dc1d20cfda7c7a7f8/imgs/weixin/wuweixusheng_weixin.png" data-lightbox="d227fa19-a9f8-41e0-ab2c-89ce87dd1e2b" data-title="w" target="_blank"><img src="https://bitbucket.org/xu12345/document/raw/114a5f5c292cc412cd46304dc1d20cfda7c7a7f8/imgs/weixin/wuweixusheng_weixin.png" alt="w"></a></td>
+<td><a href="https://bitbucket.org/xu12345/document/raw/114a5f5c292cc412cd46304dc1d20cfda7c7a7f8/imgs/weixin/wuweixusheng_weixin.png" data-lightbox="9f68ac96-d124-4340-b464-e283fab9a75e" data-title="w" target="_blank"><img src="https://bitbucket.org/xu12345/document/raw/114a5f5c292cc412cd46304dc1d20cfda7c7a7f8/imgs/weixin/wuweixusheng_weixin.png" alt="w"></a></td>
 <td><br></td>
-<td><a href="https://bitbucket.org/xu12345/document/raw/114a5f5c292cc412cd46304dc1d20cfda7c7a7f8/imgs/toutiao/wuweixusheng_toutiao.png" data-lightbox="07d3f6a4-1fd0-4c8a-bdbf-1cab1a7c995b" data-title="t" target="_blank"><img src="https://bitbucket.org/xu12345/document/raw/114a5f5c292cc412cd46304dc1d20cfda7c7a7f8/imgs/toutiao/wuweixusheng_toutiao.png" alt="t"></a></td>
+<td><a href="https://bitbucket.org/xu12345/document/raw/114a5f5c292cc412cd46304dc1d20cfda7c7a7f8/imgs/toutiao/wuweixusheng_toutiao.png" data-lightbox="ecc5e82a-23c7-450c-b136-04b2100da5ff" data-title="t" target="_blank"><img src="https://bitbucket.org/xu12345/document/raw/114a5f5c292cc412cd46304dc1d20cfda7c7a7f8/imgs/toutiao/wuweixusheng_toutiao.png" alt="t"></a></td>
 </tr>
 </tbody>
 </table>
@@ -2185,7 +2236,7 @@ maven&#x5E38;&#x7528;&#x6253;&#x5305;&#x547D;&#x4EE4;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"javaNote","level":"3.1.2","depth":2,"next":{"title":"排序算法","level":"3.1.3","depth":2,"path":"编程/java/排序算法.md","ref":"编程/java/排序算法.md","articles":[]},"previous":{"title":"java介绍","level":"3.1.1","depth":2,"path":"编程/java/java介绍.md","ref":"编程/java/java介绍.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","mermaid-gb3","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/java/javaNote.md","mtime":"2023-09-13T06:22:01.745Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-14T03:16:37.387Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"javaNote","level":"3.1.2","depth":2,"next":{"title":"排序算法","level":"3.1.3","depth":2,"path":"编程/java/排序算法.md","ref":"编程/java/排序算法.md","articles":[]},"previous":{"title":"java介绍","level":"3.1.1","depth":2,"path":"编程/java/java介绍.md","ref":"编程/java/java介绍.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","sharing-plus","lightbox","page-toc-button","expandable-chapters","theme-comscore","mermaid-gb3","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"page-toc-button":{"maxTocDepth":2,"minTocSize":2},"sharing":{"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"无为徐生","language":"zh-hans","links":{"sidebar":{"github":"https://github.com/scott180/gitbook-blog","xushufa":"https://xushufa.cn"}},"gitbook":"*"},"file":{"path":"编程/java/javaNote.md","mtime":"2024-01-05T05:57:02.460Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-01-30T08:10:19.748Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

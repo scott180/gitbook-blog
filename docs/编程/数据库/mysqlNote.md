@@ -20,20 +20,17 @@ https://www.aliyundrive.com/s/pymjQca3DbY
 ### 1.1、下载软件
 
 ```java
-下载mysql
+>下载mysql
+进入官网：https://www.mysql.com/
+单击【Downloads】选项卡
+最下面有个【 MySQL Community Edition  (GPL)】，单击【Community (GPL) Downloads »】
+单击【MySQL Community Server (GPL)】下的【DOWNLOAD】
+在弹出的页面上下载【Windows (x86, 64-bit), ZIP Archive】
 
-    进入官网：https://www.mysql.com/
-
-    单击【Downloads】选项卡
-    最下面有个【 MySQL Community Edition  (GPL)】，单击【Community (GPL) Downloads »】
-    单击【MySQL Community Server (GPL)】下的【DOWNLOAD】
-    在弹出的页面上下载【Windows (x86, 64-bit), ZIP Archive】
-
-安装mysql
+>安装mysql
 压缩包相当于免安装文件，要想使用它，需要配置正确，并通过服务来启动数据库服务。
 1.把压缩包解压到你喜欢的位置
 本示例解压到：D:\mysql-5.7.13-winx64，文件夹下
-
 
 
 2.创建my.ini文件（在 D:\mysql-5.7.13-winx64 目录），内容如下：
@@ -42,11 +39,10 @@ https://www.aliyundrive.com/s/pymjQca3DbY
     port=3306  
     basedir  ="D:\\mysql-5.7.13-winx64\\"  
     datadir  ="F:\\mysqlData\\"  
-      
-      
+
     max_allowed_packet = 32M  
 
- 注意，basedir和datadir是必须要配置的，basedir就是你解压的目录。官方文档上说，如果你喜欢用反斜杠，则要用双反斜杠，斜杠的话就不用这样。即：D:\\mysql-5.7.13-winx64\\ 或：D:/mysql-5.7.13-winx64/
+注意，basedir和datadir是必须要配置的，basedir就是你解压的目录。官方文档上说，如果你喜欢用反斜杠，则要用双反斜杠，斜杠的话就不用这样。即：D:\\mysql-5.7.13-winx64\\ 或：D:/mysql-5.7.13-winx64/
 由于本人喜欢把数据库的数据文件独立出来，所以就把datadir配置到其它地方，方便管理。另外，创建该目录。
 
 ```
@@ -926,13 +922,17 @@ SELECT id,product_id productId,sales  FROM ins_period_sales where create_time > 
 ```
 
 
-### 3.2、中文排序
+### 3.2、指定排序
 
 ```sql
-sql中文排序 
+-- 中文排序 
 SELECT id,name FROM `T_USER` ORDER BY convert(name using gbk)  ASC limit 10,100;
 ```
 
+```sql
+-- 指定字段值排序
+SELECT id,name FROM `T_USER` ORDER BY FIELD( status, 0,2,1,3 ) ASC;
+```
 
 ### 3.3、截取字符串
 
@@ -1033,6 +1033,8 @@ kill 进程ID
 
 
 ### 3.7、文档
+
+- [linux笔记]( https://gitlab.com/xuyq123/mynotes/-/blob/master/%E8%BF%90%E7%BB%B4/linuxNote-x.md )
 
 - [数据库隔离级别]( https://xushufa.cn/docs/bian-cheng/shu-ju-ku/shu-ju-ku-ge-chi-ji-bie.html )
 

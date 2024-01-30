@@ -60,6 +60,48 @@ List<SettlementProcessInstanceDO> querySettlementProcessInstanceList(@Param("bil
 
 ```
 
+```java
+<dependency>
+    <groupId>net.sf.dozer</groupId>
+    <artifactId>dozer</artifactId>
+    <version>5.5.1</version>
+</dependency>
+
+
+    /**
+     * 深度复制
+     * @param args
+     */
+    public static void main(String[] args) {
+        Object sourceObject = new Object();
+        Object targetObject = new Object();
+        DozerBeanMapper dozerBeanMapper = new DozerBeanMapper();
+        dozerBeanMapper.map(sourceObject, targetObject);
+    }
+
+	
+	
+	
+    /**
+     * 正则分割中文和数字
+     *
+     * @param region
+     * @return
+     */
+    public static List spitRegion(String region) {
+		Pattern REGION_PATTERN = Pattern.compile("[\\u4e00-\\u9fa5]+|\\d+");
+		
+        List<String> list = new ArrayList<>();
+        Matcher m = REGION_PATTERN.matcher(region);
+        while (m.find()) {
+            list.add(m.group());
+        }
+        return list;
+    }
+	
+```
+
+
 ### 1.2、lambda表达式
 
 ```java
