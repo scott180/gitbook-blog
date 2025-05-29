@@ -4,7 +4,7 @@
     "links": {
         "sidebar": {
             "github": "https://github.com/scott180/gitbook-blog",
-            "xushufa": "https://scott180.github.io/gitbook-blog/"
+            "blog": "https://scott180.github.io/gitbook-blog/"
         }
     },
     "plugins": ["-sharing", "sharing-plus", "lightbox", "page-toc-button","expandable-chapters","theme-comscore","mermaid-gb3"],
