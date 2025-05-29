@@ -2,7 +2,7 @@
 
 <br />
 
-> [blog]( https://xushufa.cn ) &ensp; [gitlab]( https://gitlab.com/xuyq123/mynotes ) &ensp; [gitee]( https://gitee.com/xy180/MyNotes ) &ensp; [github]( https://github.com/scott180 )   
+> [blog]( https://scott180.github.io/reco-blog ) &ensp; [gitlab]( https://gitlab.com/xuyq123/mynotes ) &ensp; [gitee]( https://gitee.com/xy180/MyNotes ) &ensp; [github]( https://github.com/scott180 )   
 
 
 ------------------------
@@ -76,6 +76,10 @@ $ git push origin develop --force
 
 
 ```haskell
+master分支代码回滚
+git reset --hard cad3a9ce
+git push -f origin master
+	
 git回滚之前的版本  http://www.cnblogs.com/yu-hailong/p/10681905.html
 git log   查询日历记录
 git reset --hard 5fa86ae3758e7e2a86825452977da40f34b6dd58   回滚到之前的版本
