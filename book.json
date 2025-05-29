@@ -7,7 +7,7 @@
             "blog": "https://scott180.github.io/gitbook-blog/"
         }
     },
-    "plugins": ["-sharing", "sharing-plus", "lightbox", "page-toc-button","expandable-chapters","theme-comscore","mermaid-gb3"],
+    "plugins": ["-sharing", "sharing-plus", "lightbox", "page-toc-button","expandable-chapters","theme-comscore"],
     "pluginsConfig": {
         "sharing": {
             "all": []

@@ -2,7 +2,7 @@
 
 <br />
 
-[blog]( https://xushufa.cn ) &ensp;  [gitlab]( https://gitlab.com/xuyq123/mynotes ) &ensp; [gitee]( https://gitee.com/xy180/MyNotes ) &ensp; [github]( https://github.com/scott180/MyNotes ) &ensp; [xushufa]( https://vuepress-blog.xushufa.cn )
+[note]( https://scott180.github.io/reco-blog ) &ensp;  [gitlab]( https://gitlab.com/xuyq123/mynotes ) &ensp; [gitee]( https://gitee.com/xy180/MyNotes ) &ensp; [github]( https://github.com/scott180/MyNotes ) &ensp; [blog]( https://xuyq123.gitlab.io/mkdocs-blog )
 
 <br />
 
@@ -25,7 +25,7 @@ Ctrl+W  关闭程序
 Ctrl+Z  撤销刚才进行的操作
 Ctrl+Y  恢复刚才进行的操作
 Ctrl+N  新建一个空白文档
-Ctrl+P  打开"打印"对话框
+Ctrl+P  打开打印
 Ctrl+O  打开文档
 
 Ctrl+Shift	输入法切换
@@ -36,19 +36,19 @@ Ctrl+Shift+End	选中当前到末尾所有内容
 Ctrl+Shift+Esc	打开任务管理器
 Ctrl+Shift+Del	浏览器打开清除缓存对话框
 
-Alt+Tab     程序切换（小图标）
-Win+Tab     程序切换（大图标）
+Alt+Tab     程序切换-小图标
+Win+Tab     程序切换-大图标
 
 Win     显示开始菜单
 Win+L   锁定计算机
 Win+E   启动"我的电脑"
 Win+D   快速显示桌面
 
-Win+R   打开"运行"对话框，输入命令开启相关功能
-cmd 			命令行控制台
-reg 			注册表
+Win+R		打开运行-输入命令开启相关功能
+cmd			命令行控制台
+reg			注册表
 mstsc			远程登录
-services.msc 	本地服务
+services.msc		本地服务
 	
 F2   文件改名
 F5   浏览器页面刷新
@@ -75,7 +75,7 @@ Shift+光标+右键	 选中内容
 右击--打开方式--选择默认程序
 
 **3.注册表设置** <br/>
-Win+R 在运行里面输入regedit（注册表编辑器），HEY_CLASS_ROOT下面是所有文件的后缀名文件，找到你想取消关联的后缀名，如.ppt。 <br/>
+Win+R 在运行里面输入regedit（注册表编辑器），`HEY_CLASS_ROOT`下面是所有文件的后缀名文件，找到你想取消关联的后缀名，如.ppt。 <br/>
 单击这个文件夹，右边出现的“数据”一项，双击“（默认）”，打开对话框，将“数据”下面可以填写的部分清除，保持空白，确定。 <br/>
 
 你的电脑里面所有.ppt文件就没有了任何关联和默认程序，再按自己的想法重新关联或默认就行了。 <br/>
@@ -188,23 +188,71 @@ gitlab docsify主题仓库
 
 <br/>
 
-### 1.5、部署网站
+### 1.5、bat脚本
+
+```
+具有 .bat 文件扩展名的文件是 Windows 批处理文件。它是一个纯文本文件，包含用于重复任务或逐个运行脚本组的各种命令。
+所有类型的软件都将 bat 文件用于各种目的，例如复制或删除文件、运行应用程序以及关闭进程。
+下面是 bat 文件的另一个示例，该文件使用 ping 命令来查看计算机是否可以访问具有该特定 IP 地址的路由器：
+
+ping 192.168.1.1
+pause
+
+```
+
+```java
+Win+R		打开运行-输入命令开启相关功能
+cmd			命令行控制台
 
 
-| 序号  | 平台    | 仓库地址    |  git静态页面   | 域名  | 说明 |
-| ----- | -----   | ----------- |  ------------- | ----  | ---- |
-| 1     | github  | [**reco-blog**]( https://github.com/scott180/reco-blog )  	 | [github.io/reco-blog]( https://scott180.github.io/reco-blog )   | [xushufa]( https://xushufa.cn) |  vuepress-reco部署网站 |
-| 2     | github  | [**vuepress-blog**]( https://github.com/scott180/vuepress-blog )  	 | [github.io/vuepress-blog]( https://scott180.github.io/vuepress-blog )   | [vuepress-blog.xushufa]( https://vuepress-blog.xushufa.cn) | vuepress部署网站 |
-| 3     | github  | [blog]( https://github.com/scott180/blog )  	 | [github.io/blog]( https://scott180.github.io/blog )   | [blog.xushufa]( https://blog.xushufa.cn) | vuepress部署网站 |
-| 4     | github  | [tool]( https://github.com/scott180/tool )  	 | [github.io/tool]( https://scott180.github.io/tool )   | [tool.xushufa]( https://tool.xushufa.cn) |  工具网站 |
-| 5     | github  | [docsify-blog]( https://github.com/scott180/docsify-blog )  	 | [github.io/docsify]( https://scott180.github.io/docsify-blog/ )   | [docsify-blog.xushufa]( https://docsify-blog.xushufa.cn) | docsify部署网站 |
-| 6     | **github**  | [gitbook-blog]( https://github.com/scott180/gitbook-blog )  	 | [github.io/gitbook]( https://scott180.github.io/gitbook-blog ) | -- | gitbook部署网站 |
-| 7     | gitlab  | [mkdocs-blog]( https://gitlab.com/xuyq123/mkdocs-blog )     | [gitlab.io/mkdocs]( https://xuyq123.gitlab.io/mkdocs-blog )   | -- | mkdocs部署网站  |
-| 8     | gitlab  | [**MyNotes**]( https://gitlab.com/xuyq123/mynotes )         | [files]( https://gitlab.com/xuyq123/mynotes/-/blob/master/%E6%96%87%E6%A1%A3%E7%9B%AE%E5%BD%95.md )   | -- | **编程笔记** |
-| 9     | gitcode | [**document**]( https://gitcode.net/xu180/document )  			| [note]( https://gitcode.net/xu180/document/-/blob/master/article/%E9%9A%8F%E7%AC%94/%E6%97%A5%E5%B8%B8Note.md )  | -- | 生活随笔 |
-| 10    | npm | [xushufa]( https://www.npmjs.com/~xushufa )  | [img]( https://cdn.jsdelivr.net/npm/xushufa-shu/yan/duo1-1000/0001大.jpg ) 	| -- 		  | 资料管理   |
-| 11     | bitbucket | [**imgs**]( https://bitbucket.org/xu12345/document/src/master/imgs/ )  		| [img]( https://bitbucket.org/xu12345/document/raw/87e65566e45e063244eab491abe2dab0f43de59d/imgs/shufa/%E7%8E%8B%E7%BE%B2%E4%B9%8B-%E5%85%B0%E4%BA%AD%E9%9B%86%E5%BA%8F.jpg ) 	| --   | 图片仓库   |
-| 12    | sourceforge | [xdocument]( https://sourceforge.net/p/xdocument/code/ci/master/tree/ )  | [ReadMe]( https://sourceforge.net/p/xdocument/code/ci/master/tree/README.md ) 	| -- 		  | 图片仓库   |
+Windows批处理(cmd/bat)常用命令
+https://www.cnblogs.com/hwrex/p/18663235
+https://www.cnblogs.com/xpwi/p/9626959.html
+
+cd 	显示当前目录名或改变当前目录
+md 	创建目录
+dir 显示目录中的文件和子目录列表
+
+echo 		显示消息或开启/关闭回显
+pause		暂停并等待用户按键
+ipconfig	显示、修改TCP/IP设置
+
+```
+
+```c
+:: StartRedis.bat
+echo "启动redis"
+D: & cd D:\ProgramFiles\Redis-x64-3.2.100
+redis-server.exe redis.windows.conf
+```
+
+
+```c
+echo "启动Ollama"
+cd C:\Users\Administrator\AppData\Local\Programs\Ollama
+Start ollama
+```
+
+<br/>
+
+
+### 1.6、部署网站
+
+
+| 序号  | 平台        | 仓库地址    |  git静态页面   |  说明 |
+| ----- | -----       | ----------- |  ------------- |  ---- |
+| 1     | github      | [**reco-blog**]( https://github.com/scott180/reco-blog )  	      | [github.io/reco-blog]( https://scott180.github.io/reco-blog )         |  vuepress-reco部署网站 |
+| 2     | github      | [**vuepress-blog**]( https://github.com/scott180/vuepress-blog )  | [github.io/vuepress-blog]( https://scott180.github.io/vuepress-blog ) |  vuepress部署网站      |
+| 3     | github      | [blog]( https://github.com/scott180/blog )  					  | [github.io/blog]( https://scott180.github.io/blog )   				  |  vuepress部署网站      |
+| 4     | github      | [tool]( https://github.com/scott180/tool )  	 				  | [github.io/tool]( https://scott180.github.io/tool )                   |  工具网站              |
+| 5     | github      | [docsify-blog]( https://github.com/scott180/docsify-blog )  	  | [github.io/docsify]( https://scott180.github.io/docsify-blog/ )       |  docsify部署网站       |
+| 6     | github      | [gitbook-blog]( https://github.com/scott180/gitbook-blog )        | [github.io/gitbook]( https://scott180.github.io/gitbook-blog )        |  gitbook部署网站       |
+| 7     | gitlab      | [mkdocs-blog]( https://gitlab.com/xuyq123/mkdocs-blog ) | [gitlab.io/mkdocs]( https://xuyq123.gitlab.io/mkdocs-blog )                     |  mkdocs部署网站        |
+| 8     | **gitlab**  | [**MyNotes**]( https://gitlab.com/xuyq123/mynotes )     | [files]( https://gitlab.com/xuyq123/mynotes/-/blob/master/%E6%96%87%E6%A1%A3%E7%9B%AE%E5%BD%95.md )              |  **编程笔记** |
+| 9     | gitcode     | [**document**]( https://gitcode.net/xu180/document )  	| [note]( https://gitcode.net/xu180/document/-/blob/master/article/%E9%9A%8F%E7%AC%94/%E6%97%A5%E5%B8%B8Note.md )  |  生活随笔     |
+| 10    | npm         | [xushufa]( https://www.npmjs.com/~xushufa )             | [img]( https://cdn.jsdelivr.net/npm/xushufa-shu/yan/duo1-1000/0001大.jpg ) 	                                   |  资料管理     |
+| 11    | bitbucket   | [**imgs**]( https://bitbucket.org/xu12345/document/src/master/imgs/ )    | [img]( https://bitbucket.org/xu12345/document/raw/87e65566e45e063244eab491abe2dab0f43de59d/imgs/shufa/%E7%8E%8B%E7%BE%B2%E4%B9%8B-%E5%85%B0%E4%BA%AD%E9%9B%86%E5%BA%8F.jpg )  | 图片仓库   |
+| 12    | sourceforge | [xdocument]( https://sourceforge.net/p/xdocument/code/ci/master/tree/ )  | [readMe]( https://sourceforge.net/p/xdocument/code/ci/master/tree/README.md ) 	               |  图片仓库     |
 
 
 
@@ -326,9 +374,12 @@ Windows Registry Editor Version 5.00
 
 ### 2.5、shell批量推送git
 
+> 批量推送git、压缩打包xushufa部署项目
+
 ```sh
 #!/bin/bash
 #sh push-ca.sh
+#批量推送git
 copyPush(){
 	cp -r /e/Project/gitlab/calligraphy/*.md $data_dir
 	cp -r /e/Project/gitlab/calligraphy/书法字帖 $data_dir
@@ -378,6 +429,75 @@ copyPush
 
 
 ```
+
+```sh
+#!/bin/bash
+#sh zipProject.sh
+#压缩xushufa布署项目。zip有时不能压缩隐藏文件，tar中文乱码。
+zipProject(){
+	# tar -zcvf /e/Project/github/xushufa-project/xushufa.tar.gz /e/Project/github/docsify-blog/
+	# zip -r xu.zip /e/Project/github/docsify-blog/
+	file_name=/e/Project/github/xushufa-project/$(date -d now +%Y%m%d_%H%M%S)_$project_type.$project_name.zip
+	source_dir=/e/Project/$project_type
+	cd $source_dir
+	zip -r $file_name $project_name
+	#zip -r $file_name $project_name/.[^.]*
+	# -r表示目录所有文件。.[^.]*表示所有文件，包含隐藏文件。
+	echo $file_name '...success...'
+}
+
+
+tarProject(){
+	# tar -zcvf /e/Project/github/xushufa-project/xushufa.tar.gz /e/Project/github/docsify-blog/
+	file_name=/e/Project/github/xushufa-project/$(date -d now +%Y%m%d_%H%M%S)_$project_type.$project_name.tar.gz
+	source_dir=/e/Project/$project_type
+	cd $source_dir
+	tar -zcvf $file_name $project_name/
+	echo $file_name '...success...'
+}
+
+#reco-blog 1
+project_name=reco-blog
+project_type=github
+zipProject
+
+#vuepress-blog 2
+project_name=vuepress-blog
+project_type=github
+zipProject
+
+#blog 3
+project_name=blog
+project_type=github
+zipProject
+
+#tool 4
+project_name=tool
+project_type=github
+zipProject
+
+#docsify-blog 5
+project_name=docsify-blog
+project_type=github
+zipProject
+
+#gitbook-blog 6
+project_name=gitbook-blog
+project_type=github
+zipProject
+
+
+#mkdocs-blog 7
+project_name=mkdocs-blog
+project_type=gitlab
+zipProject
+
+
+
+
+```
+
+<br/>
 
 ### 2.6、github访问不了，配置DNS与IP
 
@@ -492,7 +612,7 @@ https://www.itdog.cn/dns/github.com                                         <br/
 在时间、空间、具体事物上一般是从左到右、从大到小，比如“年年过年年年好，月月赏月月月圆”。 <br/>
 
 
-最简办法，看最后一个字：三或四声为上，一二声为下。位置：面对门右上左下。古人写字即右向左这是沿承下来的。
+最简办法，看最后一个字：**三四声为上联**，**一二声为下联**。位置：**面对门右上左下**。古人写字即右向左这是沿承下来的。
 
 <br/>
 
@@ -666,24 +786,35 @@ http://localhost:8080/druid/sql.html
 
 | 序号   | 地址        |  备注          |
 | -----  | ----------- |  ------------- |
-| 1      | [json]( https://tool.xushufa.cn/json )                     | json 格式化工具             |
-| 2      | [yaml解析]( https://tool.xushufa.cn/yaml-parse )           | yaml解析为json              |
-| 3      | [Json2Excel]( https://tool.xushufa.cn/Json2Excel )         | Json转Excel文件             |
-| 4      | [时间毫秒值转换]( https://tool.xushufa.cn/time-format )    | 时间毫秒值转换              |
+| 1      | [json]( https://scott180.github.io/tool/json )                     | json 格式化工具             |
+| 2      | [yaml解析]( https://scott180.github.io/tool/yaml-parse )           | yaml解析为json              |
+| 3      | [Json2Excel]( https://scott180.github.io/tool/Json2Excel )         | Json转Excel文件             |
+| 4      | [时间毫秒值转换]( https://scott180.github.io/tool/time-format )    | 时间毫秒值转换              |
 |        | 解码编码                                                   |                             |
-| 5      | [url解码]( https://tool.xushufa.cn/url-encode )            | url解码编码                 |
-| 6      | [unicode解码]( https://tool.xushufa.cn/unicode-encode )    | unicode解码编码             |
-| 7      | [文字转二维码]( https://tool.xushufa.cn/words-QRcode )     | 文字转二维码                |
-| 8      | [二维码生成扫描识别]( https://tool.xushufa.cn/HtmlQRCode ) | 二维码生成扫描识别          |
+| 5      | [url解码]( https://scott180.github.io/tool/url-encode )            | url解码编码                 |
+| 6      | [unicode解码]( https://scott180.github.io/tool/unicode-encode )    | unicode解码编码             |
+| 7      | [文字转二维码]( https://scott180.github.io/tool/words-QRcode )     | 文字转二维码                |
+| 8      | [二维码生成扫描识别]( https://scott180.github.io/tool/HtmlQRCode ) | 二维码生成扫描识别          |
 |        | markdown                                                   |                             |
-| 9      | [md2wx]( https://tool.xushufa.cn/md2wx/docs )              | 在线Markdown微信格式化工具            |
-| 10     | [editormd]( https://tool.xushufa.cn/markdown-editormd )    | 开源的、可嵌入的 Markdown 在线编辑器  |
-| 11     | [markthing]( https://tool.xushufa.cn/markdown-markthing )  | 一个MarkDown编辑器                    |
-| 12     | [mpeditor]( https://tool.xushufa.cn/markdown-mpeditor )    | 专注于微信公众号的编辑阅读器          |
+| 9      | [md2wx]( https://scott180.github.io/tool/md2wx/docs )              | 在线Markdown微信格式化工具            |
+| 10     | [editormd]( https://scott180.github.io/tool/markdown-editormd )    | 开源的、可嵌入的 Markdown 在线编辑器  |
+| 11     | [markthing]( https://scott180.github.io/tool/markdown-markthing )  | 一个MarkDown编辑器                    |
+| 12     | [mpeditor]( https://scott180.github.io/tool/markdown-mpeditor )    | 专注于微信公众号的编辑阅读器          |
 |        | 项目布署                                                   |                                       |
 | 13     | [tool]( https://github.com/scott180/tool )                 | github仓库                            |
-| 14     | [xushufa]( https://xushufa.cn )                            | 个人网站                              |
+| 14     | [blog]( https://scott180.github.io/reco-blog )             | 个人网站                              |
 
 
 *************************
+
+
+### 4.6、AI助手
+
+| 序号   | 地址        |  备注          |
+| -----  | ----------- |  ------------- |
+| 1      | [文心一言]( https://yiyan.baidu.com/ )                     | 你的智能伙伴             |
+| 2      | [通义千问]( https://tongyi.aliyun.com/qianwen/ )           | 一个不断进化的AI大模型   |
+| 3      | [讯飞星火]( https://xinghuo.xfyun.cn/ )         			  |  认知大模型              |
+| 4      | [ChatGPT]( https://openai.com/blog/chatgpt )          	  |  聊天机器人模型          |
+| 5      | [deepseek]( https://chat.deepseek.com  )          	      |  探索未至之境            |
 
